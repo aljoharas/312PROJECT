@@ -10,13 +10,20 @@
 <body>
     <h1>The Trend Loft</h1>
 
+    <!--NAVIGATION COPY TO ALL PAGES-->    
     <div id="navigation">
+        <a href="homepage.html"><img id="logo" src="images/logo.png"></a>
         <p>Clothes</p>
         <p>Bags</p>
         <p>Shoes</p>
         <input id="search" type="text" placeholder="Search...">
-        <p>Profile</p>
-        <a href="cartpage.html">Cart</a>
+        <!--should be a link-->
+        <img id="profile-img" src="images/user.png">
+        <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+    </div>
+
+    <div class="breadcrumb">
+       
     </div>
 
     <div class="summary">
@@ -52,11 +59,16 @@
         </div>
         <div class="item">
             <!-- Image -->
-            <p>Item Name</p>
-            <p>Price</p>
-            <input type="number" value="1" min="1" id="quantityBox">
-            <p>Subtotal</p>
-            <button class="remove-item">Remove</button>
+             <div class="item-details">
+                <p>Item Name</p>
+                <p>Price</p>
+                <input type="number" value="1" min="1" id="quantityBox">
+                <p>Subtotal</p>
+             </div>
+             <div class="remove">
+                <button class="remove-button">Remove</button>
+             </div>
+             <hr class="item-line">
         </div>
     </div>
 

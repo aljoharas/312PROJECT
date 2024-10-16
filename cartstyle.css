@@ -2,11 +2,13 @@ h1{
     text-align: center;
 }
 
-#categories{
-    width: 70%;
+.cart-category{
+    width: 100%;
     height:auto;
     display: flex;
     justify-content: space-around;
+    background-color: lightgray;
+    margin-left: 50px;
 }
 
 .summary{
@@ -17,8 +19,9 @@ h1{
 }
 
 #discountbox{
-    width: 400px;
+    width: 425px;
     height: 30px;
+    margin-left: 0;
 }
 
 #navigation{
@@ -39,12 +42,18 @@ h1{
     justify-content: space-around;
 }
 
-.item{
+/*.item{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     height: 100px;
     margin: 5px;
+}*/
+
+.item-details{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0%;
 }
 
 .cart{
@@ -55,17 +64,48 @@ h1{
     width: 30px;
     height: 20px;
 }
-.remove-item{
+.remove-button{
     width: 80px;
     height: 40px;
-    align-self: flex-end;
-    justify-self: flex-end;
-    margin-top: 60px;
+    justify-content: flex-end;
+    margin-top: 0px;
+    padding: 0;
+    border: none;
+    background: none;
+    text-decoration: underline;
 }
+
+.remove{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .summary-items{
     display:flex;
     justify-content: space-between;
+    margin-left: 2px;
 }
+
+#logo{
+    width:80px;
+    height: 60px;;
+}
+
+#profile-img{
+    width:40px;
+    height:40px;
+}
+
+#cart-img{
+    width: 40px;
+    height: 40px;
+}
+
+.item-line{
+    width: 100%;
+    margin-left: 50px;
+}
+
 
 /*<div id="categories">
                 <p>Products</p>
