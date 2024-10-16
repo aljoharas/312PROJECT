@@ -1,3 +1,88 @@
 h1{
-
+    text-align: center;
 }
+
+#categories{
+    width: 70%;
+    height:auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.summary{
+    float: right;
+    justify-content: flex-start;
+    width: 30%;
+    margin-right: 20px;
+}
+
+#discountbox{
+    width: 400px;
+    height: 30px;
+}
+
+#navigation{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    align-items: center;
+}
+
+#search{
+    height: 25px;
+    align-self: center;
+    margin-left: 800px;
+}
+
+.cart-category{
+    display: flex;
+    justify-content: space-around;
+}
+
+.item{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100px;
+    margin: 5px;
+}
+
+.cart{
+    width: 60%;
+}
+
+#quantityBox{
+    width: 30px;
+    height: 20px;
+}
+.remove-item{
+    width: 80px;
+    height: 40px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-top: 60px;
+}
+.summary-items{
+    display:flex;
+    justify-content: space-between;
+}
+
+/*<div id="categories">
+                <p>Products</p>
+                <p>Price</p>
+                <p>Quantity</p>
+                <p>Sub-Total</p>
+            </div>
+            <div class="item">
+                <!--under product-->
+                <img src="" alt="">
+                <h4>Item Name</h4>
+                <p>by Vendor</p>
+                <p><br> Item details:</p>
+                
+                <!--under price-->
+                <p>$#</p>
+
+                <!--under quantity-->
+
+            </div>*/

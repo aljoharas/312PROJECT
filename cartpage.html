@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>My Cart</title>
-        <link href="cartstyle" rel="stylesheet">
-    </head>
-    
-    <body>
-        <h1>The Trend Loft</h1>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link href="cartstyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>The Trend Loft</h1>
+
+    <div id="navigation">
+        <p>Clothes</p>
+        <p>Bags</p>
+        <p>Shoes</p>
+        <input id="search" type="text" placeholder="Search...">
+        <p>Profile</p>
+        <a href="cartpage.html">Cart</a>
+    </div>
+
+    <div class="summary">
+        <h2>Order Summary</h2>
+        <input type="text" id="discountbox" name="discount" placeholder="Enter discount code here"></input>
+        <div class="summary-items">
+            <p>Sub-Total</p>
+            <p>$X</p>
+        </div>
+        <div class="summary-items">
+            <p>Discount</p>
+            <p>- $X</p>
+        </div>
+        <div class="summary-items">
+            <p>Shipping</p>
+            <p>$X</p>
+        </div>
+        <hr>
+        <div class="summary-items">
+            <p>Total</p>
+            <p>$X</p>
+        </div>
+        <p></p>
+    </div>
+
+    <div class="cart">
+        <h2>Your Cart</h2>
+        <div class="cart-category">
+            <p>Products</p>
+            <p>Price</p>
+            <p>Quantity</p>
+            <p>Sub-Total</p>
+        </div>
+        <div class="item">
+            <!-- Image -->
+            <p>Item Name</p>
+            <p>Price</p>
+            <input type="number" value="1" min="1" id="quantityBox">
+            <p>Subtotal</p>
+            <button class="remove-item">Remove</button>
+        </div>
+    </div>
+
+</body>
+
 </html>
