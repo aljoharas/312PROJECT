@@ -10,65 +10,102 @@
 <body>
     <h1>The Trend Loft</h1>
 
-    <!--NAVIGATION COPY TO ALL PAGES-->    
+    <!-- NAVIGATION [COPY TO ALL PAGES] -->
     <div id="navigation">
-        <a href="homepage.html"><img id="logo" src="images/logo.png"></a>
-        <p>Clothes</p>
-        <p>Bags</p>
-        <p>Shoes</p>
-        <input id="search" type="text" placeholder="Search...">
-        <!--should be a link-->
-        <img id="profile-img" src="images/user.png">
-        <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+        <div id="leftnav">
+            <a href="homepage.html"><img id="logo" src="images/logo.png"></a>
+            <p>Clothes</p>
+            <p>Bags</p>
+            <p>Shoes</p>
+        </div>
+        <div id="rightnav">
+            <input id="search" type="text" placeholder="Search...">
+            <img id="profile-img" src="images/user.png">
+            <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+        </div>
     </div>
 
+    <!-- Breadcrumbs -->
     <div class="breadcrumb">
-       
+
     </div>
 
-    <div class="summary">
-        <h2>Order Summary</h2>
-        <input type="text" id="discountbox" name="discount" placeholder="Enter discount code here"></input>
-        <div class="summary-items">
-            <p>Sub-Total</p>
-            <p>$X</p>
+    <!-- Page Name -->
+    <h2>Your Cart</h2>
+
+    <div class="main-content">
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <input id="discountbox" type="text" name="discount" placeholder="Enter discount code here"></input>
+            <div class="s-details">
+                <p>Sub-Total</p>
+                <p>$X</p>
+            </div>
+            <div class="s-details">
+                <p>Discount</p>
+                <p>- $X</p>
+            </div>
+            <div class="s-details">
+                <p>Shipping</p>
+                <p>$X</p>
+            </div>
+            <hr>
+            <div class="s-details">
+                <p>Total</p>
+                <p>$X</p>
+            </div>
+            <button id="checkout">Continue to Checkout</button>
+            <p></p>
         </div>
-        <div class="summary-items">
-            <p>Discount</p>
-            <p>- $X</p>
+
+        <!-- Cart -->
+        <div id="cart">
+            <!-- Category Names -->
+            <div class="cart-category">
+                <p id="product">Product</p>
+                <p class="others">Price</p>
+                <p class="others">Quantity</p>
+                <p class="others">Sub-Total</p>
+            </div>
+
+            <!-- Item Blocks -->
+            <div class="item">
+
+                <div class="item-details">
+                    <!-- Product Category -->
+                    <div class="product-detail">
+                        <div>
+                            <!-- Image -->
+                             <p>image</p>
+                        </div>
+                        <div>
+                            <p>Item Name</p>
+                            <p>by Vendor</p>
+                            <p>Details</p>
+                        </div>
+                    </div>
+
+                    <p>Price</p>
+                    <input type="number" value="1" min="1" id="quantityBox">
+                    <p>Subtotal</p>
+                </div>
+                <div class="remove">
+                    <button class="remove-button">Remove</button>
+                </div>
+                <hr class="item-line">
+            </div>
         </div>
-        <div class="summary-items">
-            <p>Shipping</p>
-            <p>$X</p>
-        </div>
-        <hr>
-        <div class="summary-items">
-            <p>Total</p>
-            <p>$X</p>
-        </div>
-        <p></p>
     </div>
 
-    <div class="cart">
-        <h2>Your Cart</h2>
-        <div class="cart-category">
-            <p>Products</p>
-            <p>Price</p>
-            <p>Quantity</p>
-            <p>Sub-Total</p>
+    <div class="footer">
+        <img src="images/logo.png" id="f-logo">
+        <div class="contacts">
+            <p>+955XXXXXXXXX</p>
+            <p>info@example.com</p>
         </div>
-        <div class="item">
-            <!-- Image -->
-             <div class="item-details">
-                <p>Item Name</p>
-                <p>Price</p>
-                <input type="number" value="1" min="1" id="quantityBox">
-                <p>Subtotal</p>
-             </div>
-             <div class="remove">
-                <button class="remove-button">Remove</button>
-             </div>
-             <hr class="item-line">
+        <div class="copyright">
+            <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
         </div>
     </div>
 
