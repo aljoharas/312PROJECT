@@ -10,25 +10,31 @@
 <body>
     <h1>The Trend Loft</h1>
 
-    <!-- NAVIGATION [COPY TO ALL PAGES] -->
-    <div id="navigation">
-        <div id="leftnav">
-            <a href="homepage.html"><img id="logo" src="images/logo.png"></a>
-            <p>Clothes</p>
-            <p>Bags</p>
-            <p>Shoes</p>
-        </div>
-        <div id="rightnav">
-            <input id="search" type="text" placeholder="Search...">
-            <img id="profile-img" src="images/user.png">
-            <div class="user">
-                <p>Welcome, <br> User</p>
+    <header>
+        <!-- NAVIGATION [COPY TO ALL PAGES] -->
+        <div id="navigation">
+            <div id="leftnav">
+                <a href="homepage.html"><img id="logo" src="images/logo.png"></a>
+                <p>Clothes</p>
+                <p>Bags</p>
+                <p>Shoes</p>
             </div>
-            <div class="forcart">
-                <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+            <div id="rightnav">
+                <input id="search" type="text" placeholder="Search...">
+                <!-- img id="profile-img" src="images/user.png" -->
+                <div class="user">
+                    <p>Welcome, <br> User</p>
+                    <div class="user-menu">
+                        <p>Seller Page</p>
+                        <p>Your Account</p>
+                    </div>
+                </div>
+                <div class="forcart">
+                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 
     <!-- Breadcrumbs -->
     <div class="breadcrumb">
@@ -72,6 +78,7 @@
                 <p class="others">Price</p>
                 <p class="others">Quantity</p>
                 <p class="others">Sub-Total</p>
+                <p class="remove"> </p>
             </div>
 
             <!-- Item Blocks -->
@@ -82,7 +89,7 @@
                     <div class="product-detail">
                         <div>
                             <!-- Image -->
-                             <p>image</p>
+                             <img src="images/birkin.png" alt="" class="item-img">
                         </div>
                         <div>
                             <p>Item Name</p>
@@ -90,15 +97,50 @@
                             <p>Details</p>
                         </div>
                     </div>
-
-                    <p>$X</p>
-                    <input type="number" value="1" min="1" id="quantityBox">
-                    <p>$X</p>
-                </div>
-                <div class="remove">
-                    <button class="remove-button">Remove</button>
+                    
+                    <p class="item-others">$X</p>
+                    <div class="item-others">
+                        <input type="number" value="1" min="1" id="quantityBox">
+                    </div>
+                    <p class="item-others">$X</p>
+                    <div class="remove">
+                        <button class="remove-button">x</button>
+                    </div>
                 </div>
                 <hr class="item-line">
+            </div>
+
+            <div class="item">
+
+                <div class="item-details">
+                    <!-- Product Category -->
+                    <div class="product-detail">
+                        <div>
+                            <!-- Image -->
+                             <img src="images/chanel.png" alt="" class="item-img">
+                        </div>
+                        <div>
+                            <p>Item Name</p>
+                            <p>by Vendor</p>
+                            <p>Details</p>
+                        </div>
+                    </div>
+                    
+                    <p class="item-others">$X</p>
+                    <div class="item-others">
+                        <input type="number" value="1" min="1" id="quantityBox">
+                    </div>
+                    <p class="item-others">$X</p>
+                    <div class="remove">
+                        <button class="remove-button">x</button>
+                    </div>
+                </div>
+                <hr class="item-line">
+            </div>
+            
+            <div class="buttons">
+                <button class="continue"> &lt; Continue Shopping </button> <!-- Link -->
+                <button class="clear">Empty Cart</button>
             </div>
         </div>
     </div>
