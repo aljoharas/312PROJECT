@@ -38,7 +38,7 @@ h2{
 #rightnav {
     width: 30%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #search {
@@ -71,7 +71,7 @@ h2{
 .user-menu{
     position: absolute;
     display: none;
-    background-color: lightgray;
+    background-color: white;
     width: 100px;
     text-align: left;
     text-indent: 5px;
@@ -81,6 +81,7 @@ h2{
 
 .user:hover .user-menu{
     display: block;
+    width: 150px;
 }
 
 
@@ -201,8 +202,13 @@ h2{
 .buttons{
     display: flex;
     justify-content: space-between;
-    flex: 1;
 }
+
+.button-design{
+    width: 150px;
+    height: 30px;
+}
+
 
 /* --------------------------------------------------------------------------- */
 
