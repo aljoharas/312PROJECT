@@ -1,4 +1,12 @@
-
+/* new font */
+@font-face {
+    font-family: "Vanity";
+    src: url(Vanity-Light.ttf);
+}
+head{
+    font-family: "Vanity";
+}
+/* here */
 h1 {
     text-align: center;
 }
@@ -15,8 +23,21 @@ h1 {
     margin: 2% 1%;
 }
 
-/* Navigation */
+/* Navigation after update */
+navigation {
 
+    display: flex;
+
+    justify-content: space-between;
+
+    background-color: #f9f9f9;
+
+    align-items: center;
+
+    padding: 10px 20px;
+
+}
+/* here */
 /* الاضافات */
 
 .user-menu {
@@ -88,10 +109,12 @@ h1 {
     border-bottom-width: 1px;
     background-color: transparent;
 }
-
+/* logo after update */
 #logo {
-    width: 80px;
-    height: 60px;
+    width: 150px;
+
+    height: 30px;
+
 }
 
 #profile-img {
@@ -138,17 +161,17 @@ h1 {
 }
 
 
-/* Footer */ 
+/* Footer after update */ 
 
-
+/* updated part */
 #f-logo{
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 30px;
     display: block;
     margin: auto;
     margin-top: 80px;
 }
-
+/* done */
 .copyright{
     background-color: lightgray;
     height: 40px;
