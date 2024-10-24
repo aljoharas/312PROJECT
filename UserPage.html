@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        #main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            align-items: stretch;
+        }
+
+        #my-cart, #my-orders {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cart-item, .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .item-img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        .quantity-control {
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+        }
+
+        .delete-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .delete-btn img {
+            width: 20px;
+            height: 20px;
+        }
+
+       
+        .link-button {
+    display: block;
+    padding: 10px;
+    background-color: #333; 
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px; 
+    margin-left: 10px; 
+    width: 90%;
+}
+
+.link-button:hover {
+    background-color: #555; 
+}
+
+
+        #product-evaluation {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-slider {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .review {
+            display: flex;
+            flex-direction: column;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 15px;
+            flex-shrink: 0;
+            width: 30%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .review-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .review-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .review-details p {
+            margin: 0 10px 0 0;
+        }
+
+        .stars {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .stars i {
+            color: gold;
+            margin-right: 5px;
+            font-size: 18px;
+        }
+
+        .review-text {
+            margin-top: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .slider-btn {
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Trend Loft</h1>
+
+    <header>
+        <!-- NAVIGATION [COPY TO ALL PAGES] -->
+        <div id="navigation">
+            <div id="leftnav">
+                <a href="homepage.html"><img id="logo" src="images/logo.png"></a>
+                <p>Clothes</p>
+                <p>Bags</p>
+                <p>Shoes</p>
+            </div>
+            <div id="rightnav">
+                <input id="search" type="text" placeholder="Search...">
+                <div class="user">
+                    <p>Welcome, <br> User</p>
+                    <div class="user-menu">
+                        <p>Seller Page</p>
+                        <p>Your Account</p>
+                    </div>
+                </div>
+                <div class="forcart">
+                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div id="breadcrumb">
+        <p><a href="homepage.html">Home</a> > Your Account</p>
+    </div>
+
+    <!-- Section 1: User Profile and Welcome Message -->
+    <section id="user-section">
+        <img id="profile-pic" src="images/user.png" alt="User Profile">
+        <h2>Welcome, Sara</h2>
+    </section>
+
+    <!-- Section 2: My Cart and My Orders -->
+    <section id="main-content">
+    
+        <div id="my-cart">
+            <h2>My Cart</h2>
+
+          
+            <div class="cart-item">
+                <img src="images/product.png" alt="Product Image" class="item-img">
+                <div class="item-details">
+                    <p>Item #: Name Of Product 1</p>
+                    <p>$X</p>
+                    <div class="quantity-control">
+                        <button>-</button>
+                        <input type="number" value="1" min="1">
+                        <button>+</button>
+                    </div>
+                </div>
+                <button class="delete-btn"><img src="images/trash.png" alt="Delete"></button>
+            </div>
+
+            
+            <div class="cart-item">
+                <img src="images/product.png" alt="Product Image" class="item-img">
+                <div class="item-details">
+                    <p>Item #: Name Of Product 2</p>
+                    <p>$Y</p>
+                    <div class="quantity-control">
+                        <button>-</button>
+                        <input type="number" value="1" min="1">
+                        <button>+</button>
+                    </div>
+                </div>
+                <button class="delete-btn"><img src="images/trash.png" alt="Delete"></button>
+            </div>
+
+            <p>More...</p>
+            <p>Total: $X + $Y</p>
+
+           
+            <a href="cartpage.html" class="link-button">VIEW CART</a>    <!--             رابط -->
+        </div>
+
+  
+        <div id="my-orders">
+            <h2>My Orders</h2>
+
+           
+            <div class="order-item">
+                <p>Last Order</p>
+                <div class="order-details">
+                    <p>Order NO.XX</p>
+                    <p>DD/MM/YYYY</p>
+                    <p>HH:MM</p>
+                    <p>Total: $X</p>
+                </div>
+            </div>
+
+         
+            <div class="order-item">
+                <p>Previous Order</p>
+                <div class="order-details">
+                    <p>Order NO.YY</p>
+                    <p>DD/MM/YYYY</p>
+                    <p>HH:MM</p>
+                    <p>Total: $Y</p>
+                </div>
+            </div>
+
+            <p>More...</p>
+
+           
+            <a href="orderspage.html" class="link-button">VIEW ALL ORDERS</a>    <!--             رابط -->
+        </div>
+    </section>
+
+    <!-- Section 3: Product Evaluation -->
+    <section id="product-evaluation">
+        <h2>Product Evaluation</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel felis in magna facilisis interdum.</p>
+        <div class="review-slider">
+            <button class="slider-btn">‹</button>
+
+           
+            <div class="review">
+                <div class="review-header">
+                    <img src="images/user.png" alt="Reviewer" class="review-img">
+                    <div class="review-details">
+                        <p>Sara</p>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel felis in magna facilisis interdum.</p>
+                </div>
+            </div>
+
+            
+            <div class="review">
+                <div class="review-header">
+                    <img src="images/user.png" alt="Reviewer" class="review-img">
+                    <div class="review-details">
+                        <p>sara</p>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel felis in magna facilisis interdum.</p>
+                </div>
+            </div>
+
+            <button class="slider-btn">›</button>
+        </div>
+
+      
+        <a href="evaluationpage.html" class="link-button">LEAVE A REVIEW</a>  <!--             رابط -->
+    </section>
+
+    <div class="footer">
+        <img src="images/logo.png" id="f-logo">
+        <div class="contacts">
+            <div class="phone">
+                <img src="images/phone-icon.png" id="phone-icon">
+                <p>+955XXXXXXXXX</p>
+            </div>
+            <div class="email">
+                <img src="images/email-icon.png" id="email-icon">
+                <p>info@example.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
