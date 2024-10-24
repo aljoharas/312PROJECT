@@ -2,24 +2,28 @@ h1 {
     text-align: center;
 }
 
-/* Breadcrumb */
-
-.breadcrumb-links{
-    color: gray;
-
+h2{
+    text-indent: 2%;
 }
 
-.breadcrumb{
-    color: gray;
-    margin: 2% 1%;
+/* --------------------------------------------------------------------------- */
+
+/* Main Content */
+.main-content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around; /*between*/
 }
+
+/* --------------------------------------------------------------------------- */
+
 
 /* Navigation */
 
 #navigation {
     display: flex;
     justify-content: space-between;
-    background-color: #f9f9f9;
+    background-color: lightgray;
     align-items: center;
 }
 
@@ -33,19 +37,12 @@ h1 {
 #rightnav {
     width: 30%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #search {
     height: 25px;
-    width:40%;
     align-self: center;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-color: gray;
-    border-bottom-width: 1px;
-    background-color: transparent;
 }
 
 #logo {
@@ -70,10 +67,10 @@ h1 {
     align-items: center;
 }
 
-.user-menu {
+.user-menu{
     position: absolute;
     display: none;
-    background-color: white;
+    background-color: lightgray;
     width: 100px;
     text-align: left;
     text-indent: 5px;
@@ -81,23 +78,9 @@ h1 {
     border-bottom-right-radius: 10px;
 }
 
-.user-menu a{
-    margin-left: 5px ;
-    color: black;
-    text-decoration: none;
-}
-
 .user:hover .user-menu{
     display: block;
-    width: 150px;
-    background-color: #f9f9f9;
-    z-index: 1;
-    border-bottom-left-radius: 8%;
-    border-bottom-right-radius: 8%;
 }
-
-
-/* Footer */ 
 
 
 #f-logo{

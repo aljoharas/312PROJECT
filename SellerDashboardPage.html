@@ -1,141 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Your Seller Account</title>
     <link rel="stylesheet" href="style.css">
     <style>
-    /* Main Section */
-    main {
-        padding: 20px;
-    }
+        /* Main Section */
+        main {
+            padding: 20px;
+        }
 
-    .breadcrumb {
-        margin-bottom: 20px;
-    }
+        .breadcrumb {
+            margin-bottom: 20px;
+        }
 
-    .content-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        height: auto;
-    }
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            height: auto;
+        }
 
-    .products-section {
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-    }
+        .products-section {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .products-section h2 {
-        margin-bottom: 10px;
-    }
+        .products-section h2 {
+            margin-bottom: 10px;
+        }
 
-    .product-list {
-        border: 1px solid #ddd;
-        padding: 10px;
-        max-height: 400px;
-        overflow-y: auto;
-        flex-grow: 1;
-    }
+        .product-list {
+            border: 1px solid #ddd;
+            padding: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
 
-    .product-box {
-        border-bottom: 1px solid #ddd;
-        padding: 15px 0;
-        display: flex;
-        align-items: flex-start;
-    }
+        .product-box {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            display: flex;
+            align-items: flex-start;
+        }
 
-    .product-item {
-        display: flex;
-        align-items: flex-start;
-        width: 100%;
-    }
+        .product-item {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+        }
 
-    .product-image img {
-        width: 100px;
-        height: 100px;
-        margin-right: 20px;
-    }
+        .product-image img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
 
-    .product-details {
-        flex-grow: 1;
-    }
+        .product-details {
+            flex-grow: 1;
+        }
 
-    .product-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .product-name {
-        font-size: 16px;
-        font-weight: bold;
-        margin: 0;
-    }
+        .product-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
 
-    .product-price {
-        font-size: 16px;
-        color: #333;
-        text-align: right;
-    }
+        .product-price {
+            font-size: 16px;
+            color: #333;
+            text-align: right;
+        }
 
-    .product-description p {
-        margin: 5px 0;
-        font-size: 14px;
-        color: #555;
-    }
+        .product-description p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
 
-    .product-category {
-        text-align: right;
-        margin-top: 10px;
-    }
+        .product-category {
+            text-align: right;
+            margin-top: 10px;
+        }
 
-    .product-category p {
-        font-size: 14px;
-        color: #888;
-        margin: 0;
-    }
+        .product-category p {
+            font-size: 14px;
+            color: #888;
+            margin: 0;
+        }
 
-    .side-panels {
-        width: 25%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: auto;
-    }
+        .side-panels {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: auto;
+        }
 
-    .panel {
-        border: 1px solid #ddd;
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-grow: 1;
-    }
+        .panel {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
 
-    /* تنسيق الروابط كأزرار */
-    .link-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #000;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        margin-top: 10px;
-    }
+        /* تنسيق الروابط كأزرار */
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
 
-    .link-button:hover {
-        background-color: #333;
-    }
-
+        .link-button:hover {
+            background-color: #333;
+        }
     </style>
 </head>
+
 <body>
 
     <h1>The Trend Loft</h1>
@@ -172,7 +173,7 @@
 
         <div class="content-container">
             <div class="products-section">
-                <h2>My Products</h2> 
+                <h2>My Products</h2>
                 <section class="product-list">
                     <div class="product-items">
                         <div class="product-box">
@@ -255,7 +256,7 @@
                             </div>
                         </div>
 
-                       
+
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
@@ -280,19 +281,19 @@
                 </section>
             </div>
 
-           
+
             <section class="side-panels">
                 <div class="panel">
                     <p>Number of products available: XX</p>
                     <p>Product description goes here...</p>
-                    
-                    <a href="#" class="link-button">Add New Product</a>    <!-- رابط              -->
+
+                    <a href="#" class="link-button">Add New Product</a> <!-- رابط              -->
                 </div>
                 <div class="panel">
                     <p>Number of current offers: XX</p>
                     <p>Offers description goes here...</p>
-                   
-                    <a href="#" class="link-button">Add or Remove Offers</a>   <!-- رابط              -->
+
+                    <a href="#" class="link-button">Add or Remove Offers</a> <!-- رابط              -->
                 </div>
             </section>
         </div>
@@ -316,4 +317,5 @@
     </div>
 
 </body>
+
 </html>

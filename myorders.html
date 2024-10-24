@@ -4,12 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <title>My Orders</title>
-    <link href="orderstyle.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .page-title {
+            margin-left: 1%;
+        }
+
+        /* Table */
+
+        table {
+            margin: auto;
+            width: 80%;
+            text-align: center;
+            border: solid;
+            margin-top: 50px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: solid;
+            height: 80px;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+
+        /* --------------------------------------------------------------------------- */
+
+        /* Pagination */
+
+        .pagination {
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .pagination a {
+            color: black;
+            text-decoration: none;
+            font-size: 14pt;
+            text-align: center;
+        }
+
+        .pagination a:active {
+            background-color: gray;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: lightgray;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
     <h1>The Trend Loft</h1>
-    
+
     <!-- NAVIGATION [COPY TO ALL PAGES]-->
     <div id="navigation">
         <div id="leftnav">
@@ -21,9 +80,12 @@
         <div id="rightnav">
             <input id="search" type="text" placeholder="Search...">
             <div class="profile">
-                <img id="profile-img" src="images/user.png">
                 <div class="user">
                     <p>Welcome, <br> User</p>
+                    <div class="user-menu">
+                        <a href="SellerDashboardPage.html">Seller Page</a>
+                        <p>Your Account</p>
+                    </div>
                 </div>
             </div>
             <div class="forcart">
@@ -32,11 +94,16 @@
         </div>
     </div>
 
-    <!-- Page Title -->
-     <h2>My Orders</h2>
+    <!-- Breadcrumbs -->
+    <div class="breadcrumb">
+        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Your Cart</p>
+    </div>
 
-     <!-- Order Table -->
-     <div class="orders">
+    <!-- Page Title -->
+    <h2 class="page-title">My Orders</h2>
+
+    <!-- Order Table -->
+    <div class="orders">
         <table>
             <thead>
                 <tr>
@@ -92,7 +159,7 @@
             <a href="#">&raquo;</a>
         </div>
 
-     </div>
+    </div>
 
     <!-- FOOTER [COPY TO ALL PAGES]-->
     <div class="footer">
