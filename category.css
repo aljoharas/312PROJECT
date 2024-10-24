@@ -70,10 +70,15 @@ h1 {
 
 /* Sidebar Filters */
 .sidebar {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
     width: 20%;
     background-color: #f4f4f4;
     padding: 20px;
     float: left;
+    box-sizing: border-box;
+
 }
 
 .sidebar h3, .sidebar p {
@@ -89,10 +94,15 @@ h1 {
     padding: 5px;
     margin-top: 10px;
 }
+.product-item #img{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: right;
 
 /* Product Flexbox Layout */
 .background{
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 .product-grid {
