@@ -28,7 +28,7 @@ h1 {
 
     justify-content: space-between;
 
-    background-color: white;
+    background-color: #f9f9f9;
 
     align-items: center;
 
@@ -77,10 +77,9 @@ h1 {
 
 
 #logo {
+    width: 150px;
 
-    width: 80px;
-
-    height: 60px;
+    height: 30px;
 
 }
 
@@ -336,9 +335,9 @@ h1 {
 
     clear: both;
 
-    background-color: #eeeeee;
+    background-color: #f9f9f9;
 
-    color: white;
+    color: black;
 
     text-align: center;
 
@@ -352,7 +351,7 @@ h1 {
 
 .footer img {
 
-    width: 80px;
+    width: 150px;
 
     margin-bottom: 10px;
 
