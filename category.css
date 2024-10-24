@@ -1,6 +1,11 @@
-body {
+@font-face {
+    font-family: "Vanity";
+    src: url(Vanity-Light.ttf);
+}
 
-    font-family: Arial, sans-serif;
+
+body {
+    font-family: "Vantiy";
 
     margin: 0;
 
@@ -11,7 +16,6 @@ body {
 
 
 h1 {
-
     text-align: center;
 
     padding: 10px;
@@ -24,7 +28,7 @@ h1 {
 
     justify-content: space-between;
 
-    background-color: #eeeeee;
+    background-color: white;
 
     align-items: center;
 
@@ -332,7 +336,7 @@ h1 {
 
     clear: both;
 
-    background-color: #333;
+    background-color: #eeeeee;
 
     color: white;
 
