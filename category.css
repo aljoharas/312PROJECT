@@ -21,7 +21,6 @@ h1 {
     padding: 10px;
 
 }
-/* After update */
 #navigation {
 
     display: flex;
@@ -35,7 +34,6 @@ h1 {
     padding: 10px 20px;
 
 }
-/* here */
 
 
 #leftnav {
@@ -294,43 +292,34 @@ h1 {
 /* Pagination */
 
 .pagination {
-
-    text-align: center;
-
-    margin-top: 20px;
-
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 30px;
 }
-
-
 
 .pagination a {
-
+    color: black;
     text-decoration: none;
-
-    color: #333;
-
-    padding: 8px 12px;
-
-    border: 1px solid #ccc;
-
-    margin: 0 5px;
-
-    border-radius: 4px;
-
+    font-size: 14pt;
+    text-align: center;
 }
 
-
-
-.pagination a:hover {
-
-    background-color: #ddd;
-
+.pagination a:active {
+    background-color: #6d93aa;
+    color: white;
 }
 
-
-
-/* Footer  after update */
-
+.pagination a:hover:not(.active) {
+    background-color: #6d93aa;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #f-logo{
     width: 150px;
     height: 30px;

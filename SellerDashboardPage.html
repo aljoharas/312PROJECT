@@ -1,219 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Your Seller Account</title>
-	 <link rel="stylesheet" href="style.css">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">  <!--هذا السطر -->
+    <link rel="stylesheet" href="style.css">
 
     <style>
-    /* Main Section */
-   
-   
+        /* Main Section */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            height: auto;
+        }
 
-    .content-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        height: auto;
-    }
+        .products-section {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .products-section {
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-		
-		
-    }
+        .products-section h2 {
+            margin-bottom: 10px;
+        }
 
-    .products-section h2 {
-        margin-bottom: 10px;
-    }
+        .product-list {
+            border: 1px solid #ddd;
+            padding: 10px;
+            max-height: 600px;
+            overflow-y: auto;
+            flex-grow: 1;
+            margin-left: 20px;
+        }
 
-    .product-list {
-        border: 1px solid #ddd;
-        padding: 10px;
-        max-height: 600px; 
-        overflow-y: auto;
-        flex-grow: 1;
-		margin-left: 20px; 
-    }
+        .product-box {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            display: flex;
+            align-items: flex-start;
+            height: auto;
+        }
 
-    .product-box {
-        border-bottom: 1px solid #ddd;
-        padding: 15px 0;
-        display: flex;
-        align-items: flex-start;
-		height: auto; 
-		 
-    }
+        .product-item {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+        }
 
-    .product-item {
-        display: flex;
-        align-items: flex-start;
-        width: 100%;
-    }
+        .product-image img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
 
-    .product-image img {
-        width: 100px;
-        height: 100px;
-        margin-right: 20px;
-    }
+        .product-details {
+            flex-grow: 1;
+        }
 
-    .product-details {
-        flex-grow: 1;
-    }
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .product-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        .product-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
 
-    .product-name {
-        font-size: 16px;
-        font-weight: bold;
-        margin: 0;
-    }
+        .product-price {
+            font-size: 16px;
+            color: #333;
+            text-align: right;
+        }
 
-    .product-price {
-        font-size: 16px;
-        color: #333;
-        text-align: right;
-    }
+        .product-description p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
 
-    .product-description p {
-        margin: 5px 0;
-        font-size: 14px;
-        color: #555;
-    }
+        .product-category {
+            text-align: right;
+            margin-top: 10px;
+        }
 
-    .product-category {
-        text-align: right;
-        margin-top: 10px;
-    }
+        .product-category p {
+            font-size: 14px;
+            color: #888;
+            margin: 0;
+        }
 
-    .product-category p {
-        font-size: 14px;
-        color: #888;
-        margin: 0;
-    }
-	
-.product-list::-webkit-scrollbar {
-    width: 12px;  
-}
+        .product-list::-webkit-scrollbar {
+            width: 12px;
+        }
 
+        .product-list::-webkit-scrollbar-track {
+            background: #CFD8DC;
+        }
 
-.product-list::-webkit-scrollbar-track {
-    background:#CFD8DC;  
-}
+        .product-list::-webkit-scrollbar-thumb {
+            background-color: #6d93aa;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
 
+        
 
-.product-list::-webkit-scrollbar-thumb {
-    background-color:#607D8B;  
-    border-radius: 10px; 
-    border: 2px solid black 
-}
+        .side-panels {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: auto;
+            margin-top: 60px;
+            margin-right: 20px;
+        }
 
+        .panel {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
 
-.product-list::-webkit-scrollbar-thumb:hover {
-    background-color: #455A64;  
-}
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6d93aa;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
 
-    .side-panels {
-        width: 25%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: auto;
-		 margin-top: 60px;
-		 margin-right: 20px;
-    }
-
-    .panel {
-        border: 1px solid #ddd;
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-grow: 1;
-    }
-
-    
-    .link-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #607D8B;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        margin-top: 10px;
-    }
-
-    .link-button:hover {
-        background-color: #455A64;
-    }
-
+        
     </style>
 </head>
-<body>
-   <header>
-    <h1>The Trend Loft</h1>
 
+<body>
     <header>
+        <h1>The Trend Loft</h1>
+
         <!-- Navigation after update -->
         <div id="navigation">
             <div id="leftnav">
-                <a href="homepage.html"><img id="logo" src="images/logo2.png"></a>
-                <!-- Here -->
+                <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="logo"></a>
                 <p>Clothes</p>
-                <p>Bags</p>
+                <p><a href="Category.html">Bags</a></p>
                 <p>Shoes</p>
             </div>
             <div id="rightnav">
                 <input id="search" type="text" placeholder="Search...">
                 <div class="user">
-                    <p>Welcome, <br> Sara <i class="fas fa-chevron-down"></i></p>
-                   <div class="user-menu">
-    <a href="UserPage.html">Your Account</a>
-    <a href="SellerDashboardPage.html">Your Seller Account</a>
-</div>
+                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon"></p>
+                    <div class="user-menu">
+                        <a href="UserPage.html">Your Account<br><br></a>
+                        <a href="SellerDashboardPage.html">Your Seller Account</a>
+                    </div>
                 </div>
                 <div class="forcart">
-                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="card icon"></a>
                 </div>
             </div>
         </div>
     </header>
-	   
+
     <!-- Main Section -->
     <main>
         <div class="breadcrumb">
-            <p><a href="homepage.html">Home</a> > Your Seller Account</p>
+            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Your Seller Account</p>
         </div>
 
         <div class="content-container">
             <div class="products-section">
-                <h2 style=" margin-left: 20px;"> My Products</h2> 
+                <h2 style="margin-left: 20px;">My Products</h2>
                 <section class="product-list">
                     <div class="product-items">
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
-                                      <img src="images/bag2.jpeg" alt="large brown tote bag">
+                                    <img src="images/bag2.jpeg" alt="large brown tote bag">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
-                                        <p class="product-name"><strong>Saint Laurent Brown Tote  </strong></p>
+                                        <p class="product-name"><strong>Saint Laurent Brown Tote</strong></p>
                                         <p class="product-price">$10000</p>
                                     </div>
                                     <div class="product-description">
-                                      <p> Chic leather bag from 1996 collection <br> 100% authentic and in mint condition </p>
+                                        <p>Chic leather bag from 1996 collection <br> 100% authentic and in mint condition</p>
                                     </div>
                                     <div class="product-category">
                                         <p>Category: Bags</p>
@@ -225,7 +209,7 @@
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
-                                    <img src="images/dress2.png" alt="Midi green and white dress"> 
+                                    <img src="images/dress2.png" alt="Midi green and white dress">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
@@ -233,10 +217,10 @@
                                         <p class="product-price">$2500</p>
                                     </div>
                                     <div class="product-description">
-                                       <p> Mint and White Slip On Dress from 1994 collection <br> 100% authentic and in perfect condition</p>
+                                        <p>Mint and White Slip On Dress from 1994 collection <br> 100% authentic and in perfect condition</p>
                                     </div>
                                     <div class="product-category">
-                                        <p>Category: Clothes </p>
+                                        <p>Category: Clothes</p>
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +229,7 @@
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
-                                    <img src="images/shirt.png" alt="black jacket with buttons"> 
+                                    <img src="images/shirt.png" alt="black jacket with buttons">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
@@ -253,8 +237,7 @@
                                         <p class="product-price">$1500</p>
                                     </div>
                                     <div class="product-description">
-                                          <p> Limited edition black shirt from 1980 collection <br> 100% authentic and in good condition</p>
-
+                                        <p>Limited edition black shirt from 1980 collection <br> 100% authentic and in good condition</p>
                                     </div>
                                     <div class="product-category">
                                         <p>Category: Clothes</p>
@@ -274,7 +257,7 @@
                                         <p class="product-price">$5000</p>
                                     </div>
                                     <div class="product-description">
-                                    <p> Classic canvas shoulder bag with leather strap from 2005 collection<br> 100% authentic and in good condition</p>
+                                        <p>Classic canvas shoulder bag with leather strap from 2005 collection<br> 100% authentic and in good condition</p>
                                     </div>
                                     <div class="product-category">
                                         <p>Category: Bags</p>
@@ -283,12 +266,10 @@
                             </div>
                         </div>
 
-                       
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
-                                     <img src="images/product2.png" alt="Black leather boots">
-
+                                    <img src="images/product2.png" alt="Black leather boots">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
@@ -296,7 +277,7 @@
                                         <p class="product-price">$2000</p>
                                     </div>
                                     <div class="product-description">
-                                     <p> Slip on durable leather boots from 2001 collection <br> 100% authentic and in mint condition </p>
+                                        <p>Slip on durable leather boots from 2001 collection <br> 100% authentic and in mint condition</p>
                                     </div>
                                     <div class="product-category">
                                         <p>Category: Shoes</p>
@@ -304,10 +285,11 @@
                                 </div>
                             </div>
                         </div>
-                       <div class="product-box">
-                            <div class="product-item">
+
+                        <div class="product-box">              
+						<div class="product-item">
                                 <div class="product-image">
-                                    <img src="images/product1.png" alt="Brown bag"> 
+                                    <img src="images/product1.png" alt="Brown bag">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
@@ -315,7 +297,7 @@
                                         <p class="product-price">$7000</p>
                                     </div>
                                     <div class="product-description">
-                                     <p> One of the most timeless leather bags from 1990 collection. <br> 100% authentic and in perfect condition </p>
+                                        <p>One of the most timeless leather bags from 1990 collection. <br> 100% authentic and in perfect condition</p>
                                     </div>
                                     <div class="product-category">
                                         <p>Category: Bags</p>
@@ -323,46 +305,43 @@
                                 </div>
                             </div>
                         </div>
-						
                     </div>
                 </section>
             </div>
 
-           
             <section class="side-panels">
                 <div class="panel">
                     <p>Number of products available: 6</p>
-                    <p>Add new products to enhance your selling experience And offer more options to your customers. Keep your inventory updated regularly to attract more buyers.</p>
-
-                    
-                    <a href="AddProduct.html" class="link-button">Add New Product</a>    
+                    <p>Add new products to enhance your selling experience and offer more options to your customers. Keep your inventory updated regularly to attract more buyers.</p>
+                    <a href="AddProduct.html" class="link-button">Add New Product</a>
                 </div>
                 <div class="panel">
                     <p>Number of current offers: 3</p>
                     <p>Manage your current offers effectively to boost product sales. Leverage promotional deals to capture attention and increase demand for your products.</p>
-                   
-                    <a href="" class="link-button">Add or Remove Offers</a>   <!-- رابط   ***************************************************  -->
+                    <a href="OffersPage.html" class="link-button">Add or Remove Offers</a> <!-- رابط -->
                 </div>
             </section>
         </div>
     </main>
 
-    <div class="footer">
-        <img src="images/logo2.png" id="f-logo" alt="logo">
-        <div class="contacts">
-            <div class="phone">
-                <img src="images/phone-icon.png" id="phone-icon">
-                <p>+955XXXXXXXXX</p>
+    <footer>
+        <div class="footer">
+            <img src="images/logo2.png" id="f-logo" alt="logo">
+            <div class="contacts">
+                <div class="phone">
+                    <img src="images/phone-icon.png" id="phone-icon" alt="Phone Icon">
+                    <p>+955XXXXXXXXX</p>
+                </div>
+                <div class="email">
+                    <img src="images/email-icon.png" id="email-icon" alt="Email Icon">
+                    <p>info@example.com</p>
+                </div>
             </div>
-            <div class="email">
-                <img src="images/email-icon.png" id="email-icon">
-                <p>info@example.com</p>
+            <div class="copyright">
+                <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
             </div>
         </div>
-        <div class="copyright">
-            <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
-        </div>
-    </div>
-
+    </footer>
 </body>
+
 </html>

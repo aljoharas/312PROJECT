@@ -4,6 +4,9 @@
         src: url(Vanity-Light.ttf);
     }
 
+button:hover {
+    cursor: pointer;
+}
 
 /* Header */
     head{
@@ -41,46 +44,14 @@
         padding: 10px 20px;
 
     }
+
     /* here */
-    /* الاضافات */
+ .user-arrow-icon {
+    margin-left: 5px;
+    width: 10px ;
+    height: 10px ;
+}
 
-    .user-menu {
-        border: 1px solid #ddd;
-        padding: 5px;
-    }
-
-    .user-menu a:not(:last-child) {
-        border-bottom: 1px solid #ddd; 
-    }
-
-    .user-menu a {
-        display: block;
-        padding: 5px; 
-        text-decoration: none;
-        color: black;
-        text-align: center;
-    }
-
-    .user-menu a:hover {
-        background-color: #ddd;
-    }
-
-    .user p {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; 
-    }
-
-    .fas.fa-chevron-down {
-        margin-left: 5px;
-        font-size: 12px; 
-    }
-
-    .user:hover .fas.fa-chevron-down {
-        transform: rotate(180deg);
-        transition: transform 0.3s ease;
-    }
-    /* حتى هينا*/
 
     #navigation {
         display: flex;
@@ -94,6 +65,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+
+    #leftnav a{
+        text-decoration: none;
+        color:black;
     }
 
     #rightnav {
@@ -113,7 +89,7 @@
         border-bottom-width: 1px;
         background-color: transparent;
     }
-    /* logo after update */
+   
     #logo {
         width: 150px;
 
@@ -165,9 +141,8 @@
     }
 
 
-/* Footer after update */ 
 
-    /* updated part */
+/*footer */
     #f-logo{
         width: 150px;
         height: 30px;
@@ -175,7 +150,6 @@
         margin: auto;
         margin-top: 80px;
     }
-    /* done */
     .copyright{
         background-color: #f9f9f9;
         height: 40px;
