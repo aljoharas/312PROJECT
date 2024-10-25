@@ -10,7 +10,6 @@ head{
     font-family: "Vanity";
 }
 
-/* here */
 h1 {
     text-align: center;
 }
@@ -27,7 +26,7 @@ h1 {
     margin: 2% 1%;
 }
 
-/* Navigation after update */
+
 navigation {
 
     display: flex;
@@ -42,7 +41,6 @@ navigation {
 
 }
 
-/* here */
 .user-arrow-icon {
 margin-left: 5px;
 width: 10px ;
@@ -131,10 +129,15 @@ height: 10px ;
     border-bottom-left-radius: 8%;
     border-bottom-right-radius: 8%;
 }
+.products{
+    display: flex;
+    justify-content: center;
+}
 
 /* REVIEW ORDER */
 .review-order {
     padding: 20px;
+    margin: 2% 1%;
 }
 
 .review-order h1 {
@@ -159,6 +162,7 @@ height: 10px ;
 .products {
     display: flex;
     flex-direction: column;
+    margin: 2% 1%;
 }
 
 .product-item {
@@ -197,8 +201,17 @@ height: 10px ;
 .review-btn:hover {
     background-color: #6d93aa;
 }
-.background{
-    display: flex;
+.button{
+    display:flex;
+    flex-direction: column;
     justify-content: right;
-
+}
+.review-btn:hover{
+    background-color: #64989d; 
+}
+.Stars{
+    display:flex;
+    flex-direction: column;
+    justify-content: right;
+    height: 35%;
 }
