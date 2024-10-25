@@ -4,9 +4,8 @@
     src: url(Vanity-Light.ttf);
 }
 
-
 /* Header */
-head{
+head {
     font-family: "Vanity";
 }
 
@@ -15,38 +14,28 @@ h1 {
 }
 
 /* Breadcrumb */
-
-.breadcrumb-links{
+.breadcrumb-links {
     color: gray;
-
 }
 
-.breadcrumb{
+.breadcrumb {
     color: gray;
     margin: 2% 1%;
 }
 
-
 navigation {
-
     display: flex;
-
     justify-content: space-between;
-
     background-color: #f9f9f9;
-
     align-items: center;
-
-    padding: 10px 20px;
-
+    padding: 0.625em 1.25em; 
 }
 
 .user-arrow-icon {
-margin-left: 5px;
-width: 10px ;
-height: 10px ;
+    margin-left: 0.3em; 
+    width: 0.625em; 
+    height: 0.625em;
 }
-
 
 #navigation {
     display: flex;
@@ -69,37 +58,29 @@ height: 10px ;
 }
 
 #search {
-    height: 25px;
-    width:40%;
+    height: 1.6em; 
+    width: 40%;
     align-self: center;
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom-color: gray;
-    border-bottom-width: 1px;
+    border-bottom: 0.063em solid gray; 
     background-color: transparent;
 }
 
 #logo {
-    width: 150px;
-
-    height: 30px;
-
+    width: 9.375em; 
+    height: 1.875em; 
 }
 
-#profile-img {
-    width: 40px;
-    height: 40px;
+#profile-img, #cart-img {
+    width: 2.5em; 
+    height: 2.5em;
     display: flex;
     align-self: center;
 }
 
-#cart-img {
-    width: 40px;
-    height: 40px;
-}
-
-.forcart{
+.forcart {
     display: flex;
     align-items: center;
 }
@@ -108,41 +89,42 @@ height: 10px ;
     position: absolute;
     display: none;
     background-color: white;
-    width: 100px;
+    width: 6.25em; 
     text-align: left;
-    text-indent: 5px;
-    border-bottom-left-radius: 10px ;
-    border-bottom-right-radius: 10px;
+    text-indent: 0.3em; 
+    border-bottom-left-radius: 0.625em; 
+    border-bottom-right-radius: 0.625em;
 }
 
-.user-menu a{
-    margin-left: 5px ;
+.user-menu a {
+    margin-left: 0.3em;
     color: black;
     text-decoration: none;
 }
 
-.user:hover .user-menu{
+.user:hover .user-menu {
     display: block;
-    width: 150px;
+    width: 9.375em;
     background-color: #f9f9f9;
     z-index: 1;
     border-bottom-left-radius: 8%;
     border-bottom-right-radius: 8%;
 }
-.products{
+
+.products {
     display: flex;
     justify-content: center;
 }
 
 /* REVIEW ORDER */
 .review-order {
-    padding: 20px;
+    padding: 1.25em; 
     margin: 2% 1%;
 }
 
 .review-order h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 1.5em; 
+    margin-bottom: 0.625em; 
 }
 
 .order-number {
@@ -150,13 +132,13 @@ height: 10px ;
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 0.625em; 
+    border: 0.063em solid #ccc;
+    border-radius: 0.313em; 
 }
 
 .order-number select {
-    padding: 5px;
+    padding: 0.3em; 
 }
 
 .products {
@@ -170,18 +152,17 @@ height: 10px ;
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    height: 150px; 
-    box-sizing: border-box; 
+    padding: 1.25em; 
+    margin-bottom: 0.625em; 
+    border-radius: 0.313em;
+    border: 0.063em solid #ccc;
+    box-sizing: border-box;
 }
 
 .product-item img {
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
+    width: 5em; 
+    height: 5em;
+    margin-right: 1.25em; 
 }
 
 .product-details {
@@ -193,25 +174,28 @@ height: 10px ;
     justify-content: flex-start;
     background-color: #6d93aa;
     color: #fff;
-    padding: 10px 30px;
+    padding: 0.625em 1.875em; 
     border: none;
-    border-radius: 5px;
+    border-radius: 0.313em;
 }
 
 .review-btn:hover {
     background-color: #6d93aa;
 }
-.button{
-    display:flex;
+
+.button {
+    display: flex;
     flex-direction: column;
     justify-content: right;
 }
-.review-btn:hover{
-    background-color: #64989d; 
+
+.review-btn:hover {
+    background-color: #64989d;
 }
-.Stars{
+#Stars{
     display:flex;
     flex-direction: column;
     justify-content: right;
-    height: 35%;
+      width: 10%;
+      height: 30%;
 }
