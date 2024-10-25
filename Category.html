@@ -7,11 +7,11 @@
     src: url(Vanity-Light.ttf);
 }
 
-body {
-  font-family:"Vanity";
-    margin: 0;
-    padding: 0;
+/* Header */
+head {
+    font-family: "Vanity";
 }
+
 
 h1 {
     text-align: center;
@@ -82,37 +82,6 @@ h1 {
     display: flex;
     justify-content: center;
 }
-/**
-.sidebar {
-    margin-bottom: 1.25em; 
-    border-radius: 0.313em; 
-    background-color: #f9f9f9;
-    width: 20%;
-    padding: 1.25em;
-    float: left;
-    box-sizing: border-box;
-}
-
-.sidebar h3, .sidebar p {
-    margin: 0.625em 0; 
-}
-
-.sidebar input[type="checkbox"] {
-    margin-right: 0.625em;
-}
-
-.sidebar input[type="text"] {
-    width: 80%;
-    padding: 0.3em; 
-    margin-top: 0.625em; 
-}
-
-.product-item #img {
-    display: flex;
-    width: 2.5em; 
-    height: 2.5em;
-    justify-content: right;
-} **/
 
 .background {
     display: flex;
@@ -228,7 +197,7 @@ h1 {
     align-items: center;
     justify-content: right;
     padding: 0.625em 1.25em; 
-    
+
 }
 
 #filter{ 
@@ -236,6 +205,7 @@ h1 {
     margin-bottom: 1em;
     text-align: center;
     line-height: 6em; 
+    margin-right: 12%;
 }
 
 
@@ -280,29 +250,6 @@ h1 {
             <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Category</p>
         </div>
     </header>
-        
-        <!-- Sidebar Filters -->
-       <!--                    div class="sidebar">
-            <h3>DEPARTMENT</h3>
-            <input type="checkbox" id="women"><label for="women">Women</label><br>
-            <input type="checkbox" id="men"><label for="men">Men</label><br>
-
-            <h3>DESIGNERS</h3>
-            <input type="checkbox" id="brand1"><label for="brand1">Chanel</label><br>
-            <input type="checkbox" id="brand2"><label for="brand2">Loewe</label><br>
-            <input type="checkbox" id="brand3"><label for="brand3">Miu miu</label><br>
-            <input type="checkbox" id="brand4"><label for="brand4">Dior</label><br>
-
-            <h3>PRICE</h3>
-            <p>MINIMUM AMOUNT</p>
-            <input type="text" placeholder="2500 SR">
-            <select name="filter" id="filter">
-                <option value="filter1">Our picks </option>
-                <option value="order2"> Highest price</option>
-                <option value="order3">lowest price</option>
-            </select>
-        </div>                   --> 
-        <!-- Products -->
          <div class="filterbackground" >
             <select name="filter" id="filter">
                 <option value="filter1">Our picks </option>
@@ -396,13 +343,13 @@ h1 {
                 <p>+955XXXXXXXXX</p>
             </div>
             <div class="email">
-                <img src="images/email-icon.png" id="email-icon" alt="email">
-                <p>info@example.com</p>
-            </div>
+                <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email"> </a>  
+                 <p>info@example.com</p>
+             </div>
         </div>
         <div class="copyright">
             <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
         </div>
     </div>
-    </body>
+</body>
 </html>
