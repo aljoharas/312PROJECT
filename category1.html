@@ -220,6 +220,22 @@ h1 {
     display: flex;
     align-items: center;
 }
+.filterbackground{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: right;
+    padding: 0.625em 1.25em; 
+    
+}
+
+#filter{ 
+    background-color: #ccc;
+    margin-bottom: 1em;
+    text-align: center;
+    line-height: 6em; 
+}
 
 
 
@@ -263,23 +279,15 @@ h1 {
             <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Category</p>
         </div>
     </header>
-    <div class="all">
-        <!-- Sidebar Filters -->
-        <div class="sidebar">
-            <h3>DEPARTMENT</h3>
-            <input type="checkbox" id="women"><label for="women">Women</label><br>
-            <input type="checkbox" id="men"><label for="men">Men</label><br>
-
-            <h3>DESIGNERS</h3>
-            <input type="checkbox" id="brand1"><label for="brand1">Chanel</label><br>
-            <input type="checkbox" id="brand2"><label for="brand2">Loewe</label><br>
-            <input type="checkbox" id="brand3"><label for="brand3">Miu miu</label><br>
-            <input type="checkbox" id="brand4"><label for="brand4">Dior</label><br>
-
-            <h3>PRICE</h3>
-            <p>MINIMUM AMOUNT</p>
-            <input type="text" placeholder="2500 SR">
-        </div>
+    <div class="filterbackground" >
+        <select name="filter" id="filter">
+            <option value="filter1">Our picks </option>
+            <option value="order2"> Highest price</option>
+            <option value="order3">lowest price</option>
+            </div>
+        </select>
+     </div>
+    <div class="all">  
         <!-- Products -->
         <div class="background">
             <div class="product-grid">
