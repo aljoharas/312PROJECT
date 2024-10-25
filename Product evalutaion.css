@@ -139,7 +139,7 @@ height: 10px ;
 
 .review-order h1 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .order-number {
@@ -157,17 +157,21 @@ height: 10px ;
 }
 
 .products {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #fff;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    height: 150px; 
+    box-sizing: border-box; 
 }
 
 .product-item img {
@@ -181,13 +185,20 @@ height: 10px ;
 }
 
 .review-btn {
+    display: flex;
+    justify-content: flex-start;
     background-color: #6d93aa;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
 }
 
 .review-btn:hover {
     background-color: #6d93aa;
+}
+.background{
+    display: flex;
+    justify-content: right;
+
 }
