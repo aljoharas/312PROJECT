@@ -1,9 +1,231 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+@font-face {
+    font-family: "Vanity";
+    src: url(Vanity-Light.ttf);
+}
+
+body {
+  font-family:"Vanity";
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 0.625em; 
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    align-items: center;
+    padding: 0.625em 1.25em; 
+}
+
+#leftnav {
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#rightnav {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search {
+    height: 1.6em; 
+    padding: 0.3em; 
+}
+
+#logo, #f-logo {
+    width: 9.375em; 
+    height: 1.875em; 
+    display: block;
+    margin: auto;
+}
+
+#cart-img, #profile-img {
+    width: 2.5em; 
+    height: 2.5em;
+    margin-left: 0.625em; 
+}
+
+.forcart {
+    display: flex;
+    align-items: center;
+}
+
+.user-menu {
+    position: absolute;
+    display: none;
+    background-color: lightgray;
+    width: 6.25em; 
+    text-align: left;
+    text-indent: 0.3em; 
+    border-bottom-left-radius: 0.625em; 
+    border-bottom-right-radius: 0.625em;
+}
+
+.user:hover .user-menu {
+    display: block;
+}
+
+.all {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar {
+    margin-bottom: 1.25em; 
+    border-radius: 0.313em; 
+    background-color: #f9f9f9;
+    width: 20%;
+    padding: 1.25em;
+    float: left;
+    box-sizing: border-box;
+}
+
+.sidebar h3, .sidebar p {
+    margin: 0.625em 0; 
+}
+
+.sidebar input[type="checkbox"] {
+    margin-right: 0.625em;
+}
+
+.sidebar input[type="text"] {
+    width: 80%;
+    padding: 0.3em; 
+    margin-top: 0.625em; 
+}
+
+.product-item #img {
+    display: flex;
+    width: 2.5em; 
+    height: 2.5em;
+    justify-content: right;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+}
+
+.product-grid {
+    width: 75%;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.25em; 
+}
+
+.product-item {
+    width: 30%;
+    margin-bottom: 1.25em; 
+    border: 0.063em solid #ccc;
+    border-radius: 0.313em;
+    padding: 1.25em;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.product-item h4 {
+    margin: 0.625em 0;
+}
+
+.product-item p, pre {
+    color: #666;
+    font-size: 0.875em; 
+}
+
+.cart-icon {
+    width: 3.125em; 
+    height: 3.125em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-icon img {
+    width: 2.5em;
+    height: auto;
+}
+
+.pagination {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 1.875em; 
+}
+
+.pagination a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+}
+
+.pagination a:active {
+    background-color: #6d93aa;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #6d93aa;
+    color: white;
+    width: 1.875em; 
+    height: 1.875em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright {
+    background-color: #f9f9f9;
+    height: 2.5em; 
+    display: flex;
+    align-items: center;
+    text-indent: 0.625em; 
+}
+
+.contacts {
+    width: 33%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#phone-icon, #email-icon {
+    height: 1.25em; 
+    width: 1.25em;
+    margin-right: 0.3em;}
+
+.phone, .email {
+    display: flex;
+    align-items: center;
+}
+
+
+
+    </style>
     <meta charset="UTF-8">
     <title>Product Category</title>
-    <link rel="stylesheet" href="category.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Your Seller Account</title>
     <link rel="stylesheet" href="style.css">
@@ -62,59 +284,60 @@
         <div class="background">
             <div class="product-grid">
                 <div class="product-item">
-                    <img src="images/bottega bag.png" alt="Item 1">
+                    <img src="images/Alaia.png" alt="alaia shoes">
                     <div class="product-info">
-                        <h4> Bottega Veneta </h4>
-                        <p> Large Parachute Bag in Intrecciato Leather <br>5000 SR > </p>
+                        <h4> Alaïa </h4>
+                        <p> Mary-Jane Crystal-embellished Ballet Flats in Nappa Leather
+                            <br>5000 SR > </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/miu miu bag.png" alt="Miu miu leather black and gold bag">
+                    <img src="images/amina.png" alt="Amina Muaddi heels ">
                     <div class="product-info">
-                        <h4>Miu miu</h4>
-                        <p> Mini Arcadie Top-handle Bag in Matelassé Nappa <br>7000SR </p>
+                        <h4>Amina Muaddi</h4>
+                        <p> Gilda 95 Ombré Crystal-embellished Mules in Mirror Leather <br>7000SR </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/loewe bag.png" alt="Brown loewe bag">
+                    <img src="images/ChristianLouboutin.png" alt="Christian Louboutin">
                     <div class="product-info">
-                        <h4>Loewe</h4>
-                        <p>Mini Puzzle Bag in Classic Calfskin <br> 8000SR </p>
+                        <h4>Christian Louboutin</h4>
+                        <p>Sporty Kate 100 Pumps in Leather<br> 8000SR </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/hermes bag.png" alt="Kelly wallet pink" style="max-width: 500;">
+                    <img src="images/Gianvito.png" alt="Gianvito Rossi heels" style="max-width: 500;">
                     <div class="product-info">
-                        <h4>Hermès</h4>
-                        <p>Kelly To Go Wallet in Epsom Leather <br>7500SR </p>
+                        <h4>Gianvito Rossi</h4>
+                        <p>Elle 85 Mule Sandals in Patent Leather & Plexi <br>7500SR </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/Chanel bag.png" alt="Chanel pink bag">
+                    <img src="images/Saint.png" alt="SAINT LAURENT heels">
                     <div class="product-info">
-                        <h4>Chanel</h4>
-                        <p>Medium Double Flap Bag in Quilted Lambskin Leather <br>6000SR </p>
+                        <h4>SAINT LAURENT</h4>
+                        <p>D'orsay 100 Pumps in Smooth Leathe<br>6000SR </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/bottega bag2.png" alt="bottega bag">
-                    <h4>Bottega Veneta</h4>
-                    <p>Mini Arco Tote Bag in Intrecciato Leather<br> 6750SR </p>
+                    <img src="images/tomford.png" alt="tom ford heels">
+                    <h4>Tom ford</h4>
+                    <p>Naked 105 Padlock Sandals in Laminated Leather<br> 6750SR </p>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
