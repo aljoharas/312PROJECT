@@ -9,15 +9,8 @@
 
     <style>
     /* Main Section */
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-    .breadcrumb {
-        margin-bottom: 20px;
-    }
+   
+   
 
     .content-container {
         display: flex;
@@ -30,6 +23,8 @@
         width: 70%;
         display: flex;
         flex-direction: column;
+		
+		
     }
 
     .products-section h2 {
@@ -39,9 +34,10 @@
     .product-list {
         border: 1px solid #ddd;
         padding: 10px;
-        max-height: 400px;
+        max-height: 600px; 
         overflow-y: auto;
         flex-grow: 1;
+		margin-left: 20px; 
     }
 
     .product-box {
@@ -49,6 +45,8 @@
         padding: 15px 0;
         display: flex;
         align-items: flex-start;
+		height: auto; 
+		 
     }
 
     .product-item {
@@ -130,6 +128,7 @@
         justify-content: space-between;
         height: auto;
 		 margin-top: 60px;
+		 margin-right: 20px;
     }
 
     .panel {
@@ -163,14 +162,15 @@
     </style>
 </head>
 <body>
-    <!--                         من هينا                     -->
+   <header>
     <h1>The Trend Loft</h1>
 
     <header>
-        <!-- NAVIGATION [COPY TO ALL PAGES] -->
+        <!-- Navigation after update -->
         <div id="navigation">
             <div id="leftnav">
-                <a href="homepage.html"><img id="logo" src="images/logo.png"></a>
+                <a href="homepage.html"><img id="logo" src="images/logo2.png"></a>
+                <!-- Here -->
                 <p>Clothes</p>
                 <p>Bags</p>
                 <p>Shoes</p>
@@ -183,7 +183,6 @@
     <a href="UserPage.html">Your Account</a>
     <a href="SellerDashboardPage.html">Your Seller Account</a>
 </div>
-
                 </div>
                 <div class="forcart">
                     <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
@@ -191,7 +190,7 @@
             </div>
         </div>
     </header>
-	   <!--                        الى هينا                -->
+	   
     <!-- Main Section -->
     <main>
         <div class="breadcrumb">
@@ -200,24 +199,24 @@
 
         <div class="content-container">
             <div class="products-section">
-                <h2>My Products</h2> 
+                <h2 style=" margin-left: 20px;"> My Products</h2> 
                 <section class="product-list">
                     <div class="product-items">
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
-                                    <img src="product-placeholder.png" alt="Product Image">
+                                      <img src="images/bag2.jpeg" alt="large brown tote bag">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
-                                        <p class="product-name"><strong>Name of Products</strong></p>
-                                        <p class="product-price">$X</p>
+                                        <p class="product-name"><strong>Saint Laurent Brown Tote  </strong></p>
+                                        <p class="product-price">$10000</p>
                                     </div>
                                     <div class="product-description">
-                                        <p>Product Description</p>
+                                      <p> Chic leather bag from 1996 collection <br> 100% authentic and in mint condition </p>
                                     </div>
                                     <div class="product-category">
-                                        <p>Category: XX</p>
+                                        <p>Category: Bags</p>
                                     </div>
                                 </div>
                             </div>
@@ -226,18 +225,18 @@
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
-                                    <img src="product-placeholder.png" alt="Product Image">
+                                    <img src="images/dress2.png" alt="Midi green and white dress"> 
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
-                                        <p class="product-name"><strong>Name of Products</strong></p>
-                                        <p class="product-price">$X</p>
+                                        <p class="product-name"><strong>Misha Satin Dress</strong></p>
+                                        <p class="product-price">$2500</p>
                                     </div>
                                     <div class="product-description">
-                                        <p>Product Description</p>
+                                       <p> Mint and White Slip On Dress from 1994 collection <br> 100% authentic and in perfect condition</p>
                                     </div>
                                     <div class="product-category">
-                                        <p>Category: XX</p>
+                                        <p>Category: Clothes </p>
                                     </div>
                                 </div>
                             </div>
@@ -246,18 +245,19 @@
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
-                                    <img src="product-placeholder.png" alt="Product Image">
+                                    <img src="images/shirt.png" alt="black jacket with buttons"> 
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
-                                        <p class="product-name"><strong>Name of Products</strong></p>
-                                        <p class="product-price">$X</p>
+                                        <p class="product-name"><strong>Chanel Velour Shirt</strong></p>
+                                        <p class="product-price">$1500</p>
                                     </div>
                                     <div class="product-description">
-                                        <p>Product Description</p>
+                                          <p> Limited edition black shirt from 1980 collection <br> 100% authentic and in good condition</p>
+
                                     </div>
                                     <div class="product-category">
-                                        <p>Category: XX</p>
+                                        <p>Category: Clothes</p>
                                     </div>
                                 </div>
                             </div>
@@ -266,18 +266,18 @@
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
-                                    <img src="product-placeholder.png" alt="Product Image">
+                                    <img src="images/product3.png" alt="shoulder bag with logo">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
-                                        <p class="product-name"><strong>Name of Products</strong></p>
-                                        <p class="product-price">$X</p>
+                                        <p class="product-name"><strong>Dior Shoulder Bag</strong></p>
+                                        <p class="product-price">$5000</p>
                                     </div>
                                     <div class="product-description">
-                                        <p>Product Description</p>
+                                    <p> Classic canvas shoulder bag with leather strap from 2005 collection<br> 100% authentic and in good condition</p>
                                     </div>
                                     <div class="product-category">
-                                        <p>Category: XX</p>
+                                        <p>Category: Bags</p>
                                     </div>
                                 </div>
                             </div>
@@ -287,23 +287,43 @@
                         <div class="product-box">
                             <div class="product-item">
                                 <div class="product-image">
-                                    <img src="product-placeholder.png" alt="Product Image">
+                                     <img src="images/product2.png" alt="Black leather boots">
+
                                 </div>
                                 <div class="product-details">
                                     <div class="product-header">
-                                        <p class="product-name"><strong>Name of Products</strong></p>
-                                        <p class="product-price">$X</p>
+                                        <p class="product-name"><strong>Givenchy Leather Boots in Black</strong></p>
+                                        <p class="product-price">$2000</p>
                                     </div>
                                     <div class="product-description">
-                                        <p>Product Description</p>
+                                     <p> Slip on durable leather boots from 2001 collection <br> 100% authentic and in mint condition </p>
                                     </div>
                                     <div class="product-category">
-                                        <p>Category: XX</p>
+                                        <p>Category: Shoes</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                       <div class="product-box">
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="images/product1.png" alt="Brown bag"> 
+                                </div>
+                                <div class="product-details">
+                                    <div class="product-header">
+                                        <p class="product-name"><strong>Bottega Veneta Arco Tote Bag</strong></p>
+                                        <p class="product-price">$7000</p>
+                                    </div>
+                                    <div class="product-description">
+                                     <p> One of the most timeless leather bags from 1990 collection. <br> 100% authentic and in perfect condition </p>
+                                    </div>
+                                    <div class="product-category">
+                                        <p>Category: Bags</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
                     </div>
                 </section>
             </div>
@@ -311,24 +331,24 @@
            
             <section class="side-panels">
                 <div class="panel">
-                    <p>Number of products available: 5</p>
+                    <p>Number of products available: 6</p>
                     <p>Add new products to enhance your selling experience And offer more options to your customers. Keep your inventory updated regularly to attract more buyers.</p>
 
                     
-                    <a href="#" class="link-button">Add New Product</a>    <!-- رابط              -->
+                    <a href="AddProduct.html" class="link-button">Add New Product</a>    
                 </div>
                 <div class="panel">
                     <p>Number of current offers: 3</p>
                     <p>Manage your current offers effectively to boost product sales. Leverage promotional deals to capture attention and increase demand for your products.</p>
                    
-                    <a href="#" class="link-button">Add or Remove Offers</a>   <!-- رابط              -->
+                    <a href="" class="link-button">Add or Remove Offers</a>   <!-- رابط   ***************************************************  -->
                 </div>
             </section>
         </div>
     </main>
 
     <div class="footer">
-        <img src="images/logo.png" id="f-logo">
+        <img src="images/logo2.png" id="f-logo" alt="logo">
         <div class="contacts">
             <div class="phone">
                 <img src="images/phone-icon.png" id="phone-icon">
