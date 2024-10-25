@@ -4,6 +4,9 @@
         src: url(Vanity-Light.ttf);
     }
 
+button:hover {
+    cursor: pointer;
+}
 
 /* Header */
     head{
