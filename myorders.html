@@ -21,14 +21,18 @@
             border-collapse: collapse;
         }
 
-        th, td {
+        th,
+        td {
             border: solid;
+            border-color: lightgray;
             height: 80px;
             border-collapse: collapse;
         }
 
         th {
-            background-color: lightgray;
+            background-color: #6d93aa;
+            color: white;
+            border-color: #6d93aa;
         }
 
         /* --------------------------------------------------------------------------- */
@@ -51,12 +55,13 @@
         }
 
         .pagination a:active {
-            background-color: gray;
+            background-color: #6d93aa;
             color: white;
         }
 
         .pagination a:hover:not(.active) {
-            background-color: lightgray;
+            background-color: #6d93aa;
+            color: white;
             width: 30px;
             height: 30px;
             display: flex;
@@ -72,31 +77,29 @@
     <!-- NAVIGATION [COPY TO ALL PAGES]-->
     <div id="navigation">
         <div id="leftnav">
-            <a href="homepage.html"><img id="logo" src="images/logo2.png"></a>
+            <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft"></a>
             <p>Clothes</p>
             <p>Bags</p>
             <p>Shoes</p>
         </div>
         <div id="rightnav">
             <input id="search" type="text" placeholder="Search...">
-            <div class="profile">
-                <div class="user">
-                    <p>Welcome, <br> User</p>
-                    <div class="user-menu">
-                        <a href="SellerDashboardPage.html">Seller Page</a>
-                        <p>Your Account</p>
-                    </div>
+            <div class="user">
+                <p>Welcome, <br> Sara</p>
+                <div class="user-menu">
+                    <a href="UserPage.html">Your Account</a>
+                    <a href="SellerDashboardPage.html">Your Seller Account</a>
                 </div>
             </div>
             <div class="forcart">
-                <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+                <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="Cart"></a>
             </div>
         </div>
     </div>
 
     <!-- Breadcrumbs -->
     <div class="breadcrumb">
-        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Your Cart</p>
+        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; <a href="UserPage.html" class="breadcrumb-links">Your Account</a> &raquo; My Orders</p>
     </div>
 
     <!-- Page Title -->
@@ -116,61 +119,61 @@
             <tbody>
                 <tr>
                     <td>#001</td>
-                    <td>DD/MM/YYYY</td>
-                    <td>hh:mm</td>
-                    <td>$X</td>
+                    <td>06/12/2023</td>
+                    <td>18:03</td>
+                    <td>$2000</td>
                 </tr>
                 <tr>
                     <td>#002</td>
-                    <td>DD/MM/YYYY</td>
-                    <td>hh:mm</td>
-                    <td>$X</td>
+                    <td>18/02/2024</td>
+                    <td>12:28</td>
+                    <td>$6500</td>
                 </tr>
                 <tr>
                     <td>#003</td>
-                    <td>DD/MM/YYYY</td>
-                    <td>hh:mm</td>
-                    <td>$X</td>
+                    <td>22/06/2024</td>
+                    <td>11:52</td>
+                    <td>$10,000</td>
                 </tr>
                 <tr>
                     <td>#004</td>
-                    <td>DD/MM/YYYY</td>
-                    <td>hh:mm</td>
-                    <td>$X</td>
+                    <td>27/07/2024</td>
+                    <td>16:51</td>
+                    <td>$8000</td>
                 </tr>
                 <tr>
                     <td>#005</td>
-                    <td>DD/MM/YYYY</td>
-                    <td>hh:mm</td>
-                    <td>$X</td>
+                    <td>30/10/2024</td>
+                    <td>21:46</td>
+                    <td>$12,750</td>
                 </tr>
             </tbody>
         </table>
 
         <!-- Pagination -->
         <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">&raquo;</a>
+            <a href="">&laquo;</a>
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+            <a href="">&raquo;</a>
         </div>
 
     </div>
 
     <!-- FOOTER [COPY TO ALL PAGES]-->
     <div class="footer">
-        <img src="images/logo2.png" id="f-logo">
+        <img src="images/logo2.png" id="f-logo" alt="The Trend Loft">
         <div class="contacts">
             <div class="phone">
-                <img src="images/phone-icon.png" id="phone-icon">
+                <img src="images/phone-icon.png" id="phone-icon" alt="Phone Number">
                 <p>+955XXXXXXXXX</p>
             </div>
             <div class="email">
-                <img src="images/email-icon.png" id="email-icon">
+                <img src="images/email-icon.png" id="email-icon" alt="Email Address">
                 <p>info@example.com</p>
             </div>
         </div>
