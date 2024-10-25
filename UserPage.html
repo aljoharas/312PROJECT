@@ -5,25 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Account</title>
-    <link rel="stylesheet" href="style.css">
+	 <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            font-size: 36px;
-            color: #333;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin: 0;
-        }
+      
 
         #main-content {
             display: flex;
@@ -31,6 +19,17 @@
             padding: 30px;
             align-items: stretch;
         }
+		#user-section {
+           display: flex; 
+           align-items: center; 
+           gap: 10px;
+}
+		#profile-pic{
+		    width: 40px;
+            height: 40px;
+			margin-bottom: 5px;
+            
+		}
 
         #my-cart, #my-orders {
             width: 45%;
@@ -41,6 +40,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+			
         }
 
         .cart-item, .order-item {
@@ -51,13 +51,13 @@
             margin-bottom: 10px;
             border-bottom: 1px solid #ddd;
         }
+		.item-details {
+          flex-grow: 1; 
+          padding-left: 20px; 
+}
 
-        .item-img {
-            width: 80px;
-            height: 80px;
-            margin-right: 20px;
-        }
 
+       
         .quantity-control {
             display: flex;
             justify-content: space-between;
@@ -79,7 +79,7 @@
         .link-button {
     display: block;
     padding: 10px;
-    background-color: #333; 
+    background-color:#607D8B ; 
     color: white;
     text-align: center;
     text-decoration: none;
@@ -90,10 +90,16 @@
 }
 
 .link-button:hover {
-    background-color: #555; 
+    background-color: #455A64; 
 }
 
-
+       .item-img {
+    width: 100px;
+    height: auto;
+    max-width: 100%; 
+    display: block; 
+    margin: 0;
+}
         #product-evaluation {
             width: 90%;
             margin: 0 auto;
@@ -120,6 +126,9 @@
             flex-shrink: 0;
             width: 30%;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-direction: column; 
+            width: 30%;
+
         }
 
         .review-header {
@@ -167,18 +176,40 @@
             background-color: transparent;
             border: none;
             cursor: pointer;
+			
+}
+.review-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-image-review {
+    margin-left: 15px; 
+	 width:100%;
+}
+
+.product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+
         }
     </style>
 </head>
 
 <body>
+   <header>
     <h1>The Trend Loft</h1>
 
     <header>
-        <!-- NAVIGATION [COPY TO ALL PAGES] -->
+        <!-- Navigation after update -->
         <div id="navigation">
             <div id="leftnav">
-                <a href="homepage.html"><img id="logo" src="images/logo.png"></a>
+                <a href="homepage.html"><img id="logo" src="images/logo2.png"></a>
+                <!-- Here -->
                 <p>Clothes</p>
                 <p>Bags</p>
                 <p>Shoes</p>
@@ -186,11 +217,11 @@
             <div id="rightnav">
                 <input id="search" type="text" placeholder="Search...">
                 <div class="user">
-                    <p>Welcome, <br> User</p>
-                    <div class="user-menu">
-                        <p>Seller Page</p>
-                        <p>Your Account</p>
-                    </div>
+                    <p>Welcome, <br> Sara <i class="fas fa-chevron-down"></i></p>
+                   <div class="user-menu">
+    <a href="UserPage.html">Your Account</a>
+    <a href="SellerDashboardPage.html">Your Seller Account</a>
+</div>
                 </div>
                 <div class="forcart">
                     <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
@@ -198,19 +229,18 @@
             </div>
         </div>
     </header>
-
     <!-- Breadcrumb -->
     <div id="breadcrumb">
-        <p><a href="homepage.html">Home</a> > Your Account</p>
+        <p style="color:silver"><a  href="homepage.html">Home</a> > Your Account</p>
     </div>
 
-    <!-- Section 1: User Profile and Welcome Message -->
+   
     <section id="user-section">
         <img id="profile-pic" src="images/user.png" alt="User Profile">
         <h2>Welcome, Sara</h2>
     </section>
 
-    <!-- Section 2: My Cart and My Orders -->
+   
     <section id="main-content">
     
         <div id="my-cart">
@@ -218,39 +248,40 @@
 
           
             <div class="cart-item">
-                <img src="images/product.png" alt="Product Image" class="item-img">
+			 <img src="images/bottega bag.png" alt="Product Image" class="item-img">
+                
                 <div class="item-details">
-                    <p>Item #: Name Of Product 1</p>
-                    <p>$X</p>
+                    <p>Item #1: Parachute Bag</p>
+                    <p>$5000</p>
                     <div class="quantity-control">
                         <button>-</button>
                         <input type="number" value="1" min="1">
                         <button>+</button>
                     </div>
                 </div>
-                <button class="delete-btn"><img src="images/trash.png" alt="Delete"></button>
+                <button class="delete-btn"><img src="images/delete.png" alt="Delete"></button>
             </div>
 
             
             <div class="cart-item">
-                <img src="images/product.png" alt="Product Image" class="item-img">
+			 <img src="images/miu miu bag.png" alt="Product Image" class="item-img">
                 <div class="item-details">
-                    <p>Item #: Name Of Product 2</p>
-                    <p>$Y</p>
+                    <p>Item #2:Mini Arcadie Top-Handle Bag</p>
+                    <p>$7000</p>
                     <div class="quantity-control">
                         <button>-</button>
                         <input type="number" value="1" min="1">
                         <button>+</button>
                     </div>
                 </div>
-                <button class="delete-btn"><img src="images/trash.png" alt="Delete"></button>
+                <button class="delete-btn"><img src="images/delete.png" alt="Delete"></button>
             </div>
 
             <p>More...</p>
-            <p>Total: $X + $Y</p>
+            <p>Total: $20,000</p>
 
            
-            <a href="cartpage.html" class="link-button">VIEW CART</a>    <!--             رابط -->
+            <a href="cartpage.html" class="link-button">VIEW CART</a>   
         </div>
 
   
@@ -261,10 +292,10 @@
             <div class="order-item">
                 <p>Last Order</p>
                 <div class="order-details">
-                    <p>Order NO.XX</p>
-                    <p>DD/MM/YYYY</p>
-                    <p>HH:MM</p>
-                    <p>Total: $X</p>
+                    <p>Order NO.007</p>
+                    <p>15/4/2024</p>
+                    <p>16:20</p>
+                    <p>Total: $30,000</p>
                 </div>
             </div>
 
@@ -272,76 +303,91 @@
             <div class="order-item">
                 <p>Previous Order</p>
                 <div class="order-details">
-                    <p>Order NO.YY</p>
-                    <p>DD/MM/YYYY</p>
-                    <p>HH:MM</p>
-                    <p>Total: $Y</p>
+                    <p>Order NO.006</p>
+                    <p>03/11/2023</p>
+                    <p>23:15</p>
+                    <p>Total: $10,000</p>
                 </div>
             </div>
 
             <p>More...</p>
 
            
-            <a href="orderspage.html" class="link-button">VIEW ALL ORDERS</a>    <!--             رابط -->
+            <a href="myorders.html" class="link-button">VIEW ALL ORDERS</a>    
         </div>
     </section>
 
     <!-- Section 3: Product Evaluation -->
-    <section id="product-evaluation">
-        <h2>Product Evaluation</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel felis in magna facilisis interdum.</p>
-        <div class="review-slider">
-            <button class="slider-btn">‹</button>
+ <section id="product-evaluation">
+    <h2>Product Evaluation</h2>
+    <p>Here’s a look at your past reviews. Your insights have helped others, and we value your feedback! Feel free to leave a new review and share your latest experience with our products.</p>
+    <div class="review-slider">
+        <button class="slider-btn">‹</button>
 
+       
+        <div class="review">
+            <div class="review-header">
+                <img src="images/user.png" alt="Reviewer" class="review-img">
+                <div class="review-details">
+                    <p>Sara</p>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
            
-            <div class="review">
-                <div class="review-header">
-                    <img src="images/user.png" alt="Reviewer" class="review-img">
-                    <div class="review-details">
-                        <p>Sara</p>
-                    </div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
+            <div class="review-content">
                 <div class="review-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel felis in magna facilisis interdum.</p>
+                    <p>I've been using this product for a few weeks, and it works perfectly. It’s exactly as described and the customer service was very helpful.</p>
+                </div>
+               
+                <div class="product-image-review">
+                     <img src="images/bottega bag.png" alt="Product Image" class="item-img">
                 </div>
             </div>
-
-            
-            <div class="review">
-                <div class="review-header">
-                    <img src="images/user.png" alt="Reviewer" class="review-img">
-                    <div class="review-details">
-                        <p>sara</p>
-                    </div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="review-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel felis in magna facilisis interdum.</p>
-                </div>
-            </div>
-
-            <button class="slider-btn">›</button>
         </div>
 
-      
-        <a href="evaluationpage.html" class="link-button">LEAVE A REVIEW</a>  <!--             رابط -->
-    </section>
+        >
+        <div class="review">
+            <div class="review-header">
+                <img src="images/user.png" alt="Reviewer" class="review-img">
+                <div class="review-details">
+                    <p>Sara</p>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+           
+            <div class="review-content">
+                <div class="review-text">
+                    <p>The quality of this product exceeded my expectations. The material feels premium, and it arrived right on time. Definitely worth the price!</p>
+                </div>
+             
+                <div class="product-image-review">
+                    <img src="images/miu miu bag.png" alt="Product Image" class="item-img">
+                </div>
+            </div>
+        </div>
+
+        <button class="slider-btn">›</button>
+    </div>
+
+    <a href="evaluationpage.html" class="link-button">LEAVE A REVIEW</a> <!------***********رابط**********-->
+</section>
+
+
 
     <div class="footer">
-        <img src="images/logo.png" id="f-logo">
+        <img src="images/logo2.png" id="f-logo" alt="logo">
         <div class="contacts">
             <div class="phone">
                 <img src="images/phone-icon.png" id="phone-icon">
