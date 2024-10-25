@@ -1,148 +1,154 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <title>Product Category</title>
     <link rel="stylesheet" href="category.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">  <!--هذا السطر -->
-</head>
-<body>
-<header>
-    <h1>The Trend Loft</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Your Seller Account</title>
+    <link rel="stylesheet" href="style.css">
 
+</head>
+
+<body>
     <header>
-        <!-- Navigation after update -->
-        <div id="navigation">
-            <div id="leftnav">
-                <a href="homepage.html"><img id="logo" src="images/logo2.png"></a>
-                <!-- Here -->
-                <p>Clothes</p>
-                <p>Bags</p>
-                <p>Shoes</p>
-            </div>
-            <div id="rightnav">
-                <input id="search" type="text" placeholder="Search...">
-                <div class="user">
-                    <p>Welcome, <br> Sara <i class="fas fa-chevron-down"></i></p>
-                   <div class="user-menu">
-    <a href="UserPage.html">Your Account</a>
-    <a href="SellerDashboardPage.html">Your Seller Account</a>
-</div>
+        <h1>The Trend Loft</h1>
+
+        <header>
+            <!-- Navigation -->
+            <div id="navigation">
+                <div id="leftnav">
+                    <a href="homepage.html"><img id="logo" src="images/logo2.png"></a>
+                    <p>Clothes</p>
+                    <p>Bags</p>
+                    <p>Shoes</p>
                 </div>
-                <div class="forcart">
-                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+                <div id="rightnav">
+                    <input id="search" type="text" placeholder="Search...">
+                    <div class="user">
+                        <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon"></p>
+                        <div class="user-menu">
+                            <a href="UserPage.html">Your Account<br><br></a>
+                            <a href="SellerDashboardPage.html">Your Seller Account</a>
+                        </div>
+                    </div>
+                    <div class="forcart">
+                        <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+                    </div>
                 </div>
             </div>
+        </header>
+        <div class="breadcrumb">
+            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Category</p>
         </div>
     </header>
-    <div class="breadcrumb">
-        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Category</p>
-    </div>
-</header>
-<div class="all">
-<!-- Sidebar Filters -->
-<div class="sidebar">
-    <h3>DEPARTMENT</h3>
-    <input type="checkbox" id="women"><label for="women">Women</label><br>
-    <input type="checkbox" id="men"><label for="men">Men</label><br>
+    <div class="all">
+        <!-- Sidebar Filters -->
+        <div class="sidebar">
+            <h3>DEPARTMENT</h3>
+            <input type="checkbox" id="women"><label for="women">Women</label><br>
+            <input type="checkbox" id="men"><label for="men">Men</label><br>
 
-    <h3>DESIGNERS</h3>
-    <input type="checkbox" id="brand1"><label for="brand1">Chanel</label><br>
-    <input type="checkbox" id="brand2"><label for="brand2">Loewe</label><br>
-    <input type="checkbox" id="brand3"><label for="brand3">Miu miu</label><br>
-    <input type="checkbox" id="brand4"><label for="brand4">Dior</label><br>
+            <h3>DESIGNERS</h3>
+            <input type="checkbox" id="brand1"><label for="brand1">Chanel</label><br>
+            <input type="checkbox" id="brand2"><label for="brand2">Loewe</label><br>
+            <input type="checkbox" id="brand3"><label for="brand3">Miu miu</label><br>
+            <input type="checkbox" id="brand4"><label for="brand4">Dior</label><br>
 
-    <h3>PRICE</h3>
-    <p>MINIMUM AMOUNT</p>
-    <input type="text" placeholder="2500 SR">
-</div>
-<!-- Products -->
- <div class="background">
-<div class="product-grid">
-    <div class="product-item">
-        <img src="images/bottega bag.png" alt="Item 1">
-        <div class="product-info">
-        <h4> Bottega Veneta </h4>
-    <p> Large Parachute Bag in Intrecciato Leather  <br>5000 SR > </p> 
+            <h3>PRICE</h3>
+            <p>MINIMUM AMOUNT</p>
+            <input type="text" placeholder="2500 SR">
         </div>
-    <div class="cart-icon">
-        <img src="images/cart.png" alt="cart">
-    </div>
-    </div>
-    <div class="product-item">
-        <img src="images/miu miu bag.png" alt="Miu miu leather black and gold bag">
-        <div class="product-info">
-        <h4>Miu miu</h4>
-    <p> Mini Arcadie Top-handle Bag in Matelassé Nappa <br>7000SR </p>
-</div>
-    <div class="cart-icon">
-        <img src="images/cart.png" alt="cart">
-    </div>
-    </div>
-    <div class="product-item">
-        <img src="images/loewe bag.png" alt="Brown loewe bag">
-        <div class="product-info">
-        <h4>Loewe</h4>
-        <p>Mini Puzzle Bag in Classic Calfskin <br> 8000SR </p>
-        </div>
-        <div class="cart-icon">
-            <img src="images/cart.png" alt="cart">
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="images/hermes bag.png" alt="Kelly wallet pink" style="max-width: 500;">
-        <div class="product-info">
-    <h4>Hermès</h4>
-<p>Kelly To Go Wallet in Epsom Leather <br>7500SR </p>
-</div>
-<div class="cart-icon">
-    <img src="images/cart.png" alt="cart">
-</div>
-    </div>
-    <div class="product-item">
-        <img src="images/Chanel bag.png" alt="Chanel pink bag">
-        <div class="product-info">
-        <h4>Chanel</h4>
-    <p>Medium Double Flap Bag in Quilted Lambskin Leather <br>6000SR </p>
-        </div>
-    <div class="cart-icon">
-        <img src="images/cart.png" alt="cart">
-    </div>
-    </div>
-    <div class="product-item">
-        <img src="images/bottega bag2.png" alt="bottega bag">
-    <h4>Bottega Veneta</h4>
-    <p>Mini Arco Tote Bag in Intrecciato Leather<br> 6750SR </p>
-    <div class="cart-icon">
-        <img src="images/cart.png" alt="cart">
-    </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- Pagination -->
-<div class="pagination">
-    <a href="#">&lt;</a>
-    <a href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">4</a>
-    <a href="#">5</a>
-    <a href="#">&gt;</a>
-</div>
-<!-- Footer -->
-<div class="footer">
-    <img src="images/logo2.png" id="f-logo" alt="logo">
-    <div class="contacts">
-        <div class="phone">
-            <img src="images/phone-icon.png" id="phone-icon" alt="phone">
-            <p>+955XXXXXXXXX</p>
-        </div>
-        <div class="email">
-            <img src="images/email-icon.png" id="email-icon" alt="email">
-            <p>info@example.com</p>
+        <!-- Products -->
+        <div class="background">
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="images/bottega bag.png" alt="Item 1">
+                    <div class="product-info">
+                        <h4> Bottega Veneta </h4>
+                        <p> Large Parachute Bag in Intrecciato Leather <br>5000 SR > </p>
+                    </div>
+                    <div class="cart-icon">
+                        <img src="images/cart.png" alt="cart">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="images/miu miu bag.png" alt="Miu miu leather black and gold bag">
+                    <div class="product-info">
+                        <h4>Miu miu</h4>
+                        <p> Mini Arcadie Top-handle Bag in Matelassé Nappa <br>7000SR </p>
+                    </div>
+                    <div class="cart-icon">
+                        <img src="images/cart.png" alt="cart">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="images/loewe bag.png" alt="Brown loewe bag">
+                    <div class="product-info">
+                        <h4>Loewe</h4>
+                        <p>Mini Puzzle Bag in Classic Calfskin <br> 8000SR </p>
+                    </div>
+                    <div class="cart-icon">
+                        <img src="images/cart.png" alt="cart">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="images/hermes bag.png" alt="Kelly wallet pink" style="max-width: 500;">
+                    <div class="product-info">
+                        <h4>Hermès</h4>
+                        <p>Kelly To Go Wallet in Epsom Leather <br>7500SR </p>
+                    </div>
+                    <div class="cart-icon">
+                        <img src="images/cart.png" alt="cart">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="images/Chanel bag.png" alt="Chanel pink bag">
+                    <div class="product-info">
+                        <h4>Chanel</h4>
+                        <p>Medium Double Flap Bag in Quilted Lambskin Leather <br>6000SR </p>
+                    </div>
+                    <div class="cart-icon">
+                        <img src="images/cart.png" alt="cart">
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="images/bottega bag2.png" alt="bottega bag">
+                    <h4>Bottega Veneta</h4>
+                    <p>Mini Arco Tote Bag in Intrecciato Leather<br> 6750SR </p>
+                    <div class="cart-icon">
+                        <img src="images/cart.png" alt="cart">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="">&laquo;</a>
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">6</a>
+        <a href="">&raquo;</a>
     </div>
-</div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <img src="images/logo2.png" id="f-logo" alt="logo">
+        <div class="contacts">
+            <div class="phone">
+                <img src="images/phone-icon.png" id="phone-icon" alt="phone">
+                <p>+955XXXXXXXXX</p>
+            </div>
+            <div class="email">
+                <img src="images/email-icon.png" id="email-icon" alt="email">
+                <p>info@example.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
+        </div>
+    </div>

@@ -81,7 +81,7 @@
         border-bottom-width: 1px;
         background-color: transparent;
     }
-    /* logo after update */
+   
     #logo {
         width: 150px;
 
@@ -133,9 +133,8 @@
     }
 
 
-/* Footer after update */ 
 
-    /* updated part */
+/*footer */
     #f-logo{
         width: 150px;
         height: 30px;
@@ -143,7 +142,6 @@
         margin: auto;
         margin-top: 80px;
     }
-    /* done */
     .copyright{
         background-color: #f9f9f9;
         height: 40px;
