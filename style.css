@@ -4,6 +4,9 @@
         src: url(Vanity-Light.ttf);
     }
 
+button:hover {
+    cursor: pointer;
+}
 
 /* Header */
     head{
@@ -62,6 +65,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+
+    #leftnav a{
+        text-decoration: none;
+        color:black;
     }
 
     #rightnav {
