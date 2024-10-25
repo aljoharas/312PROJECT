@@ -2,16 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Add Product</title>
-    <link href="newProduct.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
+        
 
         
         /* Container Styling */
@@ -32,13 +27,13 @@
             grid-column: span 2; /* Title spans both columns */
             text-align: center;
             padding: 20px;
-            background-color: #939694;
-            color: white;
+            background-color: #f9f9f9;
+            color: rgb(75, 75, 75);
             font-size: 24px;
             text-transform: uppercase;
             letter-spacing: 1.2px;
             margin: 0;
-            border-bottom: 4px solid #5e5f5e;
+            border-bottom: 2px solid #5e5f5e;
         }
 
         .left-section {
@@ -61,18 +56,17 @@
             font-size: 18px;
             font-weight: bold;
             color: white;
-            background-color: #5e5f5e;
+            background-color: #6d93aa;
             border-radius: 5px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .custom-file-upload:hover {
-            background-color: #5e5f5e;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
+    background-color: #64989d; 
+    
+}
 
         .right-section {
             padding: 30px;
@@ -83,7 +77,7 @@
             margin-bottom: 10px;
             font-weight: bold;
             font-size: 16px;
-            color: #5e5f5e;
+            color: rgb(74, 74, 74);
         }
 
         .right-section input[type="text"],
@@ -97,8 +91,8 @@
             border-radius: 5px;
             box-sizing: border-box;
             font-size: 16px;
-            color: #333;
-            transition: border-color 0.3s ease;
+            color: rgb(74, 74, 74);
+            
         }
 
         .right-section input:focus,
@@ -122,49 +116,22 @@
         .right-section input[type="submit"] {
             width: 100%;
             padding: 12px;
-            background-color: #939694;
+            background-color: #6d93aa;
             border: none;
             color: white;
             font-size: 18px;
             cursor: pointer;
             border-radius: 5px;
-            transition: all 0.3s ease;
+            
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .right-section input[type="submit"]:hover {
-            background-color: #616161;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
+    background-color: #64989d; 
+    
+}
 
-        /* Flex layout for Quantity and Price with Add/Minus buttons */
-        .input-with-buttons {
-            display: flex;
-            align-items: center;
-        }
-
-        .input-with-buttons input[type="number"] {
-            flex: 1;
-            padding: 10px;
-            margin-right: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        .input-with-buttons button {
-            padding: 10px;
-            background-color: #ddd;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .input-with-buttons button:hover {
-            background-color: #ccc;
-        }
+       
     </style>
 </head>
 <body>
@@ -174,30 +141,33 @@
     <!-- Header -->
     <h1>The Trend Loft</h1>
     <header>
-        <!-- NAVIGATION [COPY TO ALL PAGES] -->
         <div id="navigation">
             <div id="leftnav">
-                <a href="homepage.html"><img id="logo" src="images/logo.png"></a>
+                <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft"></a>
                 <p>Clothes</p>
                 <p>Bags</p>
                 <p>Shoes</p>
             </div>
             <div id="rightnav">
                 <input id="search" type="text" placeholder="Search...">
-                <!-- img id="profile-img" src="images/user.png" -->
                 <div class="user">
-                    <p>Welcome, <br> User</p>
+                    <p>Welcome, <br> Sara<i class="fas fa-chevron-down"></i></p>
                     <div class="user-menu">
-                        <p>Seller Page</p>
-                        <p>Your Account</p>
+                        <a href="UserPage.html">Your Account<br><hr></a>
+                        <a href="SellerDashboardPage.html">Your Seller Account</a>
                     </div>
                 </div>
                 <div class="forcart">
-                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png"></a>
+                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="Cart"></a>
                 </div>
             </div>
         </div>
     </header>
+
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb">
+        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; <a href="SellerDashboardPage.html" class="breadcrumb-links">Your Seller Account</a> &raquo;Add New Product</p>
+    </div>
 
     <!-- Main Content -->
     <div class="container">
@@ -222,11 +192,7 @@
                 <input type="text" id="product-label" name="product-label" placeholder="e.g. trench coat" required>
 
                 <label for="product-price">Product Price</label>
-                <div class="input-with-buttons">
-                    <input type="number" id="product-price" name="product-price" placeholder="$$$" step="0.01" min="0" required>
-                    <button type="button" onclick="document.getElementById('product-price').stepDown()">-</button>
-                    <button type="button" onclick="document.getElementById('product-price').stepUp()">+</button>
-                </div>
+                <input type="number" id="product-price" name="product-price" placeholder="$$$" required>
 
                 <label for="product-description">Product Description</label>
                 <textarea id="product-description" name="product-description" placeholder="Enter product description here..." required></textarea>
@@ -239,11 +205,7 @@
                 </select>
 
                 <label for="product-quantity">Product Quantity</label>
-                <div class="input-with-buttons">
-                    <input type="number" id="product-quantity" name="product-quantity" placeholder="e.g. 10" min="1" required>
-                    <button type="button" onclick="document.getElementById('product-quantity').stepDown()">-</button>
-                    <button type="button" onclick="document.getElementById('product-quantity').stepUp()">+</button>
-                </div>
+                <input type="number" id="product-quantity" name="product-quantity" required>
 
                 <input type="submit" value="Add">
             </form>
@@ -252,14 +214,14 @@
 
     <!-- Footer -->
     <div class="footer">
-        <img src="images/logo.png" id="f-logo">
+        <img src="images/logo2.png" id="f-logo" alt="logo">
         <div class="contacts">
             <div class="phone">
-                <img src="images/phone-icon.png" id="phone-icon">
+                <img src="images/phone-icon.png" id="phone-icon" alt="phone">
                 <p>+955XXXXXXXXX</p>
             </div>
             <div class="email">
-                <img src="images/email-icon.png" id="email-icon">
+                <img src="images/email-icon.png" id="email-icon" alt="email">
                 <p>info@example.com</p>
             </div>
         </div>
