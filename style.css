@@ -64,6 +64,11 @@
         align-items: center;
     }
 
+    #leftnav a{
+        text-decoration: none;
+        color:black;
+    }
+
     #rightnav {
         width: 30%;
         display: flex;
