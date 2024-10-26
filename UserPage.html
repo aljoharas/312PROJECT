@@ -6,185 +6,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Account</title>
 	 <link rel="stylesheet" href="style.css"> 
-	 <!--Update------------------------------>
+	
 	
 
     <style>
-        #main-content {
-            display: flex;
-            justify-content: space-between;
-            padding: 30px;
-            align-items: stretch;
-        }
-		#user-section {
-           display: flex; 
-           align-items: center; 
-           gap: 10px;
-        }
-		#profile-pic{
-		    width: 40px;
-            height: 40px;
-			margin-bottom: 5px;
-		}
+	     #main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    align-items: stretch;
+}
 
-        #my-cart, #my-orders {
-            width: 45%;
-            padding: 20px;
-            background-color: white;
-            border: 1px solid #ddd;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+#user-section {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+}
 
-        .cart-item, .order-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #ddd;
-        }
+#profile-pic {
+    width: 2.5em;
+    height: 2.5em;
+    margin-bottom: 0.3125em;
+}
 
-		.item-details {
-          flex-grow: 1; 
-          padding-left: 20px; 
-        }
+#my-cart, #my-orders {
+    width: 45%;
+    padding: 1.25em;
+    background-color: white;
+    border: 0.063em solid #ddd;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        .quantity-control {
-            display: flex;
-            justify-content: space-between;
-            width: 100px;
-        }
+.cart-item, .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.625em;
+    margin-bottom: 0.625em;
+    border-bottom: 0.063em solid #ddd;
+}
 
-        .delete-btn {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
+.item-details {
+    flex-grow: 1;
+    padding-left: 1.25em;
+}
 
-        .delete-btn img {
-            width: 20px;
-            height: 20px;
-        }
+.quantity-control {
+    display: flex;
+    justify-content: space-between;
+    width: 6.25em;
+}
 
-        .link-button {
-            display: block;
-            padding: 10px;
-            background-color:#607D8B ; 
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 30px; 
-            margin-left: 10px; 
-            width: 90%;
-        }
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 
-       
+.delete-btn img {
+    width: 1.25em;
+    height: 1.25em;
+}
 
-       .item-img {
-            width: 100px;
-            height: auto;
-            max-width: 100%; 
-            display: block; 
-            margin: 0;
-        }
+.link-button {
+    display: block;
+    padding: 0.625em;
+    background-color: #607D8B;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.3125em;
+    margin-top: 1.875em;
+    margin-left: 0.625em;
+    width: 90%;
+}
 
-        #product-evaluation {
-            width: 90%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
+.item-img {
+    width: 6.25em;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+}
 
-        .review-slider {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            overflow: hidden;
-        }
+#product-evaluation {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.25em;
+    background-color: white;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+}
 
-        .review {
-            display: flex;
-            flex-direction: column;
-            background-color: #6d93aa9;
-            padding: 10px;
-            border-radius: 5px;
-            margin-right: 15px;
-            flex-shrink: 0;
-            width: 30%;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            flex-direction: column; 
-            width: 30%;
-        }
+.review-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
 
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.review {
+    display: flex;
+    flex-direction: column;
+    background-color: #6d93aa9;
+    padding: 0.625em;
+    border-radius: 0.3125em;
+    margin-right: 0.9375em;
+    flex-shrink: 0;
+    width: 30%;
+    box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.1);
+}
 
-        .review-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .review-details {
-            display: flex;
-            align-items: center;
-        }
+.review-img {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    margin-right: 0.625em;
+}
 
-        .review-details p {
-            margin: 0 10px 0 0;
-        }
+.review-details {
+    display: flex;
+    align-items: center;
+}
 
-        .stars {
-            display: flex;
-            align-items: center;
-            margin-left: auto;
-        }
+.review-details p {
+    margin: 0 0.625em 0 0;
+}
 
-       .star-icon {
-         width: 18px; 
-         height: 18px;
-         margin-right: 5px; 
-        }
+.stars {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
 
-        .review-text {
-            margin-top: 10px;
-            text-align: left;
-            font-size: 14px;
-        }
+.star-icon {
+    width: 1.125em;
+    height: 1.125em;
+    margin-right: 0.3125em;
+}
 
-        .slider-btn {
-            font-size: 24px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
+.review-text {
+    margin-top: 0.625em;
+    text-align: left;
+    font-size: 0.875em;
+}
 
-        .review-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+.slider-btn {
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 
-        .product-image-review {
-            margin-left: 15px; 
-		    width:100%;
-        }
+.review-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        .product-img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-        }
+.product-image-review {
+    margin-left: 0.9375em;
+    width: 100%;
+}
+
+.product-img {
+    width: 5em;
+    height: 5em;
+    object-fit: cover;
+}
+
     </style>
 </head>
 
@@ -198,16 +197,17 @@
         <div id="navigation">
             <div id="leftnav">
                 <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="Logo"></a>
-                <p>Clothes</p>
-                <p>Bags</p>
-                <p>Shoes</p>
+				
+                <p><a href="Category2.html">Clothes</a></p>
+                <p><a href="Category.html">Bags</a></p>
+                <p><a href="category1.html">Shoes</a></p>
             </div>
             <div id="rightnav">
                 <input id="search" type="text" placeholder="Search...">
                 <div class="user">
-                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon"></p> <!--Update----------------------->
+                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon"></p> 
                     <div class="user-menu">
-                        <a href="UserPage.html">Your Account<br><hr></a> <!--Update----------------------->
+                        <a href="UserPage.html">Your Account<br><br></a>
                         <a href="SellerDashboardPage.html">Your Seller Account</a>
                     </div>
                 </div>
@@ -221,8 +221,9 @@
     <!-- Main Section -->
     <main>
         <!-- Breadcrumb -->
-        <div id="breadcrumb">
-            <p style="color:silver"><a href="homepage.html">Home</a> > Your Account</p>
+        <div class="breadcrumb">
+		        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo;Your Account</p>
+
         </div>
 
         <!-- User Section -->
@@ -237,7 +238,7 @@
                 <h2>My Cart</h2>
 
                 <div class="cart-item">
-                    <img src="images/bottega bag.png" alt="Product Image" class="item-img">
+                    <img src="images/bottega-bag.png" alt="Product Image" class="item-img">
                     <div class="item-details">
                         <p>Item #1: Parachute Bag</p>
                         <p>$5000</p>
@@ -251,7 +252,7 @@
                 </div>
 
                 <div class="cart-item">
-                    <img src="images/miu miu bag.png" alt="Product Image" class="item-img">
+                    <img src="images/miumiu-bag.png" alt="Product Image" class="item-img">
                     <div class="item-details">
                         <p>Item #2: Mini Arcadie Top-Handle Bag</p>
                         <p>$7000</p>
@@ -324,7 +325,7 @@
                             <p>I've been using this product for a few weeks, and it works perfectly. It’s exactly as described and the customer service was very helpful.</p>
                         </div>
                         <div class="product-image-review">
-                            <img src="images/bottega bag.png" alt="Product Image" class="item-img">
+                            <img src="images/bottega-bag.png" alt="Product Image" class="item-img">
                         </div>
                     </div>
                 </div>
@@ -348,7 +349,7 @@
                             <p>The quality of this product exceeded my expectations. The material feels premium, and it arrived right on time. Definitely worth the price!</p>
                         </div>
                         <div class="product-image-review">
-                            <img src="images/miu miu bag.png" alt="Product Image" class="item-img">
+                            <img src="images/miumiu-bag.png" alt="Product Image" class="item-img">
                         </div>
                     </div>
                 </div>
@@ -356,7 +357,7 @@
                 <button class="slider-btn">›</button>
             </div>
 
-            <a href="evaluationpage.html" class="link-button">LEAVE A REVIEW</a>
+            <a href="Product evaluation.html" class="link-button">LEAVE A REVIEW</a>
         </section>
     </main>
 
@@ -366,7 +367,7 @@
             <img src="images/logo2.png" id="f-logo" alt="Website Logo">
             <div class="contacts">
                 <div class="phone">
-                    <img src="images/phone-icon.png" id="phone-icon" alt="Phone Icon">
+                    <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email"> </a>
                     <p>+955XXXXXXXXX</p>
                 </div>
                 <div class="email">
