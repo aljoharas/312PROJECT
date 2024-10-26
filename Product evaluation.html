@@ -1,256 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Reivew orders</title>
-        <link rel="stylesheet" href="style.css">
-        <style>
 
-@font-face {
-    font-family: "Vanity";
-    src: url(Vanity-Light.ttf);
-}
+<head>
+    <meta charset="UTF-8">
+    <title>Reivew orders</title>
+    <link rel="stylesheet" href="Product evalutaion.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Your Seller Account</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: "Vanity";
+            src: url(Vanity-Light.ttf);
+        }
 
-/* Header */
-head {
-    font-family: "Vanity";
-}
+        /* Header */
+        head {
+            font-family: "Vanity";
+        }
 
-h1 {
-    text-align: center;
-}
+        h1 {
+            text-align: center;
+        }
 
-/* Breadcrumb */
-.breadcrumb-links {
-    color: gray;
-}
+        /* Breadcrumb */
+        .breadcrumb-links {
+            color: gray;
+        }
 
-.breadcrumb {
-    color: gray;
-    margin: 2% 1%;
-}
+        .breadcrumb {
+            color: gray;
+            margin: 2% 1%;
+        }
 
-navigation {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f9f9f9;
-    align-items: center;
-    padding: 0.625em 1.25em; 
-}
+        navigation {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            align-items: center;
+            padding: 0.625em 1.25em;
+        }
 
-.user-arrow-icon {
-    margin-left: 0.3em; 
-    width: 0.625em; 
-    height: 0.625em;
-}
+        .user-arrow-icon {
+            margin-left: 0.3em;
+            width: 0.625em;
+            height: 0.625em;
+        }
 
-#navigation {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f9f9f9;
-    align-items: center;
-}
+        #navigation {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            align-items: center;
+        }
 
-#leftnav {
-    width: 33%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+        #leftnav {
+            width: 33%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
 
-#rightnav {
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
-}
+        #rightnav {
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+        }
 
-#search {
-    height: 1.6em; 
-    width: 40%;
-    align-self: center;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 0.063em solid gray; 
-    background-color: transparent;
-}
+        #search {
+            height: 1.6em;
+            width: 40%;
+            align-self: center;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 0.063em solid gray;
+            background-color: transparent;
+        }
 
-#logo {
-    width: 9.375em; 
-    height: 1.875em; 
-}
+        #logo {
+            width: 9.375em;
+            height: 1.875em;
+        }
 
-#profile-img, #cart-img {
-    width: 2.5em; 
-    height: 2.5em;
-    display: flex;
-    align-self: center;
-}
+        #profile-img,
+        #cart-img {
+            width: 2.5em;
+            height: 2.5em;
+            display: flex;
+            align-self: center;
+        }
 
-.forcart {
-    display: flex;
-    align-items: center;
-}
+        .forcart {
+            display: flex;
+            align-items: center;
+        }
 
-.user-menu {
-    position: absolute;
-    display: none;
-    background-color: white;
-    width: 6.25em; 
-    text-align: left;
-    text-indent: 0.3em; 
-    border-bottom-left-radius: 0.625em; 
-    border-bottom-right-radius: 0.625em;
-}
+        .user-menu {
+            position: absolute;
+            display: none;
+            background-color: white;
+            width: 6.25em;
+            text-align: left;
+            text-indent: 0.3em;
+            border-bottom-left-radius: 0.625em;
+            border-bottom-right-radius: 0.625em;
+        }
 
-.user-menu a {
-    margin-left: 0.3em;
-    color: black;
-    text-decoration: none;
-}
+        .user-menu a {
+            margin-left: 0.3em;
+            color: black;
+            text-decoration: none;
+        }
 
-.user:hover .user-menu {
-    display: block;
-    width: 9.375em;
-    background-color: #f9f9f9;
-    z-index: 1;
-    border-bottom-left-radius: 8%;
-    border-bottom-right-radius: 8%;
-}
+        .user:hover .user-menu {
+            display: block;
+            width: 9.375em;
+            background-color: #f9f9f9;
+            z-index: 1;
+            border-bottom-left-radius: 8%;
+            border-bottom-right-radius: 8%;
+        }
 
-.products {
-    display: flex;
-    justify-content: center;
-}
+        .products {
+            display: flex;
+            justify-content: center;
+        }
 
-/* REVIEW ORDER */
-.review-order {
-    padding: 1.25em; 
-    margin: 2% 1%;
-}
+        /* REVIEW ORDER */
+        .review-order {
+            padding: 1.25em;
+            margin: 2% 1%;
+        }
 
-.review-order h1 {
-    font-size: 1.5em; 
-    margin-bottom: 0.625em; 
-}
+        .review-order h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.625em;
+        }
 
-.order-number {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 0.625em; 
-    border: 0.063em solid #ccc;
-    border-radius: 0.313em; 
-}
+        .order-number {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 0.625em;
+            border: 0.063em solid #ccc;
+            border-radius: 0.313em;
+        }
 
-.order-number select {
-    padding: 0.3em; 
-}
+        .order-number select {
+            padding: 0.3em;
+        }
 
-.products {
-    display: flex;
-    flex-direction: column;
-    margin: 2% 1%;
-}
+        .products {
+            display: flex;
+            flex-direction: column;
+            margin: 2% 1%;
+        }
 
-.product-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 1.25em; 
-    margin-bottom: 0.625em; 
-    border-radius: 0.313em;
-    border: 0.063em solid #ccc;
-    box-sizing: border-box;
-}
+        .product-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 1.25em;
+            margin-bottom: 0.625em;
+            border-radius: 0.313em;
+            border: 0.063em solid #ccc;
+            box-sizing: border-box;
+        }
 
-.product-item img {
-    width: 5em; 
-    height: 5em;
-    margin-right: 1.25em; 
-}
+        .product-item img {
+            width: 5em;
+            height: 5em;
+            margin-right: 1.25em;
+        }
 
-.product-details {
-    flex-grow: 1;
-}
+        .product-details {
+            flex-grow: 1;
+        }
 
-.review-btn {
-    display: flex;
-    justify-content: flex-start;
-    background-color: #6d93aa;
-    color: #fff;
-    padding: 0.625em 1.875em; 
-    border: none;
-    border-radius: 0.313em;
-}
+        .review-btn {
+            display: flex;
+            justify-content: flex-start;
+            background-color: #6d93aa;
+            color: #fff;
+            padding: 0.625em 1.875em;
+            border: none;
+            border-radius: 0.313em;
+        }
 
-.review-btn:hover {
-    background-color: #6d93aa;
-}
+        .review-btn:hover {
+            background-color: #6d93aa;
+        }
 
-.button {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-}
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+        }
 
-.review-btn:hover {
-    background-color: #64989d;
-}
-#Stars{
-    display:flex;
-    flex-direction: column;
-    justify-content: right;
-      width: 10%;
-      height: 30%;
-}
-#Stars2{
-    display:flex;
-    flex-direction: column;
-    justify-content: right;
-      width: 10%;
-      height: 30%;
-}
+        .review-btn:hover {
+            background-color: #64989d;
+        }
 
-        </style>
-    </head>
-    
-    <body>
-        <h1>The Trend Loft</h1>
-        <header>
-            <!-- NAVIGATION [COPY TO ALL PAGES] -->
-            <div id="navigation">
-                <div id="leftnav">
-                    <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft Logo"></a>
-                    <p>Clothes</p>
-                    <p><a href="Category.html">Bags</a></p>
-                    <p>Shoes</p>
+        #Stars {
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            width: 10%;
+            height: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Trend Loft</h1>
+    <header>
+        <!-- NAVIGATION [COPY TO ALL PAGES] -->
+        <div id="navigation">
+            <div id="leftnav">
+                <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft Logo"></a>
+                <p>Clothes</p>
+                <p><a href="Category.html">Bags</a></p>
+                <p>Shoes</p>
+            </div>
+            <div id="rightnav">
+                <input id="search" type="text" placeholder="Search...">
+                <div class="user">
+                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon"
+                            class="user-arrow-icon"></p>
+                    <div class="user-menu">
+                        <a href="UserPage.html">Your Account<br><br></a>
+                        <a href="SellerDashboardPage.html">Your Seller Account</a>
+                    </div>
                 </div>
-                <div id="rightnav">
-                    <input id="search" type="text" placeholder="Search...">
-                    <div class="user">
-                        <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon"
-                                class="user-arrow-icon"></p>
-                        <div class="user-menu">
-                            <a href="UserPage.html">Your Account<br><br></a>
-                            <a href="SellerDashboardPage.html">Your Seller Account</a>
-                        </div>
-                    </div>
-                    <div class="forcart">
-                        <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="Cart"></a>
-                    </div>
+                <div class="forcart">
+                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="Cart"></a>
                 </div>
             </div>
-        </header>
-        <!-- Breadcrumbs -->
-        <div class="breadcrumb">
-            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; <a href="UserPage.html">User page</a> &raquo; Order review</p>
         </div>
+    </header>
+    <!-- Breadcrumbs -->
+    <div class="breadcrumb">
+        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; <a href="UserPage.html"
+                class="breadcrumb-links">User page</a> &raquo; Order review</p>
+    </div>
     <main>
         <section class="review-order">
-            <h2>Review your order</h2>
+            <h1>Review your order</h1>
             <div class="order-number">
                 <h2>#Order number</h2>
                 <select name="orders" id="order-select">
@@ -266,29 +264,33 @@ navigation {
                         <h3>Miu miu</h3>
                         <p> Mini Arcadie Top-handle Bag in Matelassé Nappa </p>
                     </div>
-                    
+
                     <img src="images/Stars.png" alt="stars" id="Stars">
                     <div class="button">
-                    <button class="review-btn">Write a product review</button>
-                    </div> </div>
-                    <div class="product-item">
-                <img src="images/loewe-bag.png" alt="Brown loewe bag">
-                <div class="product-details">
-                    <h4>Loewe</h4>
-                    <p>Mini Puzzle Bag in Classic Calfskin </p>
+                        <button class="review-btn">Write a product review</button>
+                    </div>
                 </div>
-                <img src="images/Stars.png" alt="Stars" id="Stars2"> 
+                <div class="product-item">
+                    <img src="images/loewe-bag.png" alt="Brown loewe bag">
+                    <div class="product-details">
+                        <h4>Loewe</h4>
+                        <p>Mini Puzzle Bag in Classic Calfskin </p>
+                    </div>
+
+                    <img src="images/Stars.png" alt="Stars" id="Stars">
                     <div class="button">
-                    <button class="review-btn">Write a product review</button>
+                        <button class="review-btn">Write a product review</button>
+                    </div>
                 </div>
-                </div>
+            </div>
+            </div>
             </div>
         </section>
     </main>
 
 </body>
-  <!-- Footer -->
-  <div class="footer">
+<!-- Footer -->
+<div class="footer">
     <img src="images/logo2.png" id="f-logo" alt="logo">
     <div class="contacts">
         <div class="phone">
@@ -304,4 +306,5 @@ navigation {
         <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
     </div>
 </div>
+
 </html>

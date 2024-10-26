@@ -1,228 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    
+
     <title>Add Product</title>
     <link href="style.css" rel="stylesheet">
     <style>
-        
-
-        
         .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background-color: white;
-    border-radius: 0.625em;
-    box-shadow: 0 0.375em 0.75em rgba(0, 0, 0, 0.1);
-    width: 90%;
-    margin: 2.5em auto;
-    overflow: hidden;
-}
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background-color: white;
+            border-radius: 0.625em;
+            box-shadow: 0 0.375em 0.75em rgba(0, 0, 0, 0.1);
+            width: 90%;
+            margin: 2.5em auto;
+            overflow: hidden;
+        }
 
-.container h2 {
-    grid-column: span 2;
-    text-align: center;
-    padding: 1.25em;
-    background-color: #f9f9f9;
-    color: rgb(75, 75, 75);
-    font-size: 1.5em;
-    text-transform: uppercase;
-    letter-spacing: 0.075em;
-    margin: 0;
-    border-bottom: 0.125em solid #5e5f5e;
-}
+        .container h2 {
+            grid-column: span 2;
+            text-align: center;
+            padding: 1.25em;
+            background-color: #f9f9f9;
+            color: rgb(75, 75, 75);
+            font-size: 1.5em;
+            text-transform: uppercase;
+            letter-spacing: 0.075em;
+            margin: 0;
+            border-bottom: 0.125em solid #5e5f5e;
+        }
 
-.left-section {
-    background-color: #f8f9fa;
-    padding: 1.875em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .left-section {
+            background-color: #f8f9fa;
+            padding: 1.875em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.left-section input[type="file"] {
-    display: none;
-}
+        .left-section input[type="file"] {
+            display: none;
+        }
 
-.custom-file-upload {
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.9375em 1.875em;
-    font-size: 1.125em;
-    font-weight: bold;
-    color: white;
-    background-color: #6d93aa;
-    border-radius: 0.3125em;
-    cursor: pointer;
-    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-}
+        .custom-file-upload {
+            text-decoration: none;
+            display: inline-block;
+            padding: 0.9375em 1.875em;
+            font-size: 1.125em;
+            font-weight: bold;
+            color: white;
+            background-color: #6d93aa;
+            border-radius: 0.3125em;
+            cursor: pointer;
+            box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+        }
 
-.custom-file-upload:hover {
-    background-color: #64989d; 
-}
+        .custom-file-upload:hover {
+            background-color: #64989d;
+        }
 
-.right-section {
-    padding: 1.875em;
-}
+        .right-section {
+            padding: 1.875em;
+        }
 
-.right-section label {
+        .right-section label {
 
-    display: block;
-    margin-bottom: 0.625em;
-    font-weight: bold;
-    font-size: 1em;
-    color: rgb(74, 74, 74);
-}
+            display: block;
+            margin-bottom: 0.625em;
+            font-weight: bold;
+            font-size: 1em;
+            color: rgb(74, 74, 74);
+        }
 
-.right-section input[type="text"],
-.right-section input[type="number"],
-.right-section select,
-.right-section textarea {
-    width: 100%;
-    padding: 0.75em;
-    margin-bottom: 1.25em;
-    border: 0.125em solid #ddd;
-    border-radius: 0.3125em;
-    box-sizing: border-box;
-    font-size: 1em;
-    color: #333;
-}
+        .right-section input[type="text"],
+        .right-section input[type="number"],
+        .right-section select,
+        .right-section textarea {
+            width: 100%;
+            padding: 0.75em;
+            margin-bottom: 1.25em;
+            border: 0.125em solid #ddd;
+            border-radius: 0.3125em;
+            box-sizing: border-box;
+            font-size: 1em;
+            color: #333;
+        }
 
-.right-section input:focus,
-.right-section textarea:focus,
-.right-section select:focus {
-    border-color: #ddd;
-    outline: none;
-    box-shadow: 0 0 0.3125em rgba(0, 123, 255, 0.2);
-}
+        .right-section input:focus,
+        .right-section textarea:focus,
+        .right-section select:focus {
+            border-color: #ddd;
+            outline: none;
+            box-shadow: 0 0 0.3125em rgba(0, 123, 255, 0.2);
+        }
 
-.right-section input::placeholder,
-.right-section textarea::placeholder {
-    color: #939694;
-}
+        .right-section input::placeholder,
+        .right-section textarea::placeholder {
+            color: #939694;
+        }
 
-.right-section textarea {
-    height: 7.5em;
-    resize: vertical;
-}
+        .right-section textarea {
+            height: 7.5em;
+            resize: vertical;
+        }
 
-.right-section input[type="submit"] {
-    text-decoration: none;
-    width: 100%;
-    padding: 0.75em;
-    background-color: #6d93aa;
-    border: none;
-    color: white;
-    font-size: 1.125em;
-    cursor: pointer;
-    border-radius: 0.3125em;
-    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-}
+        .right-section input[type="submit"] {
+            text-decoration: none;
+            width: 100%;
+            padding: 0.75em;
+            background-color: #6d93aa;
+            border: none;
+            color: white;
+            font-size: 1.125em;
+            cursor: pointer;
+            border-radius: 0.3125em;
+            box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+        }
 
-.right-section input[type="submit"]:hover {
-    background-color: #64989d; 
-}
+        .right-section input[type="submit"]:hover {
+            background-color: #64989d;
+        }
     </style>
 </head>
+
 <body>
-    
-    
-<div class="page-wrapper">
-    <!-- Header -->
-    <h1>The Trend Loft</h1>
-    <header>
-        <div id="navigation">
-            <div id="leftnav">
-                <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft"></a>
-                <p><a href="Category2.html">Clothes</a></p>
-                <p><a href="Category.html">Bags</a></p>
-                <p><a href="category1.html">Shoes</a></p>
-            </div>
-            <div id="rightnav">
-                <input id="search" type="text" placeholder="Search...">
-                <div class="user">
-                    <p>Welcome, <br> Sara<img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon"></p>
-                    <div class="user-menu">
-                        <a href="UserPage.html">Your Account<br><hr></a>
-                        <a href="SellerDashboardPage.html">Your Seller Account</a>
+
+
+    <div class="page-wrapper">
+        <!-- Header -->
+        <h1>The Trend Loft</h1>
+        <header>
+            <div id="navigation">
+                <div id="leftnav">
+                    <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft"></a>
+                    <p><a href="Category2.html">Clothes</a></p>
+                    <p><a href="Category.html">Bags</a></p>
+                    <p><a href="category1.html">Shoes</a></p>
+                </div>
+                <div id="rightnav">
+                    <input id="search" type="text" placeholder="Search...">
+                    <div class="user">
+                        <p>Welcome, <br> Sara<img src="images/arrow-down.png" alt="arrow down icon"
+                                class="user-arrow-icon"></p>
+                        <div class="user-menu">
+                            <a href="UserPage.html">Your Account<br><br></a>
+                            <a href="SellerDashboardPage.html">Your Seller Account</a>
+                        </div>
+                    </div>
+                    <div class="forcart">
+                        <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="Cart"></a>
                     </div>
                 </div>
-                <div class="forcart">
-                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="Cart"></a>
+            </div>
+        </header>
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumb">
+            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; <a href="SellerDashboardPage.html"
+                    class="breadcrumb-links">Your Seller Account</a> &raquo;Add New Product</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container">
+            <!-- Add Product Title -->
+
+            <h2>Add Product</h2>
+
+            <!-- Left Section for Product Image -->
+            <div class="left-section">
+                <form>
+                    <label class="custom-file-upload">
+                        <input type="file" id="product-image" name="product-image" accept="image/*">
+                        Choose Product Image
+                    </label>
+                </form>
+            </div>
+
+            <!-- Right Section for Other Form Inputs -->
+            <div class="right-section">
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <label for="product-label">Product Label</label>
+                    <input type="text" id="product-label" name="product-label" placeholder="e.g. trench coat" required>
+
+                    <label for="product-price">Product Price</label>
+                    <input type="number" id="product-price" name="product-price" placeholder="$$$" required>
+
+                    <label for="product-description">Product Description</label>
+                    <textarea id="product-description" name="product-description"
+                        placeholder="Enter product description here..." required></textarea>
+
+                    <label for="product-category">Product Category</label>
+                    <select id="product-category" name="product-category" required>
+                        <option value="clothes">clothes</option>
+                        <option value="bags">bags</option>
+                        <option value="shoes">shoes</option>
+                    </select>
+
+                    <label for="product-quantity">Product Quantity</label>
+                    <input type="number" id="product-quantity" name="product-quantity" required>
+
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <img src="images/logo2.png" id="f-logo" alt="logo">
+            <div class="contacts">
+                <div class="phone">
+                    <img src="images/phone-icon.png" id="phone-icon" alt="phone">
+                    <p>+955XXXXXXXXX</p>
+                </div>
+                <div class="email">
+                    <img src="images/email-icon.png" id="email-icon" alt="email">
+                    <div class="email">
+                        <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon"
+                                alt="email"> </a>
+                        <p>info@example.com</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-
-     <!-- Breadcrumbs -->
-     <div class="breadcrumb">
-        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; <a href="SellerDashboardPage.html" class="breadcrumb-links">Your Seller Account</a> &raquo;Add New Product</p>
-    </div>
-
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Add Product Title -->
-        
-        <h2>Add Product</h2>
-
-        <!-- Left Section for Product Image -->
-        <div class="left-section">
-            <form>
-                <label class="custom-file-upload">
-                    <input type="file" id="product-image" name="product-image" accept="image/*">
-                    Choose Product Image
-                </label>
-            </form>
-        </div>
-
-        <!-- Right Section for Other Form Inputs -->
-        <div class="right-section">
-            <form action="#" method="post" enctype="multipart/form-data">
-                <label for="product-label">Product Label</label>
-                <input type="text" id="product-label" name="product-label" placeholder="e.g. trench coat" required>
-
-                <label for="product-price">Product Price</label>
-                <input type="number" id="product-price" name="product-price" placeholder="$$$" required>
-
-                <label for="product-description">Product Description</label>
-                <textarea id="product-description" name="product-description" placeholder="Enter product description here..." required></textarea>
-
-                <label for="product-category">Product Category</label>
-                <select id="product-category" name="product-category" required>
-                    <option value="clothes">clothes</option>
-                    <option value="bags">bags</option>
-                    <option value="shoes">shoes</option>
-                </select>
-
-                <label for="product-quantity">Product Quantity</label>
-                <input type="number" id="product-quantity" name="product-quantity" required>
-
-                <input type="submit" value="Add">
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <img src="images/logo2.png" id="f-logo" alt="logo">
-        <div class="contacts">
-            <div class="phone">
-                <img src="images/phone-icon.png" id="phone-icon" alt="phone">
-                <p>+955XXXXXXXXX</p>
-            </div>
-            <div class="email">
-                <img src="images/email-icon.png" id="email-icon" alt="email">
-                <div class="email">
-                    <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email"> </a>  
-                     <p>info@example.com</p>
-                 </div>
+            <div class="copyright">
+                <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
             </div>
         </div>
-        <div class="copyright">
-            <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
-        </div>
-    </div>
-    
+
 </body>
+
 </html>
