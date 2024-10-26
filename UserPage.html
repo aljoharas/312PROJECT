@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Account</title>
 	 <link rel="stylesheet" href="style.css"> 
+	 <!--Update------------------------------>
 	
 
     <style>
@@ -110,6 +111,7 @@
         .review {
             display: flex;
             flex-direction: column;
+            background-color: #6d93aa9;
             padding: 10px;
             border-radius: 5px;
             margin-right: 15px;
@@ -197,15 +199,15 @@
             <div id="leftnav">
                 <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="Logo"></a>
                 <p>Clothes</p>
-                <p><a href="Category.html">Bags</a></p>
+                <p>Bags</p>
                 <p>Shoes</p>
             </div>
             <div id="rightnav">
                 <input id="search" type="text" placeholder="Search...">
                 <div class="user">
-                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon"></p>
+                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon"></p> <!--Update----------------------->
                     <div class="user-menu">
-                        <a href="UserPage.html">Your Account<br><br></a>
+                        <a href="UserPage.html">Your Account<br><hr></a> <!--Update----------------------->
                         <a href="SellerDashboardPage.html">Your Seller Account</a>
                     </div>
                 </div>
@@ -219,8 +221,8 @@
     <!-- Main Section -->
     <main>
         <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Your Account</p>
+        <div id="breadcrumb">
+            <p style="color:silver"><a href="homepage.html">Home</a> > Your Account</p>
         </div>
 
         <!-- User Section -->
