@@ -186,9 +186,9 @@
 </head>
 
 <body>
-    <h1>The Trend Loft</h1>
 
     <header>
+        <h1>The Trend Loft</h1>
         <!-- NAVIGATION [COPY TO ALL PAGES] -->
         <div id="navigation">
             <div id="leftnav">
@@ -212,168 +212,174 @@
                 </div>
             </div>
         </div>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumb">
+            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Your Cart</p>
+        </div>
     </header>
 
-    <!-- Breadcrumbs -->
-    <div class="breadcrumb">
-        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Your Cart</p>
-    </div>
+    <main>
+        <!-- Page Name -->
+        <h2 class="page-title">Your Cart</h2>
 
-    <!-- Page Name -->
-    <h2 class="page-title">Your Cart</h2>
-
-    <div class="main-content">
-        <!-- Order Summary -->
-        <div class="order-summary">
-            <h2>Order Summary</h2>
-            <input id="discountbox" type="text" name="discount" placeholder="Enter discount code here">
-            <div class="s-details">
-                <p>Sub-Total</p>
-                <p>$20,000</p>
-            </div>
-            <div class="s-details">
-                <p>Discount</p>
-                <p>- $0</p>
-            </div>
-            <div class="s-details">
-                <p>Shipping</p>
-                <p>$50</p>
-            </div>
-            <hr>
-            <div class="s-details">
-                <p>Total</p>
-                <p>$20,050</p>
-            </div>
-            <button id="checkout">Continue to Checkout</button>
-            <p></p>
-        </div>
-
-        <!-- Cart -->
-        <div id="cart">
-            <!-- Category Names -->
-            <div class="cart-category">
-                <p id="product">Product</p>
-                <p class="others">Price</p>
-                <p class="others">Quantity</p>
-                <p class="others">Sub-Total</p>
-                <p class="remove"> </p>
-            </div>
-
-            <!-- Item Blocks -->
-            <div class="item">
-
-                <div class="item-details">
-                    <!-- Product Category -->
-                    <div class="product-detail">
-                        <div>
-                            <!-- Image -->
-                            <img src="images/bottega-bag.png" alt="Bottega Veneta Large Parachute Bag" class="item-img">
-                        </div>
-                        <div>
-                            <p class="item-name">Parachute Bag</p>
-                            <p>Bottega</p>
-                            <p>Large Parachute Bag in Intrecciato Leather</p>
-                        </div>
-                    </div>
-
-                    <p class="item-others">$5000</p>
-                    <div class="item-others counter">
-                        <button class="operation decrease">-</button>
-                        <input type="text" value="1" class="quantity">
-                        <button class="operation increase">+</button>
-                    </div>
-                    <p class="item-others">$5000</p>
-                    <div class="remove">
-                        <button class="remove-button">x</button>
-                    </div>
+        <div class="main-content">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <input id="discountbox" type="text" name="discount" placeholder="Enter discount code here">
+                <div class="s-details">
+                    <p>Sub-Total</p>
+                    <p>$20,000</p>
                 </div>
-                <hr class="item-line">
-            </div>
-
-            <div class="item">
-
-                <div class="item-details">
-                    <!-- Product Category -->
-                    <div class="product-detail">
-                        <div>
-                            <!-- Image -->
-                            <img src="images/miumiu-bag.png" alt="Miu Miu Arcadie Top-Handle Bag" class="item-img">
-                        </div>
-                        <div>
-                            <p class="item-name">Mini Arcadie Top-Handle Bag</p>
-                            <p>Miu Miu</p>
-                            <p>Mini Arcadie Top-Handle Bag in Matelassé Nappa</p>
-                        </div>
-                    </div>
-
-                    <p class="item-others">$7000</p>
-                    <div class="item-others counter">
-                        <button class="operation decrease">-</button>
-                        <input type="text" value="1" class="quantity">
-                        <button class="operation increase">+</button>
-                    </div>
-                    <p class="item-others">$7000</p>
-                    <div class="remove">
-                        <button class="remove-button">x</button>
-                    </div>
+                <div class="s-details">
+                    <p>Discount</p>
+                    <p>- $0</p>
                 </div>
-                <hr class="item-line">
-            </div>
-
-            <div class="item">
-
-                <div class="item-details">
-                    <!-- Product Category -->
-                    <div class="product-detail">
-                        <div>
-                            <!-- Image -->
-                            <img src="images/loewe-bag.png" alt="Loewe Mini Puzzle Bag" class="item-img">
-                        </div>
-                        <div>
-                            <p class="item-name">Mini Puzzle Bag</p>
-                            <p>Loewe</p>
-                            <p>Mini Puzzle Bag in Classic Calfskin</p>
-                        </div>
-                    </div>
-
-                    <p class="item-others">$8000</p>
-                    <div class="item-others counter">
-                        <button class="operation decrease">-</button>
-                        <input type="text" value="1" class="quantity">
-                        <button class="operation increase">+</button>
-                    </div>
-                    <p class="item-others">$8000</p>
-                    <div class="remove">
-                        <button class="remove-button">x</button>
-                    </div>
+                <div class="s-details">
+                    <p>Shipping</p>
+                    <p>$50</p>
                 </div>
-                <hr class="item-line">
+                <hr>
+                <div class="s-details">
+                    <p>Total</p>
+                    <p>$20,050</p>
+                </div>
+                <button id="checkout">Continue to Checkout</button>
+                <p></p>
             </div>
 
-            <div class="buttons">
-                <button class="button-design"> &laquo; Continue Shopping </button> <!-- Link -->
-                <button class="button-design">Empty Cart</button>
-            </div>
-        </div>
-    </div>
+            <!-- Cart -->
+            <div id="cart">
+                <!-- Category Names -->
+                <div class="cart-category">
+                    <p id="product">Product</p>
+                    <p class="others">Price</p>
+                    <p class="others">Quantity</p>
+                    <p class="others">Sub-Total</p>
+                    <p class="remove"> </p>
+                </div>
 
-    <div class="footer">
-        <img src="images/logo2.png" id="f-logo" alt="logo">
-        <div class="contacts">
-            <div class="phone">
-                <img src="images/phone-icon.png" id="phone-icon" alt="phone">
-                <p>+955XXXXXXXXX</p>
-            </div>
-            <div class="email">
-                <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email">
-                </a>
-                <p>info@example.com</p>
+                <!-- Item Blocks -->
+                <div class="item">
+
+                    <div class="item-details">
+                        <!-- Product Category -->
+                        <div class="product-detail">
+                            <div>
+                                <!-- Image -->
+                                <img src="images/bottega-bag.png" alt="Bottega Veneta Large Parachute Bag"
+                                    class="item-img">
+                            </div>
+                            <div>
+                                <p class="item-name">Parachute Bag</p>
+                                <p>Bottega</p>
+                                <p>Large Parachute Bag in Intrecciato Leather</p>
+                            </div>
+                        </div>
+
+                        <p class="item-others">$5000</p>
+                        <div class="item-others counter">
+                            <button class="operation decrease">-</button>
+                            <input type="text" value="1" class="quantity">
+                            <button class="operation increase">+</button>
+                        </div>
+                        <p class="item-others">$5000</p>
+                        <div class="remove">
+                            <button class="remove-button">x</button>
+                        </div>
+                    </div>
+                    <hr class="item-line">
+                </div>
+
+                <div class="item">
+
+                    <div class="item-details">
+                        <!-- Product Category -->
+                        <div class="product-detail">
+                            <div>
+                                <!-- Image -->
+                                <img src="images/miumiu-bag.png" alt="Miu Miu Arcadie Top-Handle Bag" class="item-img">
+                            </div>
+                            <div>
+                                <p class="item-name">Mini Arcadie Top-Handle Bag</p>
+                                <p>Miu Miu</p>
+                                <p>Mini Arcadie Top-Handle Bag in Matelassé Nappa</p>
+                            </div>
+                        </div>
+
+                        <p class="item-others">$7000</p>
+                        <div class="item-others counter">
+                            <button class="operation decrease">-</button>
+                            <input type="text" value="1" class="quantity">
+                            <button class="operation increase">+</button>
+                        </div>
+                        <p class="item-others">$7000</p>
+                        <div class="remove">
+                            <button class="remove-button">x</button>
+                        </div>
+                    </div>
+                    <hr class="item-line">
+                </div>
+
+                <div class="item">
+
+                    <div class="item-details">
+                        <!-- Product Category -->
+                        <div class="product-detail">
+                            <div>
+                                <!-- Image -->
+                                <img src="images/loewe-bag.png" alt="Loewe Mini Puzzle Bag" class="item-img">
+                            </div>
+                            <div>
+                                <p class="item-name">Mini Puzzle Bag</p>
+                                <p>Loewe</p>
+                                <p>Mini Puzzle Bag in Classic Calfskin</p>
+                            </div>
+                        </div>
+
+                        <p class="item-others">$8000</p>
+                        <div class="item-others counter">
+                            <button class="operation decrease">-</button>
+                            <input type="text" value="1" class="quantity">
+                            <button class="operation increase">+</button>
+                        </div>
+                        <p class="item-others">$8000</p>
+                        <div class="remove">
+                            <button class="remove-button">x</button>
+                        </div>
+                    </div>
+                    <hr class="item-line">
+                </div>
+
+                <div class="buttons">
+                    <button class="button-design"> &laquo; Continue Shopping </button> <!-- Link -->
+                    <button class="button-design">Empty Cart</button>
+                </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <img src="images/logo2.png" id="f-logo" alt="logo">
+            <div class="contacts">
+                <div class="phone">
+                    <img src="images/phone-icon.png" id="phone-icon" alt="phone">
+                    <p>+955XXXXXXXXX</p>
+                </div>
+                <div class="email">
+                    <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon"
+                            alt="email">
+                    </a>
+                    <p>info@example.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
+            </div>
         </div>
-    </div>
+    </footer>
 
 </body>
 
