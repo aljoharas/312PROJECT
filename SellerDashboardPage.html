@@ -8,142 +8,139 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Main Section */
-        .content-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: stretch;
-            height: auto;
-        }
+	
+   .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: auto;
+}
 
-        .products-section {
-            width: 70%;
-            display: flex;
-            flex-direction: column;
-        }
+.products-section {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
 
-        .products-section h2 {
-            margin-bottom: 10px;
-        }
+.products-section h2 {
+    margin-bottom: 0.625em;
+}
 
-        .product-list {
-            border: 1px solid #ddd;
-            padding: 10px;
-            max-height: 600px;
-            overflow-y: auto;
-            flex-grow: 1;
-            margin-left: 20px;
-        }
+.product-list {
+    border: 0.063em solid #ddd;
+    padding: 0.625em;
+    max-height: 37.5em;
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-left: 1.25em;
+}
 
-        .product-box {
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
-            display: flex;
-            align-items: flex-start;
-            height: auto;
-        }
+.product-box {
+    border-bottom: 0.063em solid #ddd;
+    padding: 0.9375em 0;
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+}
 
-        .product-item {
-            display: flex;
-            align-items: flex-start;
-            width: 100%;
-        }
+.product-item {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
 
-        .product-image img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-        }
+.product-image img {
+    width: 6.25em;
+    height: 6.25em;
+    margin-right: 1.25em;
+}
 
-        .product-details {
-            flex-grow: 1;
-        }
+.product-details {
+    flex-grow: 1;
+}
 
-        .product-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .product-name {
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0;
-        }
+.product-name {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
 
-        .product-price {
-            font-size: 16px;
-            color: #333;
-            text-align: right;
-        }
+.product-price {
+    font-size: 1em;
+    color: #333;
+    text-align: right;
+}
 
-        .product-description p {
-            margin: 5px 0;
-            font-size: 14px;
-            color: #555;
-        }
+.product-description p {
+    margin: 0.3125em 0;
+    font-size: 0.875em;
+    color: #555;
+}
 
-        .product-category {
-            text-align: right;
-            margin-top: 10px;
-        }
+.product-category {
+    text-align: right;
+    margin-top: 0.625em;
+}
 
-        .product-category p {
-            font-size: 14px;
-            color: #888;
-            margin: 0;
-        }
+.product-category p {
+    font-size: 0.875em;
+    color: #888;
+    margin: 0;
+}
 
-        .product-list::-webkit-scrollbar {
-            width: 12px;
-        }
+.product-list::-webkit-scrollbar {
+    width: 0.75em;
+}
 
-        .product-list::-webkit-scrollbar-track {
-            background: #CFD8DC;
-        }
+.product-list::-webkit-scrollbar-track {
+    background: #CFD8DC;
+}
 
-        .product-list::-webkit-scrollbar-thumb {
-            background-color: #6d93aa;
-            border-radius: 10px;
-            border: 2px solid black;
-        }
+.product-list::-webkit-scrollbar-thumb {
+    background-color: #6d93aa;
+    border-radius: 0.625em;
+    border: 0.125em solid black;
+}
 
-        
+.side-panels {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    margin-top: 3.75em;
+    margin-right: 1.25em;
+}
 
-        .side-panels {
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: auto;
-            margin-top: 60px;
-            margin-right: 20px;
-        }
+.panel {
+    border: 0.063em solid #ddd;
+    padding: 1.25em;
+    text-align: center;
+    margin-bottom: 1.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
 
-        .panel {
-            border: 1px solid #ddd;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
+.link-button {
+    display: inline-block;
+    padding: 0.625em 1.25em;
+    background-color: #6d93aa;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.3125em;
+    transition: background-color 0.3s;
+    margin-top: 0.625em;
+}
 
-        .link-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #6d93aa;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            margin-top: 10px;
-        }
-
-        
     </style>
 </head>
 
@@ -155,9 +152,10 @@
         <div id="navigation">
             <div id="leftnav">
                 <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="logo"></a>
-                <p>Clothes</p>
+              
+                <p><a href="Category2.html">Clothes</a></p>
                 <p><a href="Category.html">Bags</a></p>
-                <p>Shoes</p>
+                <p><a href="category1.html">Shoes</a></p>
             </div>
             <div id="rightnav">
                 <input id="search" type="text" placeholder="Search...">
@@ -178,7 +176,9 @@
     <!-- Main Section -->
     <main>
         <div class="breadcrumb">
-            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Your Seller Account</p>
+		 <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo;Your Seller Account</p>
+
+     
         </div>
 
         <div class="content-container">
@@ -333,7 +333,7 @@
                     <p>+955XXXXXXXXX</p>
                 </div>
                 <div class="email">
-                    <img src="images/email-icon.png" id="email-icon" alt="Email Icon">
+                  <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email"> </a>
                     <p>info@example.com</p>
                 </div>
             </div>
