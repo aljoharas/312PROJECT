@@ -45,13 +45,13 @@
             display: flex;
             justify-content: space-between;
             margin: auto;
-            margin-top: 30px;
+            margin-top: 2%;
         }
 
         .pagination a {
             color: black;
             text-decoration: none;
-            font-size: 14pt;
+            font-size: 1em;
             text-align: center;
         }
 
@@ -60,11 +60,11 @@
             color: white;
         }
 
-        .pagination a:hover:not(.active) {
+        .pagination a:hover {
             background-color: #6d93aa;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 1.8em;
+            height: 1.8em;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -80,13 +80,14 @@
         <div id="leftnav">
             <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft Logo"></a>
             <p>Clothes</p>
-            <p>Bags</p>
+            <p><a href="Category.html">Bags</a></p>
             <p>Shoes</p>
         </div>
         <div id="rightnav">
             <input id="search" type="text" placeholder="Search...">
             <div class="user">
-                <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon"></p>
+                <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon">
+                </p>
                 <div class="user-menu">
                     <a href="UserPage.html">Your Account<br><br></a>
                     <a href="SellerDashboardPage.html">Your Seller Account</a>
@@ -100,7 +101,8 @@
 
     <!-- Breadcrumbs -->
     <div class="breadcrumb">
-        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; <a href="UserPage.html" class="breadcrumb-links">Your Account</a> &raquo; My Orders</p>
+        <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; <a href="UserPage.html"
+                class="breadcrumb-links">Your Account</a> &raquo; My Orders</p>
     </div>
 
     <!-- Page Title -->
@@ -174,9 +176,9 @@
                 <p>+955XXXXXXXXX</p>
             </div>
             <div class="email">
-                <img src="images/email-icon.png" id="email-icon" alt="Email Address">
-                <p>info@example.com</p>
-            </div>
+                <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email"> </a>  
+                 <p>info@example.com</p>
+             </div>
         </div>
         <div class="copyright">
             <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>

@@ -12,7 +12,6 @@ head {
     font-family: "Vanity";
 }
 
-
 h1 {
     text-align: center;
     padding: 0.625em; 
@@ -81,6 +80,37 @@ h1 {
 .all {
     display: flex;
     justify-content: center;
+}
+
+.sidebar {
+    margin-bottom: 1.25em; 
+    border-radius: 0.313em; 
+    background-color: #f9f9f9;
+    width: 20%;
+    padding: 1.25em;
+    float: left;
+    box-sizing: border-box;
+}
+
+.sidebar h3, .sidebar p {
+    margin: 0.625em 0; 
+}
+
+.sidebar input[type="checkbox"] {
+    margin-right: 0.625em;
+}
+
+.sidebar input[type="text"] {
+    width: 80%;
+    padding: 0.3em; 
+    margin-top: 0.625em; 
+}
+
+.product-item #img {
+    display: flex;
+    width: 2.5em; 
+    height: 2.5em;
+    justify-content: right;
 }
 
 .background {
@@ -188,7 +218,6 @@ h1 {
     display: flex;
     align-items: center;
 }
-
 .filterbackground{
     display: flex;
     flex-direction: row;
@@ -196,7 +225,7 @@ h1 {
     align-items: center;
     justify-content: right;
     padding: 0.625em 1.25em; 
-
+    
 }
 
 #filter{ 
@@ -246,74 +275,76 @@ h1 {
             </div>
         </header>
         <div class="breadcrumb">
-            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Bages</p>
+            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo;Clothes</p>
         </div>
     </header>
-         <div class="filterbackground" >
-            <select name="filter" id="filter">
-                <option value="filter1">Our picks </option>
-                <option value="order2"> Highest price</option>
-                <option value="order3">lowest price</option>
-                </div>
-            </select>
-         </div>
-         <div class="all"></div>
+    <div class="filterbackground" >
+        <select name="filter" id="filter">
+            <option value="filter1">Our picks </option>
+            <option value="order2"> Highest price</option>
+            <option value="order3">lowest price</option>
+            </div>
+        </select>
+     </div>
+    <div class="all">  
+        <!-- Products -->
         <div class="background">
             <div class="product-grid">
                 <div class="product-item">
-                    <img src="images/bottega-bag.png" alt="botega bag">
+                    <img src="images/solace.png" alt="Solace London pink dress">
                     <div class="product-info">
-                        <h4> Bottega Veneta </h4>
-                        <p> Large Parachute Bag in Intrecciato Leather <br>5000 SR > </p>
+                        <h4> Solace London </h4>
+                        <p> Imani gown
+                            <br>5000 SR > </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/miumiu-bag.png" alt="Miu miu leather black and gold bag">
+                    <img src="images/anna.png" alt="Anna Quan dress  ">
                     <div class="product-info">
-                        <h4>Miu miu</h4>
-                        <p> Mini Arcadie Top-handle Bag in Matelassé Nappa <br>7000SR </p>
+                        <h4>Anna Quan </h4>
+                        <p> Classis pink dress <br>7000SR </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/loewe-bag.png" alt="Brown loewe bag">
+                    <img src="images/solace2.png" alt="Solace London pink dress">
                     <div class="product-info">
-                        <h4>Loewe</h4>
-                        <p>Mini Puzzle Bag in Classic Calfskin <br> 8000SR </p>
+                        <h4>Solace London</h4>
+                        <p>The Kaila maxi dressr<br> 8000SR </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/hermes-bag.png" alt="Kelly wallet pink" style="max-width: 500;">
+                    <img src="images/ana.png" alt="ana white dress" style="max-width: 500;">
                     <div class="product-info">
-                        <h4>Hermès</h4>
-                        <p>Kelly To Go Wallet in Epsom Leather <br>7500SR </p>
+                        <h4>Ana</h4>
+                        <p>ruffle-detail maxi dress<br>7500SR </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/Chanel-bag.png" alt="Chanel pink bag">
+                    <img src="images/solace4.png" alt="Solace London dress ">
                     <div class="product-info">
-                        <h4>Chanel</h4>
-                        <p>Medium Double Flap Bag in Quilted Lambskin Leather <br>6000SR </p>
+                        <h4>Solace London</h4>
+                        <p>DThe Kyla maxi dress<br>6000SR </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
                 </div>
                 <div class="product-item">
-                    <img src="images/bottega-bag2.png" alt="bottega bag">
-                    <h4>Bottega Veneta</h4>
-                    <p>Mini Arco Tote Bag in Intrecciato Leather<br> 6750SR </p>
+                    <img src="images/solace3.png" alt="solace london pink dress">
+                    <h4>Solace London</h4>
+                    <p>Talia oversized-cuffs gown<br> 6750SR </p>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
                     </div>
@@ -350,5 +381,5 @@ h1 {
             <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
         </div>
     </div>
-</body>
+    </body>
 </html>
