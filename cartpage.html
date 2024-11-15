@@ -164,6 +164,7 @@
             display: flex;
             justify-content: space-between;
             color: white;
+            margin-top: 3%;
         }
 
         .button-design {
@@ -282,12 +283,12 @@
                         <p class="item-others">$5000</p>
                         <div class="item-others counter">
                             <button class="operation decrease">-</button>
-                            <input type="text" value="1" class="quantity">
+                            <input type="text" value="1" class="quantity" readonly>
                             <button class="operation increase">+</button>
                         </div>
                         <p class="item-others">$5000</p>
                         <div class="remove">
-                            <button class="remove-button">x</button>
+                            <button class="remove-button" onclick="removeItem(this);">x</button>
                         </div>
                     </div>
                     <hr class="item-line">
@@ -312,12 +313,12 @@
                         <p class="item-others price">$7000</p>
                         <div class="item-others counter">
                             <button class="operation decrease" onclick="decrease(this);">-</button>
-                            <input type="text" value="1" class="quantity">
+                            <input type="text" value="1" class="quantity" readonly>
                             <button class="operation increase" onclick="increase(this);">+</button>
                         </div>
                         <p class="item-others subtotal">$7000</p>
                         <div class="remove">
-                            <button class="remove-button">x</button>
+                            <button class="remove-button" onclick="removeItem(this);">x</button>
                         </div>
                     </div>
                     <hr class="item-line">
@@ -342,20 +343,21 @@
                         <p class="item-others">$8000</p>
                         <div class="item-others counter">
                             <button class="operation decrease">-</button>
-                            <input type="text" value="1" class="quantity">
+                            <input type="text" value="1" class="quantity" readonly>
                             <button class="operation increase">+</button>
                         </div>
                         <p class="item-others">$8000</p>
                         <div class="remove">
-                            <button class="remove-button">x</button>
+                            <button class="remove-button" onclick="removeItem(this);">x</button>
                         </div>
                     </div>
                     <hr class="item-line">
                 </div>
 
+
                 <div class="buttons">
                     <button class="button-design"> &laquo; Continue Shopping </button> <!-- Link -->
-                    <button class="button-design">Empty Cart</button>
+                    <button class="button-design" onclick="empty();">Empty Cart</button>
                 </div>
             </div>
         </div>
