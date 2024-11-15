@@ -232,7 +232,7 @@
                 <input id="discountbox" type="text" name="discount" placeholder="Enter discount code here">
                 <div class="s-details">
                     <p>Sub-Total</p>
-                    <p>$20,000</p>
+                    <p id ="finalSubtotal">$20000</p>
                 </div>
                 <div class="s-details">
                     <p>Discount</p>
@@ -240,12 +240,12 @@
                 </div>
                 <div class="s-details">
                     <p>Shipping</p>
-                    <p>$50</p>
+                    <p id="shippingCost">$50</p>
                 </div>
                 <hr>
                 <div class="s-details">
                     <p>Total</p>
-                    <p>$20,050</p>
+                    <p id="totalCost">$20050</p>
                 </div>
                 <button id="checkout" onclick="checkout();">Continue to Checkout</button>
                 <p></p>
@@ -280,13 +280,13 @@
                             </div>
                         </div>
 
-                        <p class="item-others">$5000</p>
+                        <p class="item-others price">$5000</p>
                         <div class="item-others counter">
-                            <button class="operation decrease">-</button>
+                            <button class="operation decrease" onclick="decrease(this);">-</button>
                             <input type="text" value="1" class="quantity" readonly>
-                            <button class="operation increase">+</button>
+                            <button class="operation increase" onclick="increase(this);">+</button>
                         </div>
-                        <p class="item-others">$5000</p>
+                        <p class="item-others subtotal">$5000</p>
                         <div class="remove">
                             <button class="remove-button" onclick="removeItem(this);">x</button>
                         </div>
@@ -340,13 +340,13 @@
                             </div>
                         </div>
 
-                        <p class="item-others">$8000</p>
+                        <p class="item-others price">$8000</p>
                         <div class="item-others counter">
-                            <button class="operation decrease">-</button>
+                            <button class="operation decrease" onclick="decrease(this);">-</button>
                             <input type="text" value="1" class="quantity" readonly>
-                            <button class="operation increase">+</button>
+                            <button class="operation increase" onclick="increase(this);">+</button>
                         </div>
-                        <p class="item-others">$8000</p>
+                        <p class="item-others subtotal">$8000</p>
                         <div class="remove">
                             <button class="remove-button" onclick="removeItem(this);">x</button>
                         </div>
