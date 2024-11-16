@@ -81,11 +81,15 @@
         var discount = document.getElementById("discountbox").value;
         if (discount.startsWith("TTL")){
             var discountPercent = parseFloat(discount.substring(3));
-            var total = parseInt(document.getElementById("totalCost").innerHTML.replace("$",""))
-            alert(discountPercent);
+            var total = parseInt(document.getElementById("subtotal").innerHTML.replace("$",""));
             var discountedAmount = total * (discountPercent/100);
-            var newTotal = total - discountedAmount;
+            document.getElementById("discountedAmount").innerHTML = "$" + discountedAmount;
+            var shippingCost = parseInt(document.getElementById("shippingCost").innerHTML.replace("$",""));
+            var newTotal = total - discountedAmount + shippingCost;
             document.getElementById("totalCost").innerHTML = "$" + newTotal;
+        }
+        else{
+            alert("Invalid discount code. \nTry again!");
         }
     }*/
 
