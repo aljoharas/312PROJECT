@@ -97,89 +97,86 @@
         }
 
         .right-section {
-            padding: 1.875em;
-        }
+    padding: 1.875em;
+}
 
-        .right-section label {
-            display: block;
-            margin-bottom: 0.625em;
-            font-weight: bold;
-            font-size: 1em;
-            color: #333;
-        }
+.right-section label {
+    display: block;
+    margin-bottom: 0.625em;
+    font-weight: bold;
+    font-size: 1em;
+    color: #333;
+}
 
-        .right-section input[type="text"],
-        .right-section input[type="number"],
-        .right-section textarea,
-        .right-section select,
-        .right-section input[type="date"] {
-            width: 100%;
-            padding: 0.75em;
-            margin-bottom: 1.25em;
-            border: 0.125em solid #ddd;
-            border-radius: 0.3125em;
-            box-sizing: border-box;
-            font-size: 1em;
-            color: #333;
-        }
+.right-section input[type="text"],
+.right-section textarea,
+.right-section input[type="file"] {
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1.25em;
+    border: 0.125em solid #ddd;
+    border-radius: 0.3125em;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+}
 
-        .right-section input:focus,
-        .right-section textarea:focus,
-        .right-section select:focus {
-            border-color: #777777;
-            outline: none;
-            box-shadow: 0 0 0.3125em rgba(119, 119, 119, 0.2);
-        }
+.right-section input:focus,
+.right-section textarea:focus {
+    border-color: #777777;
+    outline: none;
+    box-shadow: 0 0 0.3125em rgba(119, 119, 119, 0.2);
+}
 
-        .right-section input::placeholder,
-        .right-section textarea::placeholder {
-            color: #888;
-        }
+.right-section input::placeholder,
+.right-section textarea::placeholder {
+    color: #888;
+}
 
-        .right-section textarea {
-            height: 6.25em;
-            resize: vertical;
-        }
+.right-section textarea {
+    height: 6.25em;
+    resize: vertical;
+}
 
-        .right-section input[type="submit"] {
-            width: 100%;
-            padding: 0.75em;
-            background-color: #6d93aa;
-            text-decoration: none;
-            border: none;
-            color: white;
-            font-size: 1.125em;
-            cursor: pointer;
-            border-radius: 0.3125em;
-            box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-        }
+.right-section input[type="submit"] {
+    width: 100%;
+    padding: 0.75em;
+    background-color: #6d93aa;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-size: 1.125em;
+    cursor: pointer;
+    border-radius: 0.3125em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+}
 
-        .right-section input[type="submit"]:hover {
-            background-color: #64989d;
-        }
+.right-section input[type="submit"]:hover {
+    background-color: #64989d;
+}
 
-        .right-section input[type="file"] {
-            display: none;
-        }
+.right-section input[type="file"] {
+    display: none;
+}
 
-        .right-section .custom-file-upload {
-            display: inline-block;
-            padding: 0.5em 1em;
-            font-size: 0.875em;
-            font-weight: bold;
-            color: white;
-            background-color: #6d93aa;
-            border-radius: 0.3125em;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 6.25em;
-        }
+.right-section .custom-file-upload {
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: white;
+    background-color: #6d93aa;
+    border-radius: 0.3125em;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 6.25em;
+}
 
-        .right-section .custom-file-upload:hover {
-            background-color: #64989d;
-        }
+.right-section .custom-file-upload:hover {
+    background-color: #64989d;
+}
     </style>
 </head>
 
@@ -256,39 +253,24 @@
             <!-- Right Section: Add New Offer Form -->
             <div class="right-section">
                 <h3 class="section-header">Add New Offer</h3>
-
+            
                 <form action="#" method="post" enctype="multipart/form-data">
                     <label for="offer-label">Offer Label</label>
                     <input type="text" id="offer-label" name="offer-label" placeholder="e.g. Summer Sale" required>
-
-                    <label for="sale-percentage">Sale Percentage</label>
-                    <input type="number" id="sale-percentage" name="sale-percentage" placeholder="%XX" min="0" max="100"
-                        required>
-
+            
                     <label for="offer-description">Offer Description</label>
-                    <textarea id="offer-description" name="offer-description" placeholder="Describe the offer here..."
-                        required></textarea>
-
+                    <textarea id="offer-description" name="offer-description" placeholder="Describe the offer here..." required></textarea>
+            
                     <label for="offer-image">Upload Offer Image</label>
                     <label class="custom-file-upload">
                         <input type="file" id="offer-image" name="offer-image" required>
                         Choose File
                     </label>
-
-                    <label for="product-selection">Product Selection</label>
-                    <select id="product-selection" name="product-selection" required>
-                        <option value="" disabled selected>Select a product</option>
-                        <option value="product1">Product 1</option>
-                        <option value="product2">Product 2</option>
-                        <option value="product3">Product 3</option>
-                    </select>
-
-                    <label for="expiration-date">Offer Expiration Date</label>
-                    <input type="date" id="expiration-date" name="expiration-date" required>
-
+            
                     <input type="submit" value="Add Offer">
                 </form>
             </div>
+            
         </div>
 
         <!-- Footer -->
