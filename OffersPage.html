@@ -291,6 +291,81 @@
             </div>
         </div>
 
+        <script>
+            // Offers array to hold offer objects
+            const offers = [
+                { id: "offer1", label: "70% sale", image: "images/70Sale.jpg" },
+                { id: "offer2", label: "30% off everything", image: "images/30Off.jpg" },
+                { id: "offer3", label: "Free Shipping on Orders Over $20", image: "images/FreeShipping.jpg" }
+            ];
+        
+            // Function to handle delete selected offers
+            document.querySelector('.delete-btn').addEventListener('click', function() {
+                const selectedOffers = offers.filter(offer => 
+                    document.getElementById(offer.id).checked
+                );
+                
+                if (selectedOffers.length === 0) {
+                    alert("Please select at least one offer");
+                } else {
+                    const confirmDelete = confirm("Are you sure you want to delete the selected offers?");
+                    if (confirmDelete) {
+                        selectedOffers.forEach(offer => {
+                            const checkbox = document.getElementById(offer.id);
+                            checkbox.closest('.offer-item').remove(); // Remove offer element from DOM
+                        });
+                    }
+                }
+            });
+        
+            // Form validation and adding a new offer
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+        
+                const offerLabel = document.getElementById("offer-label").value.trim();
+                const offerDescription = document.getElementById("offer-description").value.trim();
+                const offerImage = document.getElementById("offer-image").files[0];
+        
+                // Check if fields are empty
+                if (!offerLabel || !offerDescription) {
+                    alert("Please fill in all fields.");
+                    return;  // Stop further execution
+                }
+        
+                // Check if a file is attached
+                if (!offerImage) {
+                    alert("Please attach a file for the offer image.");
+                    return;
+                }
+        
+                // If form is valid, add the new offer
+                const newOfferId = `offer${offers.length + 1}`;
+                offers.push({
+                    id: newOfferId,
+                    label: offerLabel,
+                    image: URL.createObjectURL(offerImage)  // Temporary image preview
+                });
+        
+                // Add new offer element to the left section
+                const editOffers = document.querySelector('.editoffers');
+                const newOfferItem = document.createElement('div');
+                newOfferItem.classList.add('offer-item');
+                newOfferItem.innerHTML = `
+                    <input type="checkbox" id="${newOfferId}">
+                    <img src="${URL.createObjectURL(offerImage)}" alt="Offer ${offerLabel}">
+                    <label for="${newOfferId}">${offerLabel}</label>
+                `;
+                editOffers.appendChild(newOfferItem);
+        
+                // Clear the form fields
+                document.querySelector('form').reset();
+            });
+        </script>
+        
+        
+        
+        
+
 </body>
 
 </html>

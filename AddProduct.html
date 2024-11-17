@@ -225,6 +225,93 @@
             </div>
         </div>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const form = document.querySelector("form");
+                const productLabelInput = document.getElementById("product-label");
+                const productPriceInput = document.getElementById("product-price");
+                const productDescriptionInput = document.getElementById("product-description");
+                const productCategoryInput = document.getElementById("product-category");
+                const productQuantityInput = document.getElementById("product-quantity");
+                const productImageInput = document.getElementById("product-image"); // Image input
+        
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault();
+        
+                    // Validation: Check if all fields are filled
+                    if (!productLabelInput.value.trim()) {
+                        alert("Product Label is required.");
+                        return;  // Stop further validation
+                    }
+        
+                    if (!productPriceInput.value) {
+                        alert("Product Price is required.");
+                        return;
+                    }
+        
+                    if (!productDescriptionInput.value.trim()) {
+                        alert("Product Description is required.");
+                        return;
+                    }
+        
+                    if (!productCategoryInput.value) {
+                        alert("Product Category is required.");
+                        return;
+                    }
+        
+                    if (!productQuantityInput.value) {
+                        alert("Product Quantity is required.");
+                        return;
+                    }
+        
+                    // Check if an image is uploaded
+                    if (!productImageInput.files.length) {
+                        alert("Product Image is required.");
+                        return;
+                    }
+        
+                    // Check if product label starts with a letter
+                    if (/^[0-9]/.test(productLabelInput.value)) {
+                        alert("Product Label should not start with a number.");
+                        return;
+                    }
+        
+                    // Check if product price and quantity are numbers
+                    if (isNaN(productPriceInput.value) || productPriceInput.value <= 0) {
+                        alert("Product Price must be a positive number.");
+                        return;
+                    }
+        
+                    if (isNaN(productQuantityInput.value) || productQuantityInput.value <= 0) {
+                        alert("Product Quantity must be a positive number.");
+                        return;
+                    }
+        
+                    // Get product data
+                    const newProduct = {
+                        label: productLabelInput.value.trim(),
+                        price: parseFloat(productPriceInput.value),
+                        description: productDescriptionInput.value.trim(),
+                        category: productCategoryInput.value,
+                        quantity: parseInt(productQuantityInput.value, 10)
+                    };
+        
+                    // Store in localStorage
+                    let products = JSON.parse(localStorage.getItem("products")) || [];
+                    products.push(newProduct);
+                    localStorage.setItem("products", JSON.stringify(products));
+        
+                    // Alert success
+                    alert(`Product "${newProduct.label}" has been added successfully.`);
+        
+                    // Clear form
+                    form.reset();
+                });
+            });
+        </script>
+        
+            
+
 </body>
 
 </html>
