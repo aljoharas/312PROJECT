@@ -93,5 +93,78 @@
         }
     }*/
 
+/* ###################### Seller Daashboard ###################### */  
+document.addEventListener("DOMContentLoaded", function () {
+    const productList = document.getElementById("product-list");
+    const productCount = document.getElementById("product-count");
+   
+    let products = JSON.parse(localStorage.getItem("products")) || [];
+
+    productCount.textContent = products.length;
+
+    if (products.length === 0) {
+        productList.innerHTML = "<p style='padding: 1em; color: #888;'>No products available.</p>";
+    } else {
+        displayProducts(products);
+
+        document.querySelectorAll('.delete-button').forEach(button => {
+            button.addEventListener('click', handleDelete);
+        });
+    }
+
+    function displayProducts(products) {
+        productList.innerHTML = ""; 
+        if (products.length === 0) {
+            productList.innerHTML = "<p style='padding: 1em; color: #888;'>No products available.</p>";
+        } else {
+            products.forEach((product, index) => {
+                const productBox = document.createElement("div");
+                productBox.classList.add("product-box");
+
+                productBox.innerHTML = `
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.label}">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-header">
+                                <p class="product-name">${product.label}</p>
+                                <p class="product-price">$${product.price}</p>
+                            </div>
+                            <div class="product-description">${product.description}</div>
+                            <div class="product-quantity-category">
+                                <div class="product-category">
+                                    <p>Quantity: ${product.quantity}</p>
+                                </div>
+                                <div class="product-category">
+                                    <p>Category: ${product.category}</p>
+                                </div>
+                            </div>
+                            <div class="delete-container">
+                                <button class="delete-button" data-index="${index}">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productList.appendChild(productBox);
+            });
+
+            document.querySelectorAll('.delete-button').forEach(button => {
+                button.addEventListener('click', handleDelete);
+            });
+        }
+    }
+
+    function handleDelete(event) {
+        const productIndex = event.target.getAttribute('data-index');
         
+        const isConfirmed = confirm("Are you sure you want to delete this product?");
+        if (isConfirmed) {
+            products.splice(productIndex, 1);
+            localStorage.setItem('products', JSON.stringify(products));
+            displayProducts(products);
+            productCount.textContent = products.length;
+        }
+    }
+});
 /* ###################### INSERT NEXT PAGE NAME ###################### */
