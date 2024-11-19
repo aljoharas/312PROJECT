@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Your Seller Account</title>
+    <title>Your Seller Account</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
+  
+    <style> 
         .content-container {
             display: flex;
             justify-content: space-between;
-            align-items: stretch;
+            align-items: flex-start;  
             height: auto;
         }
 
@@ -19,72 +19,100 @@
             width: 70%;
             display: flex;
             flex-direction: column;
+            border-radius: 0.625em;
+            padding: 1.25em 0;
+            box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); 
+            margin-top: 1.5em;
         }
 
-        .products-section h2 {
-            margin-bottom: 0.625em;
-        }
-
-        .product-list {
-            border: 0.063em solid #ddd;
-            padding: 0.625em;
-            max-height: 37.5em;
-            overflow-y: auto;
-            flex-grow: 1;
-            margin-left: 1.25em;
+       .product-list {
+            display: flex;
+            overflow-x: auto; 
+            padding: 1.25em; 
+            gap: 1.25em; 
+            margin-top: 1.25em;    
         }
 
         .product-box {
-            border-bottom: 0.063em solid #ddd;
-            padding: 0.9375em 0;
-            display: flex;
-            align-items: flex-start;
+	    	border-radius: 1em;
+            width: 25em;
             height: auto;
+            border: 0.063em solid #ddd;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            margin: 1em;
+            box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+            min-width: 25em;
         }
 
-        .product-item {
+        .product-items {
             display: flex;
-            align-items: flex-start;
-            width: 100%;
+            flex-wrap: nowrap; 
         }
 
         .product-image img {
-            width: 6.25em;
-            height: 6.25em;
-            margin-right: 1.25em;
+            width: 100%;
+            height: 100%;
+            
+        }
+        .product-image {
+            width: 100%;
+            height: 15em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
         }
 
         .product-details {
             flex-grow: 1;
+            align-items: flex-start;  
+            flex-direction: column;
+            width: 100%;
+			justify-content: space-between;
         }
 
         .product-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
+            margin-bottom: 0.5em; 
         }
 
         .product-name {
             font-size: 1em;
             font-weight: bold;
-            margin: 0;
+            text-align: left;
+            flex-grow: 1;
+            word-wrap: break-word;
+            white-space: normal;
         }
 
         .product-price {
-            font-size: 1em;
             color: #333;
+            font-weight: normal;
             text-align: right;
+            width: auto;
+            margin-left: 1em; 
         }
 
-        .product-description p {
-            margin: 0.3125em 0;
+        .product-description {
             font-size: 0.875em;
             color: #555;
+            text-align: left;
+            margin-top: 0.5em; 
+            word-wrap: break-word;
+            white-space: normal;
         }
 
         .product-category {
-            text-align: right;
-            margin-top: 0.625em;
+            font-size: 0.875em;
+            color: #888;
+            text-align: left;
+            margin-top: 0.5em; 
         }
 
         .product-category p {
@@ -94,7 +122,7 @@
         }
 
         .product-list::-webkit-scrollbar {
-            width: 0.75em;
+            height: 1em;
         }
 
         .product-list::-webkit-scrollbar-track {
@@ -104,7 +132,6 @@
         .product-list::-webkit-scrollbar-thumb {
             background-color: #6d93aa;
             border-radius: 0.625em;
-            border: 0.125em solid black;
         }
 
         .side-panels {
@@ -140,21 +167,36 @@
             margin-top: 0.625em;
         }
         .link-button:hover {
-    background-color: #64989d;
+            background-color: #64989d;     
+        }
+		.delete-button {
+    background-color: #e57373;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.3125em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-        
+
+.delete-button:hover {
+    background-color: #f44336;
+}
+
+.delete-container {
+    margin-top: 0.5em;
+    text-align: right; 
+}
     </style>
+
 </head>
 
 <body>
     <header>
         <h1>The Trend Loft</h1>
-
-        <!-- Navigation after update -->
         <div id="navigation">
             <div id="leftnav">
                 <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="logo"></a>
-
                 <p><a href="Category2.html">Clothes</a></p>
                 <p><a href="Category.html">Bags</a></p>
                 <p><a href="category1.html">Shoes</a></p>
@@ -162,8 +204,7 @@
             <div id="rightnav">
                 <input id="search" type="text" placeholder="Search...">
                 <div class="user">
-                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon"
-                            class="user-arrow-icon"></p>
+                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon" class="user-arrow-icon"></p>
                     <div class="user-menu">
                         <a href="UserPage.html">Your Account<br><br></a>
                         <a href="SellerDashboardPage.html">Your Seller Account</a>
@@ -176,160 +217,27 @@
         </div>
     </header>
 
-    <!-- Main Section -->
     <main>
         <div class="breadcrumb">
-            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo;Your Seller Account</p>
-
-
+            <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; Your Seller Account</p>
         </div>
-
+        
         <div class="content-container">
             <div class="products-section">
-                <h2 style="margin-left: 20px;">My Products</h2>
-                <section class="product-list">
-                    <div class="product-items">
-                        <div class="product-box">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="images/bag2.jpeg" alt="large brown tote bag">
-                                </div>
-                                <div class="product-details">
-                                    <div class="product-header">
-                                        <p class="product-name"><strong>Saint Laurent Brown Tote</strong></p>
-                                        <p class="product-price">$10000</p>
-                                    </div>
-                                    <div class="product-description">
-                                        <p>Chic leather bag from 1996 collection <br> 100% authentic and in mint
-                                            condition</p>
-                                    </div>
-                                    <div class="product-category">
-                                        <p>Category: Bags</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-box">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="images/dress2.png" alt="Midi green and white dress">
-                                </div>
-                                <div class="product-details">
-                                    <div class="product-header">
-                                        <p class="product-name"><strong>Misha Satin Dress</strong></p>
-                                        <p class="product-price">$2500</p>
-                                    </div>
-                                    <div class="product-description">
-                                        <p>Mint and White Slip On Dress from 1994 collection <br> 100% authentic and in
-                                            perfect condition</p>
-                                    </div>
-                                    <div class="product-category">
-                                        <p>Category: Clothes</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-box">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="images/shirt.png" alt="black jacket with buttons">
-                                </div>
-                                <div class="product-details">
-                                    <div class="product-header">
-                                        <p class="product-name"><strong>Chanel Velour Shirt</strong></p>
-                                        <p class="product-price">$1500</p>
-                                    </div>
-                                    <div class="product-description">
-                                        <p>Limited edition black shirt from 1980 collection <br> 100% authentic and in
-                                            good condition</p>
-                                    </div>
-                                    <div class="product-category">
-                                        <p>Category: Clothes</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-box">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="images/product3.png" alt="shoulder bag with logo">
-                                </div>
-                                <div class="product-details">
-                                    <div class="product-header">
-                                        <p class="product-name"><strong>Dior Shoulder Bag</strong></p>
-                                        <p class="product-price">$5000</p>
-                                    </div>
-                                    <div class="product-description">
-                                        <p>Classic canvas shoulder bag with leather strap from 2005 collection<br> 100%
-                                            authentic and in good condition</p>
-                                    </div>
-                                    <div class="product-category">
-                                        <p>Category: Bags</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-box">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="images/product2.png" alt="Black leather boots">
-                                </div>
-                                <div class="product-details">
-                                    <div class="product-header">
-                                        <p class="product-name"><strong>Givenchy Leather Boots in Black</strong></p>
-                                        <p class="product-price">$2000</p>
-                                    </div>
-                                    <div class="product-description">
-                                        <p>Slip on durable leather boots from 2001 collection <br> 100% authentic and in
-                                            mint condition</p>
-                                    </div>
-                                    <div class="product-category">
-                                        <p>Category: Shoes</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-box">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <img src="images/product1.png" alt="Brown bag">
-                                </div>
-                                <div class="product-details">
-                                    <div class="product-header">
-                                        <p class="product-name"><strong>Bottega Veneta Arco Tote Bag</strong></p>
-                                        <p class="product-price">$7000</p>
-                                    </div>
-                                    <div class="product-description">
-                                        <p>One of the most timeless leather bags from 1990 collection. <br> 100%
-                                            authentic and in perfect condition</p>
-                                    </div>
-                                    <div class="product-category">
-                                        <p>Category: Bags</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <h2 style="margin-left: 1em; margin-top: 0.25em;">My Products</h2>
+                <section class="product-list" id="product-list"></section>
             </div>
 
             <section class="side-panels">
                 <div class="panel">
-                    <p>Number of products available: 6</p>
-                    <p>Add new products to enhance your selling experience and offer more options to your customers.
-                        Keep your inventory updated regularly to attract more buyers.</p>
+                    <p>Number of products available: <span id="product-count">0</span></p>
+                    <p>Add new products to enhance your selling experience.</p>
                     <a href="AddProduct.html" class="link-button">Add New Product</a>
                 </div>
                 <div class="panel">
-                    <p>Number of current offers: 3</p>
-                    <p>Manage your current offers effectively to boost product sales. Leverage promotional deals to
-                        capture attention and increase demand for your products.</p>
-                    <a href="OffersPage.html" class="link-button">Add or Remove Offers</a> <!-- رابط -->
+                    <p>Number of current offers:3</p>
+                    <p>Manage your current offers to boost sales.</p>
+                    <a href="OffersPage.html" class="link-button">Add or Remove Offers</a>
                 </div>
             </section>
         </div>
@@ -344,8 +252,7 @@
                     <p>+955XXXXXXXXX</p>
                 </div>
                 <div class="email">
-                    <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon"
-                            alt="email"> </a>
+                    <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email"> </a>
                     <p>info@example.com</p>
                 </div>
             </div>
@@ -354,6 +261,91 @@
             </div>
         </div>
     </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const productList = document.getElementById("product-list");
+        const productCount = document.getElementById("product-count");
+       
+        let products = JSON.parse(localStorage.getItem("products")) || [];
+
+        productCount.textContent = products.length;
+
+      
+        if (products.length === 0) {
+            productList.innerHTML = "<p style='padding: 1em; color: #888;'>No products available.</p>";
+        } else {
+            displayProducts(products);
+
+           
+            document.querySelectorAll('.delete-button').forEach(button => {
+                button.addEventListener('click', handleDelete);
+            });
+        }
+
+       
+        function displayProducts(products) {
+            productList.innerHTML = ""; 
+            if (products.length === 0) {
+                productList.innerHTML = "<p style='padding: 1em; color: #888;'>No products available.</p>";
+            } else {
+                products.forEach((product, index) => {
+                    const productBox = document.createElement("div");
+                    productBox.classList.add("product-box");
+
+                    productBox.innerHTML = `
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="${product.image}" alt="${product.label}">
+                            </div>
+                            <div class="product-details">
+                                <div class="product-header">
+                                    <p class="product-name">${product.label}</p>
+                                    <p class="product-price">$${product.price}</p>
+                                </div>
+                                <div class="product-description">${product.description}</div>
+                                <div class="product-quantity-category">
+                                    <div class="product-category">
+                                        <p>Quantity: ${product.quantity}</p>
+                                    </div>
+                                    <div class="product-category">
+                                        <p>Category: ${product.category}</p>
+                                    </div>
+                                </div>
+                                <div class="delete-container">
+                                    <button class="delete-button" data-index="${index}">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    productList.appendChild(productBox);
+                });
+
+                document.querySelectorAll('.delete-button').forEach(button => {
+                    button.addEventListener('click', handleDelete);
+                });
+            }
+        }
+
+        
+        function handleDelete(event) {
+            const productIndex = event.target.getAttribute('data-index');
+            
+            const isConfirmed = confirm("Are you sure you want to delete this product?");
+            if (isConfirmed) {
+                products.splice(productIndex, 1);
+                localStorage.setItem('products', JSON.stringify(products));
+                displayProducts(products);
+                productCount.textContent = products.length;
+            }
+        }
+
+     
+       
+        });
+
+</script>
+
 </body>
 
 </html>
