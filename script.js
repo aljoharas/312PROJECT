@@ -170,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* ###################### INSERT NEXT PAGE NAME ###################### */
 /* Category pages */
 /* sorting */
+/*
 document.addEventListener("DOMContentLoaded",() => {
     const filterDropdown = document.getElementById("filter");
     const productGrid = document.querySelector(".product-grid");
@@ -206,6 +207,6 @@ function getPrice(product){
 function getName(product){
     return product.querySelector("h4").textContent.trim();}
    
-});
+}); */
 
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Product Category</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <style>
 @font-face {
     font-family: "Vanity";
@@ -380,4 +381,47 @@ h1 {
     </div>
 </footer>
     </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterDropdown = document.getElementById("filter");
+            const productGrid = document.querySelector(".product-grid");
+            const products = Array.from(productGrid.children);
+        
+            filterDropdown.addEventListener("change", () => {
+                const selectedOption = filterDropdown.value;
+                let sortedProducts;
+        
+                if (selectedOption === "order2") {
+                    // High to Low
+                    sortedProducts = products.sort((a, b) => getPrice(b) - getPrice(a));
+                } else if (selectedOption === "order3") {
+                    // Low to High
+                    sortedProducts = products.sort((a, b) => getPrice(a) - getPrice(b));
+                } else if (selectedOption === "A to Z") {
+                    // A to Z
+                    sortedProducts = products.sort((a, b) =>
+                        getName(a).localeCompare(getName(b), undefined, { sensitivity: "base" })
+                    );
+                } else if (selectedOption === "Z to A") {
+                    // Z to A
+                    sortedProducts = products.sort((a, b) =>
+                        getName(b).localeCompare(getName(a), undefined, { sensitivity: "base" })
+                    );
+                }
+        
+                // Clear and re-append sorted products
+                productGrid.innerHTML = "";
+                sortedProducts.forEach((product) => productGrid.appendChild(product));
+            });
+        
+            function getPrice(product) {
+                const priceText = product.querySelector("p").textContent;
+                return parseFloat(priceText.match(/(\d+)/)[0]);
+            }
+        
+            function getName(product) {
+                return product.querySelector("h4").textContent.trim();
+            }
+        });
+        </script>
 </html>
