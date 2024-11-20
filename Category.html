@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Product Category</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <style>
 @font-face {
     font-family: "Vanity";
@@ -245,24 +244,24 @@ h1 {
          <div class="filterbackground" >
           <form action="#">
             <select name="filter" id="filter">
-               <optgroup Label="Price">
-                <option value="order2"> Highest to lowest </option>
-          <option value="order3"> Lowest to Highest </option>
-            </optgroup>
-            <optgroup label="Alphabetical order">
-                <option value="order2"> A to Z</option>
-                <option value="order3">Z to A</option>
+                <optgroup label="Price">
+                    <option value="order2">Highest to Lowest</option>
+                    <option value="order3">Lowest to Highest</option>
+                </optgroup>
+                <optgroup label="Alphabetical order">
+                    <option value="A to Z">A to Z</option>
+                    <option value="Z to A">Z to A</option>
+                </optgroup>
             </select>
         </form>
          </div>
-         <div class="all"></div>
         <div class="background">
             <div class="product-grid">
                 <div class="product-item">
                     <img src="images/bottega-bag.png" alt="botega bag">
                     <div class="product-info">
-                        <h4> Bottega Veneta </h4>
-                        <p> Large Parachute Bag in Intrecciato Leather <br>5000 SR > </p>
+                        <h4>Bottega Veneta</h4>
+                        <p> Large Parachute Bag in Intrecciato Leather <br>5000 SR </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
@@ -366,19 +365,12 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (selectedOption === "order3") {
             // Low to High
             sortedProducts = products.sort((a, b) => getPrice(a) - getPrice(b));
-        } else if (selectedOption === "A to Z") {
-            // A to Z
-            sortedProducts = products.sort((a, b) =>
-                getName(a).localeCompare(getName(b), undefined, { sensitivity: "base" })
-            );
-        } else if (selectedOption === "Z to A") {
-            // Z to A
-            sortedProducts = products.sort((a, b) =>
-                getName(b).localeCompare(getName(a), undefined, { sensitivity: "base" })
-            );
-        }
-
-        // Clear and re-append sorted products
+        } if (selectedOption === "A to Z") {
+    sortedProducts = products.sort((a, b) => getName(a).localeCompare(getName(b)));
+} else if (selectedOption === "Z to A") {
+    sortedProducts = products.sort((a, b) => getName(b).localeCompare(getName(a)));
+}
+    
         productGrid.innerHTML = "";
         sortedProducts.forEach((product) => productGrid.appendChild(product));
     });
@@ -389,8 +381,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function getName(product) {
-        return product.querySelector("h4").textContent.trim();
+        return product.querySelector("h4").textContent.trim().toLowerCase();
     }
 });
 </script>
+
 </html>
