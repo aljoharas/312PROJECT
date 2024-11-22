@@ -384,6 +384,41 @@ document.addEventListener("DOMContentLoaded", () => {
         return product.querySelector("h4").textContent.trim().toLowerCase();
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    // Get all cart icons
+    const cartIcons = document.querySelectorAll(".cart-icon img");
+
+    // Add event listener for each cart icon
+    cartIcons.forEach((cartIcon, index) => {
+        cartIcon.addEventListener("click", () => {
+            // Get the corresponding product information
+            const productItem = cartIcon.closest(".product-item");
+            const productName = productItem.querySelector("h4").textContent;
+            const productPrice = productItem.querySelector("p").textContent.trim();
+            const productImage = productItem.querySelector("img").src;
+
+            // Create product object
+            const product = {
+                name: productName,
+                price: productPrice,
+                image: productImage
+            };
+
+            // Retrieve current cart from local storage or initialize it as an empty array
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Add the product to the cart
+            cart.push(product);
+
+            // Save the updated cart back to local storage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Redirect to the cart page
+            window.location.href = "cartpage.html";
+        });
+    });
+});
+
 </script>
 
 </html>
