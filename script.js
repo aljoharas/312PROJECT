@@ -1,5 +1,24 @@
 /* ###################### CART ###################### */
 
+/*
+Item type = {
+img: String 
+itemName : string 
+brandName : String 
+itemDescription: string 
+price: int 
+quantity: int 
+}
+
+*/ 
+
+function displayItems(){
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    console.log(cart);
+    
+}
+
+
     /* Checkout Message */
         function checkout() {
             var total = document.getElementById("totalCost").innerHTML;
@@ -91,7 +110,7 @@
         else{
             alert("Invalid discount code. \nTry again!");
         }
-    }*/
+    }*/ 
 
 /* ###################### Seller Daashboard ###################### */  
 document.addEventListener("DOMContentLoaded", function () {
