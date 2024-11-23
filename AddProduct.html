@@ -286,7 +286,7 @@
                         return;
                     }
 
-                    const reader = new Fileeader();
+                    const reader = new FileReader();
                     reader.onloadend = function() {
         
                     // Get product data
@@ -310,7 +310,7 @@
                     // Clear form
                     form.reset(); 
                 };
-                reader.readAsDataUL(productImageInput.files[0]);
+                reader.readAsDataURL(productImageInput.files[0]);
                 });
             });
         </script>
