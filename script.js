@@ -113,7 +113,7 @@ function displayItems(){
     }*/ 
 
 /* ###################### Seller Daashboard ###################### */  
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     const productList = document.getElementById("product-list");
     const productCount = document.getElementById("product-count");
    
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
             productCount.textContent = products.length;
         }
     }
-});
+});*/
 /* ###################### INSERT NEXT PAGE NAME ###################### */
 /* Category pages */
 /* sorting */
