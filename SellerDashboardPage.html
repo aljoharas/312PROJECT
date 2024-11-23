@@ -235,7 +235,7 @@
                     <a href="AddProduct.html" class="link-button">Add New Product</a>
                 </div>
                 <div class="panel">
-                    <p>Number of current offers:3</p>
+                    <p>Number of current offers: <span id="offer-count">0</p>
                     <p>Manage your current offers to boost sales.</p>
                     <a href="OffersPage.html" class="link-button">Add or Remove Offers</a>
                 </div>
@@ -263,12 +263,17 @@
     </footer>
 
    <script>
-   document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const productList = document.getElementById("product-list");
     const productCount = document.getElementById("product-count");
-   
+    const offerCount = document.getElementById('offer-count');
+
+  
+    let offers = JSON.parse(localStorage.getItem("offers")) || [];  
     let products = JSON.parse(localStorage.getItem("products")) || [];
 
+   
+    offerCount.textContent = offers.length;
     productCount.textContent = products.length;
 
     if (products.length === 0) {
@@ -282,7 +287,7 @@
     }
 
     function displayProducts(products) {
-        productList.innerHTML = ""; 
+        productList.innerHTML = "";
         if (products.length === 0) {
             productList.innerHTML = "<p style='padding: 1em; color: #888;'>No products available.</p>";
         } else {
@@ -335,7 +340,49 @@
             productCount.textContent = products.length;
         }
     }
+
+
+    document.querySelector('.add-offer-btn').addEventListener('click', function () {
+        const offerLabel = document.getElementById('offer-label').value.trim();
+        const offerDescription = document.getElementById('offer-description').value.trim();
+        const offerImage = document.getElementById('offer-image').files[0];
+
+        if (!offerLabel || !offerDescription || !offerImage) {
+            alert('Please fill in all fields!');
+            return;
+        }
+
+        offers.push({ label: offerLabel, description: offerDescription, image: offerImage });
+        localStorage.setItem("offers", JSON.stringify(offers));
+
+        
+        offerCount.textContent = offers.length;
+
+        document.querySelector('.offer-form').reset();
+    });
+
+  
+    document.querySelector('.delete-offers-btn').addEventListener('click', function () {
+        const selectedOffers = offers.filter((offer, index) => document.getElementById(`offer${index}`).checked);
+
+        if (selectedOffers.length === 0) {
+            alert("Please select at least one offer");
+            return;
+        }
+
+        const confirmDelete = confirm("Are you sure you want to delete the selected offers?");
+        if (confirmDelete) {
+      
+            offers = offers.filter((offer, index) => !document.getElementById(`offer${index}`).checked);
+
+            localStorage.setItem("offers", JSON.stringify(offers));
+
+         
+            offerCount.textContent = offers.length;
+        }
+    });
 });
+
    </script>
 
 
