@@ -391,6 +391,39 @@
                 quantity: 1
             }
         ];
+        const productGrid = document.querySelector(".product-grid");
+
+products.forEach(product => {
+    const productItem = document.createElement("div");
+    productItem.classList.add("product-item");
+
+    productItem.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-info">
+            <h4>${product.brand}</h4>
+            <p>${product.description} <br>${product.price} SR</p>
+        </div>
+        <div class="cart-icon">
+            <img src="images/cart.png" alt="cart" onclick="addToCart(${product.id})">
+        </div>
+    `;
+
+    productGrid.appendChild(productItem);
+});
+function addToCart(productId) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const product = products.find(item => item.id === productId);
+
+    const existingItem = cart.find(item => item.id === productId);
+    if (existingItem) {
+        existingItem.quantity++; // Increase quantity if item already in cart
+    } else {
+        cart.push({ ...product, quantity: 1 }); // Add the item to the cart
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart)); // Save the updated cart to localStorage
+}
+
 
         /* Checkout Message */
         function checkout() {
