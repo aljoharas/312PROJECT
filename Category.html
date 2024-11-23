@@ -401,7 +401,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const product = {
                 name: productName,
                 price: productPrice,
-                image: productImage
+                image: {
+        url: productImage,
+        alt: productAltText
+    }
             };
 
             // Retrieve current cart from local storage or initialize it as an empty array
