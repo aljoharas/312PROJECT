@@ -292,75 +292,124 @@
         </div>
 
         <script>
-            // Offers array to hold offer objects
-            const offers = [
+            // Load offers from local storage or use default values
+            let offers = JSON.parse(localStorage.getItem('offers')) || [
                 { id: "offer1", label: "70% sale", image: "images/70Sale.jpg" },
                 { id: "offer2", label: "30% off everything", image: "images/30Off.jpg" },
                 { id: "offer3", label: "Free Shipping on Orders Over $20", image: "images/FreeShipping.jpg" }
             ];
         
+            // Function to validate offers
+            function validateOffers(offers) {
+                return offers.filter(offer => offer.id && offer.label && offer.image);
+            }
+        
+            // Repair improperly saved offers (if any)
+            offers = validateOffers(offers);
+            saveOffers(); // Save the repaired offers
+        
+            // Function to save offers to local storage
+            function saveOffers() {
+                localStorage.setItem('offers', JSON.stringify(offers));
+            }
+        
+            // Function to render offers in the DOM
+            function renderOffers() {
+                const editOffers = document.querySelector('.editoffers');
+                editOffers.innerHTML = ''; // Clear existing offers
+        
+                offers.forEach(offer => {
+                    const offerItem = document.createElement('div');
+                    offerItem.classList.add('offer-item');
+                    offerItem.innerHTML = `
+                        <input type="checkbox" id="${offer.id}">
+                        <img src="${offer.image}" alt="${offer.label}">
+                        <label for="${offer.id}">${offer.label}</label>
+                    `;
+                    editOffers.appendChild(offerItem);
+                });
+            }
+        
+            // Initial rendering of offers
+            renderOffers();
+        
             // Function to handle delete selected offers
-            document.querySelector('.delete-btn').addEventListener('click', function() {
-                const selectedOffers = offers.filter(offer => 
-                    document.getElementById(offer.id).checked
-                );
-                
+            document.querySelector('.delete-btn').addEventListener('click', function () {
+                const selectedOffers = offers.filter(offer => {
+                    const checkbox = document.getElementById(offer.id);
+                    return checkbox && checkbox.checked; // Ensure the checkbox exists and is checked
+                });
+        
                 if (selectedOffers.length === 0) {
                     alert("Please select at least one offer");
-                } else {
-                    const confirmDelete = confirm("Are you sure you want to delete the selected offers?");
-                    if (confirmDelete) {
-                        selectedOffers.forEach(offer => {
-                            const checkbox = document.getElementById(offer.id);
-                            checkbox.closest('.offer-item').remove(); // Remove offer element from DOM
-                        });
-                    }
+                    return; // Stop further execution
+                }
+        
+                const confirmDelete = confirm("Are you sure you want to delete the selected offers?");
+                if (confirmDelete) {
+                    selectedOffers.forEach(offer => {
+                        // Remove from the `offers` array
+                        offers = offers.filter(o => o.id !== offer.id);
+        
+                        // Remove from the DOM
+                        const checkbox = document.getElementById(offer.id);
+                        if (checkbox) {
+                            checkbox.closest('.offer-item').remove();
+                        }
+                    });
+        
+                    saveOffers(); // Save updated offers to local storage
+                    renderOffers(); // Re-render offers
                 }
             });
         
             // Form validation and adding a new offer
-            document.querySelector('form').addEventListener('submit', function(event) {
+            document.querySelector('form').addEventListener('submit', function (event) {
                 event.preventDefault();
         
                 const offerLabel = document.getElementById("offer-label").value.trim();
                 const offerDescription = document.getElementById("offer-description").value.trim();
-                const offerImage = document.getElementById("offer-image").files[0];
+                const offerImage = document.getElementById("offer-image").files[0]; // File input
         
                 // Check if fields are empty
                 if (!offerLabel || !offerDescription) {
                     alert("Please fill in all fields.");
-                    return;  // Stop further execution
+                    return; // Stop further execution
                 }
         
                 // Check if a file is attached
                 if (!offerImage) {
                     alert("Please attach a file for the offer image.");
-                    return;
+                    return; // Stop further execution
                 }
         
-                // If form is valid, add the new offer
-                const newOfferId = `offer${offers.length + 1}`;
-                offers.push({
-                    id: newOfferId,
-                    label: offerLabel,
-                    image: URL.createObjectURL(offerImage)  // Temporary image preview
-                });
+                // If form is valid, convert the image to Base64 and save the offer
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const imageBase64 = event.target.result;
         
-                // Add new offer element to the left section
-                const editOffers = document.querySelector('.editoffers');
-                const newOfferItem = document.createElement('div');
-                newOfferItem.classList.add('offer-item');
-                newOfferItem.innerHTML = `
-                    <input type="checkbox" id="${newOfferId}">
-                    <img src="${URL.createObjectURL(offerImage)}" alt="Offer ${offerLabel}">
-                    <label for="${newOfferId}">${offerLabel}</label>
-                `;
-                editOffers.appendChild(newOfferItem);
+                    const newOfferId = `offer${offers.length + 1}`;
+                    const newOffer = {
+                        id: newOfferId,
+                        label: offerLabel,
+                        image: imageBase64 // Save Base64 string
+                    };
         
-                // Clear the form fields
-                document.querySelector('form').reset();
+                    offers.push(newOffer);
+        
+                    saveOffers(); // Save updated offers to local storage
+                    renderOffers(); // Re-render offers
+        
+                    // Clear the form fields
+                    document.querySelector('form').reset();
+                };
+        
+                reader.readAsDataURL(offerImage); // Read image file as Base64
             });
         </script>
+        
+        
+        
         
         
         

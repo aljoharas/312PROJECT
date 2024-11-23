@@ -285,6 +285,9 @@
                         alert("Product Quantity must be a positive number.");
                         return;
                     }
+
+                    const reader = new Fileeader();
+                    reader.onloadend = function() {
         
                     // Get product data
                     const newProduct = {
@@ -292,7 +295,8 @@
                         price: parseFloat(productPriceInput.value),
                         description: productDescriptionInput.value.trim(),
                         category: productCategoryInput.value,
-                        quantity: parseInt(productQuantityInput.value, 10)
+                        quantity: parseInt(productQuantityInput.value, 10),
+                        image: reader.result
                     };
         
                     // Store in localStorage
@@ -304,7 +308,9 @@
                     alert(`Product "${newProduct.label}" has been added successfully.`);
         
                     // Clear form
-                    form.reset();
+                    form.reset(); 
+                };
+                reader.readAsDataUL(productImageInput.files[0]);
                 });
             });
         </script>
