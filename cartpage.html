@@ -466,7 +466,6 @@
             document.getElementById("shippingCost").innerHTML = "$0"
             updatePrice();
             localStorage.clear();
-            console.log(localStorage);
         }
 
         /* Update Total Price */
@@ -489,46 +488,40 @@
 
         /* Load items to cart */
         function loadCart() {
-            // Get the cart from localStorage
             let shoesCart = JSON.parse(localStorage.getItem('shoeCart')) || [];
             let clothesCart = JSON.parse(localStorage.getItem('clothesCart')) || [];
             let bagsCart = JSON.parse(localStorage.getItem('bagCart')) || [];
 
-            // Get the container where items will be displayed
             let allItemsContainer = document.getElementById('allItems');
 
-            // If the cart is empty, display a message
             if (shoesCart.length === 0 && clothesCart.length === 0 && bagsCart.length === 0) {
                 allItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
             } else {
-                // Otherwise, display each cart item
-                allItemsContainer.innerHTML = ''; // Clear existing items
+                allItemsContainer.innerHTML = ''; 
                 if (shoesCart.length !== 0) {
-                    shoesCart.forEach(shoe => {
-                        // Create a new div for the item
+                    shoesCart.forEach(shoes => {
                         let itemDiv = document.createElement('div');
                         itemDiv.classList.add('item');
 
-                        // Add item details to the div
                         itemDiv.innerHTML = `
                     <div class="item-details">
                         <div class="product-detail">
                             <div>
-                                <img src="${shoe.image}" alt="${shoe.name}" class="item-img">
+                                <img src="${shoes.image}" alt="${shoes.name}" class="item-img">
                             </div>
                             <div>
-                                <p class="item-name">${shoe.name}</p>
-                                <p>${shoe.brand}</p>
-                                <p>${shoe.description}</p>
+                                <p class="item-name">${shoes.name}</p>
+                                <p>${shoes.brand}</p>
+                                <p>${shoes.description}</p>
                             </div>
                         </div>
-                        <p class="item-others price">$${shoe.price}</p>
+                        <p class="item-others price">$${shoes.price}</p>
                         <div class="item-others counter">
                             <button class="operation decrease" onclick="decreaseQuantity(this);">-</button>
                             <input type="text" value="1" class="quantity" readonly>
                             <button class="operation increase" onclick="increaseQuantity(this);">+</button>
                         </div>
-                        <p class="item-others subtotal">$${shoe.price * shoe.quantity}</p>
+                        <p class="item-others subtotal">$${shoes.price * shoes.quantity}</p>
                         <div class="remove">
                             <button class="remove-button" onclick="removeItem(this);">x</button>
                         </div>
@@ -536,18 +529,15 @@
                     <hr class="item-line">
                 `;
 
-                        // Append the item div to the container
                         allItemsContainer.appendChild(itemDiv);
                     });
 
                 }
                 if (clothesCart !== 0) {
                     clothesCart.forEach(clothes => {
-                        // Create a new div for the item
                         let itemDiv = document.createElement('div');
                         itemDiv.classList.add('item');
 
-                        // Add item details to the div
                         itemDiv.innerHTML = `
                     <div class="item-details">
                         <div class="product-detail">
@@ -574,17 +564,14 @@
                     <hr class="item-line">
                 `;
 
-                        // Append the item div to the container
                         allItemsContainer.appendChild(itemDiv);
                     });
                 }
                 if (bagsCart.length !== 0) {
                     bagsCart.forEach(bag => {
-                        // Create a new div for the item
                         let itemDiv = document.createElement('div');
                         itemDiv.classList.add('item');
 
-                        // Add item details to the div
                         itemDiv.innerHTML = `
                     <div class="item-details">
                         <div class="product-detail">
@@ -611,7 +598,6 @@
                     <hr class="item-line">
                 `;
 
-                        // Append the item div to the container
                         allItemsContainer.appendChild(itemDiv);
                     });
 
