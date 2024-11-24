@@ -228,4 +228,51 @@ function getName(product){
    
 }); */
 
+/* ######################        Themes         ###################### */
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    const themeToggle = document.querySelector('.theme-toggle'); 
+    const body = document.body;
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const themeIcon = document.getElementById("theme-icon");
+
+ 
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'night') {
+     
+        body.classList.add('night-mode');
+        header.classList.add('night-mode');
+        footer.classList.add('night-mode');
+        themeIcon.src = "images/theme-toggle0.png"; 
+    } else {
+     
+        body.classList.remove('night-mode');
+        header.classList.remove('night-mode');
+        footer.classList.remove('night-mode');
+        themeIcon.src = "images/theme-toggle1.png"; 
+    }
+
+   
+    function toggleTheme() {
+     
+        body.classList.toggle('night-mode');
+        header.classList.toggle('night-mode');
+        footer.classList.toggle('night-mode');
+
+      
+        if (body.classList.contains('night-mode')) {
+          
+            themeIcon.src = "images/theme-toggle0.png";
+            localStorage.setItem('theme', 'night'); 
+        } else {
+      
+            themeIcon.src = "images/theme-toggle1.png";
+            localStorage.setItem('theme', 'day');
+        }
+    }
+
+    
+    themeToggle.addEventListener('click', toggleTheme);
+});
 
