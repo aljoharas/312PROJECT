@@ -1,256 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Product Category</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <style>
-@font-face {
-    font-family: "Vanity";
-    src: url(Vanity-Light.ttf);
-}
+        @font-face {
+            font-family: "Vanity";
+            src: url(Vanity-Light.ttf);
+        }
 
-/* Header */
-head {
-    font-family: "Vanity";
-}
+        /* Header */
+        head {
+            font-family: "Vanity";
+        }
 
-h1 {
-    text-align: center;
-    padding: 0.625em; 
-}
+        h1 {
+            text-align: center;
+            padding: 0.625em;
+        }
 
-#navigation {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f9f9f9;
-    align-items: center;
-    padding: 0.625em 1.25em; 
-}
+        #navigation {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            align-items: center;
+            padding: 0.625em 1.25em;
+        }
 
-#leftnav {
-    width: 33%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+        #leftnav {
+            width: 33%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
 
-#rightnav {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        #rightnav {
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-#search {
-    height: 1.6em; 
-    padding: 0.3em; 
-}
+        #search {
+            height: 1.6em;
+            padding: 0.3em;
+        }
 
-#logo, #f-logo {
-    width: 9.375em; 
-    height: 1.875em; 
-    display: block;
-    margin: auto;
-}
+        #logo,
+        #f-logo {
+            width: 9.375em;
+            height: 1.875em;
+            display: block;
+            margin: auto;
+        }
 
-#cart-img, #profile-img {
-    width: 2.5em; 
-    height: 2.5em;
-    margin-left: 0.625em; 
-}
+        #cart-img,
+        #profile-img {
+            width: 2.5em;
+            height: 2.5em;
+            margin-left: 0.625em;
+        }
 
-.forcart {
-    display: flex;
-    align-items: center;
-}
+        .forcart {
+            display: flex;
+            align-items: center;
+        }
 
-.user-menu {
-    position: absolute;
-    display: none;
-    background-color: lightgray;
-    width: 6.25em; 
-    text-align: left;
-    text-indent: 0.3em; 
-    border-bottom-left-radius: 0.625em; 
-    border-bottom-right-radius: 0.625em;
-}
+        .user-menu {
+            position: absolute;
+            display: none;
+            background-color: lightgray;
+            width: 6.25em;
+            text-align: left;
+            text-indent: 0.3em;
+            border-bottom-left-radius: 0.625em;
+            border-bottom-right-radius: 0.625em;
+        }
 
-.user:hover .user-menu {
-    display: block;
-}
+        .user:hover .user-menu {
+            display: block;
+        }
 
-.all {
-    display: flex;
-    justify-content: center;
-}
+        .all {
+            display: flex;
+            justify-content: center;
+        }
 
-.sidebar {
-    margin-bottom: 1.25em; 
-    border-radius: 0.313em; 
-    background-color: #f9f9f9;
-    width: 20%;
-    padding: 1.25em;
-    float: left;
-    box-sizing: border-box;
-}
+        .sidebar {
+            margin-bottom: 1.25em;
+            border-radius: 0.313em;
+            background-color: #f9f9f9;
+            width: 20%;
+            padding: 1.25em;
+            float: left;
+            box-sizing: border-box;
+        }
 
-.sidebar h3, .sidebar p {
-    margin: 0.625em 0; 
-}
+        .sidebar h3,
+        .sidebar p {
+            margin: 0.625em 0;
+        }
 
-.sidebar input[type="checkbox"] {
-    margin-right: 0.625em;
-}
+        .sidebar input[type="checkbox"] {
+            margin-right: 0.625em;
+        }
 
-.sidebar input[type="text"] {
-    width: 80%;
-    padding: 0.3em; 
-    margin-top: 0.625em; 
-}
+        .sidebar input[type="text"] {
+            width: 80%;
+            padding: 0.3em;
+            margin-top: 0.625em;
+        }
 
-.product-item #img {
-    display: flex;
-    width: 2.5em; 
-    height: 2.5em;
-    justify-content: right;
-}
+        .product-item #img {
+            display: flex;
+            width: 2.5em;
+            height: 2.5em;
+            justify-content: right;
+        }
 
-.background {
-    display: flex;
-    justify-content: center;
-}
+        .background {
+            display: flex;
+            justify-content: center;
+        }
 
-.product-grid {
-    width: 75%;
-    float: right;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1.25em; 
-}
+        .product-grid {
+            width: 75%;
+            float: right;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1.25em;
+        }
 
-.product-item {
-    width: 30%;
-    margin-bottom: 1.25em; 
-    border: 0.063em solid #ccc;
-    border-radius: 0.313em;
-    padding: 1.25em;
-    text-align: center;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
-}
+        .product-item {
+            width: 30%;
+            margin-bottom: 1.25em;
+            border: 0.063em solid #ccc;
+            border-radius: 0.313em;
+            padding: 1.25em;
+            text-align: center;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
 
-.product-item img {
-    width: 100%;
-    height: auto;
-}
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
 
-.product-item h4 {
-    margin: 0.625em 0;
-}
+        .product-item h4 {
+            margin: 0.625em 0;
+        }
 
-.product-item p, pre {
-    color: #666;
-    font-size: 0.875em; 
-}
+        .product-item p,
+        pre {
+            color: #666;
+            font-size: 0.875em;
+        }
 
-#cart-icon {
-    width: 3.125em; 
-    height: 3.125em;
-    display: flex;
-    margin-right: 70%;
-}
+        #cart-icon {
+            width: 3.125em;
+            height: 3.125em;
+            display: flex;
+            margin-right: 70%;
+        }
 
 
-.cart-icon img {
-    width: 2.5em;
-    height: auto; 
-}
+        .cart-icon img {
+            width: 2.5em;
+            height: auto;
+        }
 
-.pagination {
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    margin-top: 1.875em; 
-}
+        .pagination {
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 1.875em;
+        }
 
-.pagination a {
-    color: black;
-    text-decoration: none;
-    font-size: 1em;
-    text-align: center;
-}
+        .pagination a {
+            color: black;
+            text-decoration: none;
+            font-size: 1em;
+            text-align: center;
+        }
 
-.pagination a:active {
-    background-color: #6d93aa;
-    color: white;
-}
+        .pagination a:active {
+            background-color: #6d93aa;
+            color: white;
+        }
 
-.pagination a:hover:not(.active) {
-    background-color: #6d93aa;
-    color: white;
-    width: 1.875em; 
-    height: 1.875em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .pagination a:hover:not(.active) {
+            background-color: #6d93aa;
+            color: white;
+            width: 1.875em;
+            height: 1.875em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.copyright {
-    background-color: #f9f9f9;
-    height: 2.5em; 
-    display: flex;
-    align-items: center;
-    text-indent: 0.625em; 
-}
+        .copyright {
+            background-color: #f9f9f9;
+            height: 2.5em;
+            display: flex;
+            align-items: center;
+            text-indent: 0.625em;
+        }
 
-.contacts {
-    width: 33%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-}
+        .contacts {
+            width: 33%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
 
-#phone-icon, #email-icon {
-    height: 1.25em; 
-    width: 1.25em;
-    margin-right: 0.3em;}
+        #phone-icon,
+        #email-icon {
+            height: 1.25em;
+            width: 1.25em;
+            margin-right: 0.3em;
+        }
 
-.phone, .email {
-    display: flex;
-    align-items: center;
-}
-.filterbackground{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: right;
-    padding: 0.625em 1.25em; 
-    
-}
+        .phone,
+        .email {
+            display: flex;
+            align-items: center;
+        }
 
-#filter{ 
-    background-color: #ccc;
-    margin-bottom: 1em;
-    text-align: center;
-    line-height: 6em; 
-    margin-right: 12%;
-}
+        .filterbackground {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            justify-content: right;
+            padding: 0.625em 1.25em;
+
+        }
+
+        #filter {
+            background-color: #ccc;
+            margin-bottom: 1em;
+            text-align: center;
+            line-height: 6em;
+            margin-right: 12%;
+        }
     </style>
-     <script>
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             const filterDropdown = document.getElementById("filter");
             const productGrid = document.querySelector(".product-grid");
             const products = Array.from(productGrid.children);
-        
+
             filterDropdown.addEventListener("change", () => {
                 const selectedOption = filterDropdown.value;
                 let sortedProducts;
-        
+
                 if (selectedOption === "order2") {
                     // High to Low
                     sortedProducts = products.sort((a, b) => getPrice(b) - getPrice(a));
@@ -268,96 +276,141 @@ h1 {
                         getName(b).localeCompare(getName(a), undefined, { sensitivity: "base" })
                     );
                 }
-        
+
                 // Clear and re-append sorted products
                 productGrid.innerHTML = "";
                 sortedProducts.forEach((product) => productGrid.appendChild(product));
             });
-        
+
             function getPrice(product) {
                 const priceText = product.querySelector("p").textContent;
                 return parseFloat(priceText.match(/(\d+)/)[0]);
             }
-        
+
             function getName(product) {
                 return product.querySelector("h4").textContent.trim();
             }
         });
+
+        const shoes = [
+            {
+                "id": 1,
+                "name": "Mary-Jane Crystal-embellished Flats",
+                "brand": "Alaïa",
+                "description": "Mary-Jane Crystal-embellished Ballet Flats in Nappa Leather",
+                "price": 5000,
+                "image": "images/Alaia.png",
+                "category": "shoes",
+                "quantity": 1
+            },
+
+            {
+                "id": 2,
+                "name": "Gilda 95 Ombré Mules",
+                "brand": "Amina Muaddi",
+                "description": "Gilda 95 Ombré Crystal-embellished Mules in Mirror Leather",
+                "price": 7000,
+                "image": "images/amina.png",
+                "category": "shoes",
+                "quantity": 1
+            },
+
+            {
+                "id": 3,
+                "name": "Sporty Kate 100 Pumps",
+                "brand": "Christian Louboutin",
+                "description": "Sporty Kate 100 Pumps in Leather",
+                "price": 8000,
+                "image": "images/ChristianLouboutin.png",
+                "category": "shoes",
+                "quantity": 1
+            },
+
+            {
+                "id": 4,
+                "name": "Elle 85 Mule Sandals",
+                "brand": "Gianvito Rossi",
+                "description": "Elle 85 Mule Sandals in Patent Leather & Plexi",
+                "price": 7500,
+                "image": "images/Gianvito.png",
+                "category": "shoes",
+                "quantity": 1
+            },
+
+            {
+                "id": 5,
+                "name": "D'orsay 100 Pumps",
+                "brand": "SAINT LAURENT",
+                "description": "D'orsay 100 Pumps in Smooth Leather",
+                "price": 6000,
+                "image": "images/Saint.png",
+                "category": "shoes",
+                "quantity": 1
+            },
+
+            {
+                "id": 6,
+                "name": "Naked 105 Padlock Sandals",
+                "brand": "Tom Ford",
+                "description": "Naked 105 Padlock Sandals in Laminated Leather",
+                "price": 6750,
+                "image": "images/tomford.png",
+                "category": "shoes",
+                "quantity": 1
+            }
+        ];
+
         document.addEventListener("DOMContentLoaded", () => {
-    // Get all cart icons
-    const cartIcons = document.querySelectorAll(".cart-icon img");
+            const cartIcons = document.querySelectorAll(".cart-icon img");
 
-    // Add event listener for each cart icon
-    cartIcons.forEach((cartIcon) => {
-        cartIcon.addEventListener("click", () => {
-            // Get the corresponding product information
-            const productItem = cartIcon.closest(".product-item");
-            const productName = productItem.querySelector("h4").textContent;
-            const productPrice = productItem.querySelector("p").textContent.trim();
-            const productImage = productItem.querySelector("img").src;
-            const productAltText = productItem.querySelector("img").alt; // Fixed issue with undefined variable
+            cartIcons.forEach((cartIcon, index) => {
+                cartIcon.addEventListener("click", () => {
+                    var productId = index + 1;
+                    const product = shoes.find(p => p.id === productId);
+                    console.log("product", product);
 
-            // Create product object
-            const product = {
-                name: productName,
-                price: productPrice,
-                image: {
-                    url: productImage,
-                    alt: productAltText,
-                },
-            };
+                    let shoeCart = JSON.parse(localStorage.getItem("shoeCart")) || [];
 
-            // Debugging: Check the product details
-            console.log("Product added to cart:", product);
+                    shoeCart.push(product);
 
-            // Retrieve current cart from local storage or initialize it as an empty array
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-            // Add the product to the cart
-            cart.push(product);
-
-            // Save the updated cart back to local storage
-            localStorage.setItem("cart", JSON.stringify(cart));
-
-            // Redirect to the cart page
-            window.location.href = "cartpage.html";
+                    localStorage.setItem("shoeCart", JSON.stringify(shoeCart));
+                });
+            });
         });
-    });
-});
-
-        </script>
+    </script>
 </head>
+
 <body>
     <header>
         <h1>The Trend Loft</h1>
-            <!-- Navigation -->
-            <div id="navigation">
-                <div id="leftnav">
-                    <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft Logo"></a>
-                    <p><a href="Category2.html">Clothes</a></p>
-                    <p><a href="Category.html">Bags</a></p>
-                    <p><a href="category1.html">Shoes</a></p>
+        <!-- Navigation -->
+        <div id="navigation">
+            <div id="leftnav">
+                <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft Logo"></a>
+                <p><a href="Category2.html">Clothes</a></p>
+                <p><a href="Category.html">Bags</a></p>
+                <p><a href="category1.html">Shoes</a></p>
+            </div>
+            <div id="rightnav">
+                <input id="search" type="text" placeholder="Search...">
+                <div class="user">
+                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon"
+                            class="user-arrow-icon"></p>
+                    <div class="user-menu">
+                        <a href="UserPage.html">Your Account<br><br></a>
+                        <a href="SellerDashboardPage.html">Your Seller Account</a>
+                    </div>
                 </div>
-                <div id="rightnav">
-                    <input id="search" type="text" placeholder="Search...">
-                    <div class="user">
-                        <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon"
-                                class="user-arrow-icon"></p>
-                        <div class="user-menu">
-                            <a href="UserPage.html">Your Account<br><br></a>
-                            <a href="SellerDashboardPage.html">Your Seller Account</a>
-                        </div>
-                    </div>
-                    <div class="forcart">
-                        <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="Cart"></a>
-                    </div>
+                <div class="forcart">
+                    <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="Cart"></a>
                 </div>
             </div>
+        </div>
         <div class="breadcrumb">
             <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo;Shoes</p>
         </div>
     </header>
-    <div class="filterbackground" >
+    <div class="filterbackground">
         <select name="filter" id="filter">
             <optgroup label="Price">
                 <option value="order2">Highest to Lowest</option>
@@ -368,8 +421,8 @@ h1 {
                 <option value="Z to A">Z to A</option>
             </optgroup>
         </select>
-     </div>
-    <div class="all">  
+    </div>
+    <div class="all">
         <!-- Products -->
         <div class="background">
             <div class="product-grid">
@@ -378,7 +431,8 @@ h1 {
                     <div class="product-info">
                         <h4> Alaïa </h4>
                         <p> Mary-Jane Crystal-embellished Ballet Flats in Nappa Leather
-                            <br>5000 SR  </p>
+                            <br>5000 SR
+                        </p>
                     </div>
                     <div class="cart-icon">
                         <img src="images/cart.png" alt="cart">
@@ -448,24 +502,25 @@ h1 {
     </div>
 
     <!-- Footer -->
-     <footer>
-    <div class="footer">
-        <img src="images/logo2.png" id="f-logo" alt="logo">
-        <div class="contacts">
-            <div class="phone">
-                <img src="images/phone-icon.png" id="phone-icon" alt="phone">
-                <p>+955XXXXXXXXX</p>
+    <footer>
+        <div class="footer">
+            <img src="images/logo2.png" id="f-logo" alt="logo">
+            <div class="contacts">
+                <div class="phone">
+                    <img src="images/phone-icon.png" id="phone-icon" alt="phone">
+                    <p>+955XXXXXXXXX</p>
+                </div>
+                <div class="email">
+                    <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon"
+                            alt="email"> </a>
+                    <p>info@example.com</p>
+                </div>
             </div>
-            <div class="email">
-                <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email"> </a>  
-                 <p>info@example.com</p>
-             </div>
+            <div class="copyright">
+                <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
+            </div>
         </div>
-        <div class="copyright">
-            <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-    </body>
-        
+    </footer>
+</body>
+
 </html>

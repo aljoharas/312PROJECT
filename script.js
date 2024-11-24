@@ -1,16 +1,5 @@
 /* ###################### CART ###################### */
 
-/*
-Item type = {
-img: String 
-itemName : string 
-brandName : String 
-itemDescription: string 
-price: int 
-quantity: int 
-}
-
-*/ 
 
 function displayItems(){
     var cart = JSON.parse(localStorage.getItem("cart"));
@@ -95,22 +84,6 @@ function displayItems(){
         window.location.href="homepage.html";
     }
 
-    /* Apply Discount */
-    /*function discount(){
-        var discount = document.getElementById("discountbox").value;
-        if (discount.startsWith("TTL")){
-            var discountPercent = parseFloat(discount.substring(3));
-            var total = parseInt(document.getElementById("subtotal").innerHTML.replace("$",""));
-            var discountedAmount = total * (discountPercent/100);
-            document.getElementById("discountedAmount").innerHTML = "$" + discountedAmount;
-            var shippingCost = parseInt(document.getElementById("shippingCost").innerHTML.replace("$",""));
-            var newTotal = total - discountedAmount + shippingCost;
-            document.getElementById("totalCost").innerHTML = "$" + newTotal;
-        }
-        else{
-            alert("Invalid discount code. \nTry again!");
-        }
-    }*/ 
 
 /* ###################### Seller Daashboard ###################### */  
 /*document.addEventListener("DOMContentLoaded", function () {
