@@ -159,47 +159,7 @@ function displayItems(){
         }
     }
 });*/
-/* ###################### INSERT NEXT PAGE NAME ###################### */
-/* Category pages */
-/* sorting */
-/*
-document.addEventListener("DOMContentLoaded",() => {
-    const filterDropdown = document.getElementById("filter");
-    const productGrid = document.querySelector(".product-grid");
-    const products= array.from(productGrid.children);
-    filterDropdown.addEventListener("change" , () => {
-        const selectedOption= filterDropdown.value;
-let sortedProducts;
-if(selectedOption=="order2"){
-    // high to low
-    sortedProducts = products.sort((a,b)=>{
-return getPrice(b)-getPrice(a);});
-    }else if(SelectionOption=="order3"){
-        // low to high
-        sortedProducts = products.sort((a,b)=>{
-            return getPrice(a)-getPrice(b);});
-    }else if(selectOption == "A to Z"){
-        // A to Z
-        sortedProducts= products.sort((a,b)=>{
-            return getName(a).localeCompare(getName(b));
-        });
-        }else if(selectOption == "Z to A"){
-            // Z to A
-            sortedProducts= products.sort((a,b)=>{
-                return getName(b).localeCompare(getName(a));
-            });
-    }
-    productGrid.innerHTML="";
-    sortedProducts.forEach(product=> productGrid.appendChild(product));
-});
-function getPrice(product){
-    const priceText = product.querySelector("p").textContent;
-    return parseFloat(pricetext.match(/(\d+)/)[0]);
-}
-function getName(product){
-    return product.querySelector("h4").textContent.trim();}
-   
-}); */
+
 
 /* ######################        Themes         ###################### */
 
