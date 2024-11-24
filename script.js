@@ -1,6 +1,4 @@
 /* ###################### CART ###################### */
-
-
 function displayItems(){
     var cart = JSON.parse(localStorage.getItem("cart"));
     console.log(cart);
@@ -208,4 +206,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     themeToggle.addEventListener('click', toggleTheme);
 });
+//Stars code
+//first star
+const stars = document.querySelectorAll("#Stars1 .stars1 i");
+    stars.forEach((star, index1) => {
+      star.addEventListener("click", () => {
+        stars.forEach((star, index2) => {
+          index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+        });
+      });
+    });
+ //second star 
+ const stars2= document.querySelectorAll("#Stars2 .stars2 i");
+    stars2.forEach((star, index1) => {
+      star.addEventListener("click", () => {
+        stars2.forEach((star, index2) => {
+          index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+        });
+      });
+    });
+   
 

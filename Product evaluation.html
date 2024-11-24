@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Reivew orders</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="script.js" defer></script>
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
         @font-face {
             font-family: "Vanity";
             src: url(Vanity-Light.ttf);
@@ -176,7 +179,7 @@
             flex-grow: 1;
         }
 
-        .review-btn {
+         /*  .review-btn {
             display: flex;
             justify-content: flex-start;
             background-color: #6d93aa;
@@ -184,36 +187,64 @@
             padding: 0.625em 1.875em;
             border: none;
             border-radius: 0.313em;
-        }
+        } */
 
-        .review-btn:hover {
+       /* .review-btn:hover {
             background-color: #6d93aa;
-        }
-
+        }  */
+         
+         .review-btn {
+            display: flex;
+            justify-content: flex-start;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            }
         .button {
             display: flex;
             flex-direction: column;
             justify-content: right;
-        }
+        } 
 
-        .review-btn:hover {
+
+          /* .review-btn:hover {
             background-color: #64989d;
-        }
+        } */
 
-        #Stars {
+
+        #Stars1 {
             display: flex;
             flex-direction: column;
             justify-content: right;
             width: 10%;
             height: 30%;
         }
-        #Stars1{
+        #Stars2{
             display: flex;
             flex-direction: column;
             justify-content: right;
             width: 10%;
             height: 30%;  
         }
+        .stars1 i {
+    color: #e6e6e6;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars1 i.active {
+    color: #ff9c1a;
+}
+.stars2 i {
+    color: #e6e6e6;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars2 i.active {
+    color: #ff9c1a;
+}
+
     </style>
 </head>
 <body>
@@ -266,11 +297,24 @@
                         <h3>Miu miu</h3>
                         <p> Mini Arcadie Top-handle Bag in Matelassé Nappa </p>
                     </div>
-
-                    <img src="images/Stars.png" alt="stars" id="Stars">
+                    <div class="rating-box" id="Stars1">
+                        <div class="stars1">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                   <form>
+                    <label for="review"> Write Review </label>
+                    <input id="review" type="text" placeholder="Write your review here">
                     <div class="button">
-                        <button class="review-btn">Write a product review</button>
+                        <div class="review-btn">
+                        <input type="submit">
                     </div>
+                    </div>
+                    </form>
                 </div>
                 <div class="product-item">
                     <img src="images/loewe-bag.png" alt="Brown loewe bag">
@@ -278,11 +322,25 @@
                         <h4>Loewe</h4>
                         <p>Mini Puzzle Bag in Classic Calfskin </p>
                     </div>
-
-                    <img src="images/Stars.png" alt="Stars" id="Stars1">
+                    <div class="rating-box" id="Stars2">
+                        <div class="stars2">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                   <form>
+                    <label for="review"> Write Review </label>
+                    <input id="review" type="text" placeholder="Write your review here">
                     <div class="button">
-                        <button class="review-btn">Write a product review</button>
+                        <div class="review-btn">
+                        <input type="submit">
                     </div>
+                    </div>
+                    </form>
+            
                 </div>
             </div>
         </section>
