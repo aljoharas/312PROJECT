@@ -466,7 +466,6 @@
             document.getElementById("shippingCost").innerHTML = "$0"
             updatePrice();
             localStorage.clear();
-            console.log(localStorage);
         }
 
         /* Update Total Price */
@@ -504,7 +503,7 @@
                 // Otherwise, display each cart item
                 allItemsContainer.innerHTML = ''; // Clear existing items
                 if (shoesCart.length !== 0) {
-                    shoesCart.forEach(shoe => {
+                    shoesCart.forEach(shoes => {
                         // Create a new div for the item
                         let itemDiv = document.createElement('div');
                         itemDiv.classList.add('item');
@@ -514,21 +513,21 @@
                     <div class="item-details">
                         <div class="product-detail">
                             <div>
-                                <img src="${shoe.image}" alt="${shoe.name}" class="item-img">
+                                <img src="${shoes.image}" alt="${shoes.name}" class="item-img">
                             </div>
                             <div>
-                                <p class="item-name">${shoe.name}</p>
-                                <p>${shoe.brand}</p>
-                                <p>${shoe.description}</p>
+                                <p class="item-name">${shoes.name}</p>
+                                <p>${shoes.brand}</p>
+                                <p>${shoes.description}</p>
                             </div>
                         </div>
-                        <p class="item-others price">$${shoe.price}</p>
+                        <p class="item-others price">$${shoes.price}</p>
                         <div class="item-others counter">
                             <button class="operation decrease" onclick="decreaseQuantity(this);">-</button>
                             <input type="text" value="1" class="quantity" readonly>
                             <button class="operation increase" onclick="increaseQuantity(this);">+</button>
                         </div>
-                        <p class="item-others subtotal">$${shoe.price * shoe.quantity}</p>
+                        <p class="item-others subtotal">$${shoes.price * shoes.quantity}</p>
                         <div class="remove">
                             <button class="remove-button" onclick="removeItem(this);">x</button>
                         </div>
