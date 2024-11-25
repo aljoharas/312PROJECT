@@ -275,7 +275,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     themeToggle.addEventListener('click', toggleTheme);
 });
-//Stars code
+//Stars code for order 1
 document.addEventListener("DOMContentLoaded", () => {
     // Stars rating logic
     const stars1 = document.querySelectorAll("#Stars1 .stars1 i");
@@ -344,36 +344,4 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         window.location.href = "homepage.html";  // Redirect to homepage
     });
-});
-window.addEventListener('DOMContentLoaded', (event) => {
-    // Get the select element
-    const orderSelect = document.getElementById('order-select');
-    
-    // Get all order details containers
-    const orderDetails = document.querySelectorAll('.order-details');
-
-    // Function to hide all order details
-    const hideAllOrders = () => {
-        orderDetails.forEach(order => {
-            order.style.display = 'none';
-        });
-    };
-
-    // Event listener for order selection change
-    orderSelect.addEventListener('change', function() {
-        const selectedOrder = this.value;  // Get the selected order ID (e.g., "order1")
-        
-        // Hide all orders
-        hideAllOrders();
-        
-        // Display the selected order details by ID
-        const selectedOrderDetails = document.getElementById(`${selectedOrder}-details`);
-        if (selectedOrderDetails) {
-            selectedOrderDetails.style.display = 'block';
-        }
-    });
-
-    // Initially, hide all orders and display the first one by default
-    hideAllOrders();
-    document.getElementById('order1-details').style.display = 'block';
 });
