@@ -180,12 +180,17 @@ body.night-mode #product-evaluation {
     background-color: #333;
 }
 
-body.night-mode .review {
+body.night-mode .review q {
+    color: white;
+}
+body.night-mode .product h3 {
+	
     color: black;
 }
- .product.night-mode h3{
-    color:black;
- }
+
+body.night-mode .newproduct h2  {
+    color: white;
+}
 
 /* Footer */
 #f-logo {
