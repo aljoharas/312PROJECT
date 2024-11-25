@@ -206,7 +206,7 @@
             background-color: #64989d;
         }
     </style>
-   
+
 </head>
 
 <body onload="loadCart();">
@@ -252,7 +252,7 @@
                 <h2>Order Summary</h2>
                 <div class="s-details">
                     <p>Sub-Total</p>
-                    <p id="finalSubtotal">$20000</p>
+                    <p id="finalSubtotal">$0</p>
                 </div>
                 <div class="s-details">
                     <p>Discount</p>
@@ -260,12 +260,12 @@
                 </div>
                 <div class="s-details">
                     <p>Shipping</p>
-                    <p id="shippingCost">$50</p>
+                    <p id="shippingCost">$0</p>
                 </div>
                 <hr>
                 <div class="s-details">
                     <p>Total</p>
-                    <p id="totalCost">$20050</p>
+                    <p id="totalCost">$0</p>
                 </div>
                 <button id="checkout" onclick="checkout();">Continue to Checkout</button>
                 <p></p>
@@ -316,7 +316,7 @@
             </div>
         </div>
     </footer>
-     <script>
+    <script>
         /* Items */
         const shoes = [
             {
@@ -526,6 +526,10 @@
         function checkout() {
             var total = document.getElementById("totalCost").innerHTML;
             alert("Thank you for your purchase! \nYour total is: " + total);
+            document.getElementById("allItems").remove();
+            document.getElementById("shippingCost").innerHTML = "$0";
+            document.getElementById("finalSubtotal").innerHTML = "$0";
+            empty();
             window.location.href = "Product evaluation.html";
         }
 
@@ -558,36 +562,36 @@
 
         /* Remove */
         function removeItem(button) {//كامل هنا
-   
-    button.parentNode.parentNode.parentNode.remove();
 
-   
-    let itemName = button.parentNode.parentNode.querySelector(".item-name").innerText;
-
-   
-    let shoesCart = JSON.parse(localStorage.getItem('shoeCart')) || [];
-    let clothesCart = JSON.parse(localStorage.getItem('clothesCart')) || [];
-    let bagsCart = JSON.parse(localStorage.getItem('bagCart')) || [];
+            button.parentNode.parentNode.parentNode.remove();
 
 
-    shoesCart = shoesCart.filter(item => item.name !== itemName);
-    clothesCart = clothesCart.filter(item => item.name !== itemName);
-    bagsCart = bagsCart.filter(item => item.name !== itemName);
-
-  
-    localStorage.setItem('shoeCart', JSON.stringify(shoesCart));
-    localStorage.setItem('clothesCart', JSON.stringify(clothesCart));
-    localStorage.setItem('bagCart', JSON.stringify(bagsCart));
+            let itemName = button.parentNode.parentNode.querySelector(".item-name").innerText;
 
 
-    var items = document.getElementsByClassName("item");
-    if (items.length === 0) {
-        document.getElementById("shippingCost").innerHTML = "$0.00";
-    }
+            let shoesCart = JSON.parse(localStorage.getItem('shoeCart')) || [];
+            let clothesCart = JSON.parse(localStorage.getItem('clothesCart')) || [];
+            let bagsCart = JSON.parse(localStorage.getItem('bagCart')) || [];
 
-   
-    updatePrice();
-}
+
+            shoesCart = shoesCart.filter(item => item.name !== itemName);
+            clothesCart = clothesCart.filter(item => item.name !== itemName);
+            bagsCart = bagsCart.filter(item => item.name !== itemName);
+
+
+            localStorage.setItem('shoeCart', JSON.stringify(shoesCart));
+            localStorage.setItem('clothesCart', JSON.stringify(clothesCart));
+            localStorage.setItem('bagCart', JSON.stringify(bagsCart));
+
+
+            var items = document.getElementsByClassName("item");
+            if (items.length === 0) {
+                document.getElementById("shippingCost").innerHTML = "$0.00";
+            }
+
+
+            updatePrice();
+        }
 
         /* Empty Cart */
         function empty() {
@@ -596,7 +600,7 @@
             for (var i = items.length - 1; i >= 0; i--) {
                 items[i].remove();
             }
-            document.getElementById("shippingCost").innerHTML = "$0"
+            document.getElementById("shippingCost").innerHTML = "$0";
             updatePrice();
             localStorage.clear();
         }
@@ -633,8 +637,8 @@
             if (shoesCart.length === 0 && clothesCart.length === 0 && bagsCart.length === 0) {
                 allItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
             } else {
-               let subTotal = 0; // هناا
-                allItemsContainer.innerHTML = ''; 
+                let subTotal = 0; // هناا
+                allItemsContainer.innerHTML = '';
                 if (shoesCart.length !== 0) {
                     shoesCart.forEach(shoes => {
                         let itemDiv = document.createElement('div');
@@ -665,7 +669,7 @@
                     </div>
                     <hr class="item-line">
                 `;
-                       subTotal += shoes.price * shoes.quantity; // هناا
+                        subTotal += shoes.price * shoes.quantity; // هناا
                         allItemsContainer.appendChild(itemDiv);
                     });
 
@@ -700,7 +704,7 @@
                     </div>
                     <hr class="item-line">
                 `;
-                subTotal += clothes.price * clothes.quantity; // هناا
+                        subTotal += clothes.price * clothes.quantity; // هناا
                         allItemsContainer.appendChild(itemDiv);
                     });
                 }
@@ -734,7 +738,7 @@
                     </div>
                     <hr class="item-line">
                 `;
-                       subTotal += bag.price * bag.quantity; // هناا
+                        subTotal += bag.price * bag.quantity; // هناا
                         allItemsContainer.appendChild(itemDiv);
                     });
 
@@ -751,13 +755,14 @@
                         removeItem(button);
                     }
                 });
-                 // هنا لما الاخير
-        document.getElementById("finalSubtotal").innerHTML = "$" + subTotal.toFixed(2);
-        document.getElementById("totalCost").innerHTML = "$" + (subTotal + parseFloat(document.getElementById("shippingCost").innerHTML.replace("$", ""))).toFixed(2);
-      
-        localStorage.setItem('totalCost', (subTotal + parseFloat(document.getElementById("shippingCost").innerHTML.replace("$", ""))).toFixed(2));
-    }
-}
+                // هنا لما الاخير
+                document.getElementById("finalSubtotal").innerHTML = "$" + subTotal.toFixed(2);
+                document.getElementById("totalCost").innerHTML = "$" + (subTotal + parseFloat(document.getElementById("shippingCost").innerHTML.replace("$", ""))).toFixed(2);
+                document.getElementById("shippingCost").innerHTML = "$50";
+
+                localStorage.setItem('totalCost', (subTotal + parseFloat(document.getElementById("shippingCost").innerHTML.replace("$", ""))).toFixed(2));
+            }
+        }
     </script>
 </body>
 
