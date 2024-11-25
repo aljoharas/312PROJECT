@@ -92,7 +92,7 @@ function displayItems(){
 
     /* Continue Shopping */
     function shop(){
-        window.location.href="homepage.html";
+        window.location.href="index.html";
     }
 
     /* Apply Discount */
@@ -325,7 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(
             `Thank you for your feedback! is:\nProduct 1: ${rating1} stars`
         );
-        window.location.href = "homepage.html";  // Redirect to homepage
+        window.location.href = "index.html";  // Redirect to homepage
     });
 
     // Submit button event handler for Product 2
@@ -342,6 +342,6 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(
             `Thank you for your feedback! is:\nProduct 2: ${rating2} stars`
         );
-        window.location.href = "homepage.html";  // Redirect to homepage
+        window.location.href = "index.html";  // Redirect to homepage
     });
 });
