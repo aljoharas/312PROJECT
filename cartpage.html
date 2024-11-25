@@ -543,8 +543,6 @@
                 var price = parseInt(parent.parentNode.querySelector(".price").innerHTML.replace("$", ""));
                 var subTotal = (quant - 1) * price;
                 parent.parentNode.querySelector(".subtotal").innerHTML = "$" + subTotal.toFixed(2);
-            } else {
-                parent.parentNode.parentNode.remove();
             }
             updatePrice();
         }
