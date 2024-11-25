@@ -1,4 +1,17 @@
 /* ###################### CART ###################### */
+
+/*
+Item type = {
+img: String 
+itemName : string 
+brandName : String 
+itemDescription: string 
+price: int 
+quantity: int 
+}
+
+*/ 
+
 function displayItems(){
     var cart = JSON.parse(localStorage.getItem("cart"));
     console.log(cart);
@@ -82,6 +95,22 @@ function displayItems(){
         window.location.href="homepage.html";
     }
 
+    /* Apply Discount */
+    /*function discount(){
+        var discount = document.getElementById("discountbox").value;
+        if (discount.startsWith("TTL")){
+            var discountPercent = parseFloat(discount.substring(3));
+            var total = parseInt(document.getElementById("subtotal").innerHTML.replace("$",""));
+            var discountedAmount = total * (discountPercent/100);
+            document.getElementById("discountedAmount").innerHTML = "$" + discountedAmount;
+            var shippingCost = parseInt(document.getElementById("shippingCost").innerHTML.replace("$",""));
+            var newTotal = total - discountedAmount + shippingCost;
+            document.getElementById("totalCost").innerHTML = "$" + newTotal;
+        }
+        else{
+            alert("Invalid discount code. \nTry again!");
+        }
+    }*/ 
 
 /* ###################### Seller Daashboard ###################### */  
 /*document.addEventListener("DOMContentLoaded", function () {
@@ -157,7 +186,47 @@ function displayItems(){
         }
     }
 });*/
-
+/* ###################### INSERT NEXT PAGE NAME ###################### */
+/* Category pages */
+/* sorting */
+/*
+document.addEventListener("DOMContentLoaded",() => {
+    const filterDropdown = document.getElementById("filter");
+    const productGrid = document.querySelector(".product-grid");
+    const products= array.from(productGrid.children);
+    filterDropdown.addEventListener("change" , () => {
+        const selectedOption= filterDropdown.value;
+let sortedProducts;
+if(selectedOption=="order2"){
+    // high to low
+    sortedProducts = products.sort((a,b)=>{
+return getPrice(b)-getPrice(a);});
+    }else if(SelectionOption=="order3"){
+        // low to high
+        sortedProducts = products.sort((a,b)=>{
+            return getPrice(a)-getPrice(b);});
+    }else if(selectOption == "A to Z"){
+        // A to Z
+        sortedProducts= products.sort((a,b)=>{
+            return getName(a).localeCompare(getName(b));
+        });
+        }else if(selectOption == "Z to A"){
+            // Z to A
+            sortedProducts= products.sort((a,b)=>{
+                return getName(b).localeCompare(getName(a));
+            });
+    }
+    productGrid.innerHTML="";
+    sortedProducts.forEach(product=> productGrid.appendChild(product));
+});
+function getPrice(product){
+    const priceText = product.querySelector("p").textContent;
+    return parseFloat(pricetext.match(/(\d+)/)[0]);
+}
+function getName(product){
+    return product.querySelector("h4").textContent.trim();}
+   
+}); */
 
 /* ######################        Themes         ###################### */
 
@@ -206,24 +275,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     themeToggle.addEventListener('click', toggleTheme);
 });
-//Stars code
-//first star
-const stars = document.querySelectorAll("#Stars1 .stars1 i");
-    stars.forEach((star, index1) => {
-      star.addEventListener("click", () => {
-        stars.forEach((star, index2) => {
-          index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
-        });
-      });
-    });
- //second star 
- const stars2= document.querySelectorAll("#Stars2 .stars2 i");
-    stars2.forEach((star, index1) => {
-      star.addEventListener("click", () => {
-        stars2.forEach((star, index2) => {
-          index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
-        });
-      });
-    });
-   
 

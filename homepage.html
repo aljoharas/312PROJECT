@@ -6,11 +6,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <title> The Trend Loft </title>
+    <script src="script.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const moreButton = document.querySelectorAll(".more-btn");
+    
+    const hiddenProducts = document.querySelectorAll(".hiddenProduct");
+
+   
+    moreButton.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            
+            if (hiddenProducts[index]) {
+                hiddenProducts[index].style.display = "block";
+            }
+            
+            button.style.display = "none";
+        });
+    });
+
+        const customerData = [
+            {
+                name: "Layan Alhowaimel",
+                product: "Rene Caovilla 2003 Heels",
+                rating: 5,
+                feedback: "They are super stylish and comfortable for stilettos."
+            },
+            {
+                name: "Norah Aljayan",
+                product: "Rene Caovilla 2003 Heels",
+                rating: 5,
+                feedback: "Perfect balance between fashion and comfort."
+            },
+            {
+                name: "Abdulrahman Alkhuzayym",
+                product: "Rene Caovilla 2003 Heels",
+                rating: 5,
+                feedback: "They fit perfectly."
+            }
+        ];
+    
+        
+        const reviews = document.querySelectorAll(".reviews .review");
+    
+        reviews.forEach((review, index) => {
+            const popup = review.querySelector(".reviewpopup");
+            const stars = review.querySelector(".stars");
+    
+            
+            if (customerData[index]) {
+                popup.innerHTML = `
+                    <p><strong>Customer:</strong> ${customerData[index].name}</p>
+                    <p><strong>Product:</strong> ${customerData[index].product}</p>
+                    <p><strong>Rating:</strong> ${customerData[index].rating}</p>
+                    <p><strong>Feedback:</strong> ${customerData[index].feedback}</p>
+                `;
+            }
+    
+            
+            stars.addEventListener("mouseover", () => {
+                popup.style.display = "block";
+            });
+    
+            
+            stars.addEventListener("mouseout", () => {
+                popup.style.display = "none";
+            });
+        });
+    });
+    
+    </script>
     <style>
+          @media (max-width: 480px) {
+            body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+    #navigation a {
+        font-size: 14px;
+        
+    }
+
+    .allCategories img {
+        max-width: 120px;
+    }
+    .vision {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 1em;
+    }
+
+    .vision img {
+        max-width: 80%; 
+        margin: 0 0 1em 0; 
+    }
+
+    #visiondesription {
+        font-size: 0.9em; 
+        text-align: center; 
+    }
+    .allCategories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Category {
+        flex: none; 
+        width: 100%; 
+    
+    }
+    .cbutton {
+        padding: 0.5em; 
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.userReviews img {
+    width: 5.3em;
+    height: auto; 
+    margin: 0.5em 0; 
+}
         .newproduct {
             display: flex;
             align-items: center;
             padding: 1.25em;
+            position: relative;
 
         }
 
@@ -59,6 +192,7 @@
             display: flex;
             justify-content: space-between;
             padding: 1.25em;
+            max-width: 100px;
         }
 
         .Category {
@@ -73,8 +207,8 @@
             padding: 3.125em 1.25em;
             background-color: white;
             border-radius: 0.625em;
-            width: 100%;
-            max-width: 15.625em;
+            width: 25em;
+            max-width: 30em;
         }
 
         .cbutton img {
@@ -170,8 +304,9 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            padding: 0;
+            padding: 1em;
         }
+    
 
         .vision img {
             max-width: 31.25em;
@@ -192,10 +327,104 @@
 
         #visiondesription {
             line-height: 1.5em;
-            font-size: 2.1875em;
+            font-size: 0.9em; 
             margin-top: 0;
             font-family: 'Times New Roman', Times, serif;
         }
+        .reviewpopup {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 250px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    border-radius: 5px;
+    top: 100%; 
+    left: 0;
+   
+    display: none;
+}
+
+.reviewpopup p {
+    margin: 5px 0;
+}
+
+.review {
+    position: relative;
+}
+#navigation {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#leftnav, #rightnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+#leftnav img {
+    
+    max-width: 120px;
+}
+
+#rightnav input {
+    flex: 1;
+    max-width: 200px;}
+
+    .more-btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-top: 0.625em;
+    background-color: #6d93aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    font-size: 0.875em;
+    }
+
+.more-btn:hover {
+    background-color: #64989d;
+
+}
+.hiddenProduct {
+            background-color: white;
+            padding: 1.25em;
+            border: 0.0625em solid #ddd;
+            border-radius: 0.625em;
+            width: 30%;
+            text-align: center;
+        }
+
+        .hiddenProduct h3 {
+            font-size: 1.25em;
+            margin-bottom: 0.625em;
+        }
+
+        .hiddenProduct p {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 0.9375em;
+        }
+
+        .hiddenProduct img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.625em;
+            margin-bottom: 0.9375em;
+            max-height: 31.25em;
+        }
+
     </style>
 </head>
 
@@ -223,6 +452,9 @@
                 </div>
                 <div class="forcart">
                     <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="cart"></a>
+                    <div class="theme-toggle"><!--here-->
+                        <img id="theme-icon" src="images/theme-toggle1.png" alt="Theme Toggle" onclick="toggleTheme()">
+                                     </div>
                 </div>
             </div>
         </div>
@@ -230,6 +462,13 @@
     <!-- end of navigation -->
     <!-- section 1 new product-->
     <main>
+        <div id="date"> </div>>
+        <script>   var now=new Date();
+            var firstDay=new Date(now.setDate((now.getDate()-now.getDay()))); //to get the date of the first day in the week 
+            var options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+            let finalDate=firstDay.toLocaleString(undefined, options);
+           document.getElementById("date").textContent=finalDate;
+           </script>
         <section>
             <div class="newproduct">
                 <img src="images/birkin.png" alt="New Product">
@@ -285,10 +524,16 @@
                     <div class="product">
                         <img src="images/product3.png" alt="shoulder bag with logo">
                         <h3> Dior Shoulder Bag </h3>
-                        <p> Classic canvas shoulder bag with leather strap from 2005 collection<br> 100% authentic and
-                            in good condition</p>
-                        <a href="item.html" class="shopButton"> Shop Now </a>
-                    </div>
+                        <p> Classic canvas shoulder 2005 bag with leather strap <br> 100% authentic    in good condition</p> 
+                        <a href="item.html" class="shopButton"> Shop Now </a> </div>
+                        <div class="hiddenProduct" style="display:none;">
+                            <img src="images/hiddenbag.jpeg" alt="grey Balenciaga bag">
+                            <h3> Balenciaga City Bag</h3>
+                            <p> Grained Calfskin Neo Classic Silver Hardware S City Dark Grey </p>
+                            <a href="item.html" class="shopButton"> Shop Now </a>
+                            
+                        </div>
+                        <button class="more-btn">More</button>
                 </div>
             </div>
         </section>
@@ -304,16 +549,20 @@
                     </a>
 
                 </div>
-                <div class="userReviews">
-                    <q> These heels are a dream! They are super stylish and surprisingly comfortable for stilettos. I
-                        wore them for a whole event, and my feet didn’t hurt at all. </q>
-                    <p> Sarah Johnson </p> <br>
-                    <q> These heels are amazing! They give me the height I want without discomfort. Perfect balance
-                        between fashion and comfort. Will be getting another pair soon! </q>
-                    <p> Emily Roberts </p> <br>
-                    <q> Bought these for my wife, and she loves them. They fit her perfectly, and she says they’re quite
-                        comfy for high heels. The design is sleek and elegant, great for formal occasions. </q>
-                    <p> Michael Stevens </p> <br>
+                <div class="review">
+                    <img class="stars"src="images/5stars.png" alt="5 star rating" class="stars">
+                    <q> These heels are a dream! They are super stylish and surprisingly comfortable for stilettos. </q>
+                    <div class="reviewpopup" style="display: none;"></div>
+                </div>
+                <div class="review">
+                    <img class="stars"src="images/5stars.png" alt="5 star rating" class="stars">
+                    <q> These heels are amazing! They give me the height I want without discomfort. Perfect balance between fashion and comfort. </q>
+                    <div class="reviewpopup" style="display: none;"></div>
+                </div>
+                <div class="review">
+                    <img class="stars" src="images/5stars.png" alt="5 star rating" class="stars">
+                    <q> Bought these for my wife, and she loves them. They fit her perfectly, and she says they’re quite comfy for high heels. </q>
+                    <div class="reviewpopup" style="display: none;"></div>
                 </div>
             </div>
         </section>
@@ -344,6 +593,14 @@
                         </p>
                         <a href="item.html" class="shopButton"> Shop Now </a>
                     </div>
+                    <div class="hiddenProduct" style="display:none;">
+                        <img src="images/hiddenshoe.jpeg" alt="Black Leather Shoe">
+                        <h3> Gucci Princetown Mules</h3>
+                        <p> Black leather with signature horseshoe <br> 100% authentic and in perfect condition</p>
+                        <a href="item.html" class="shopButton"> Shop Now </a>
+                        
+                    </div>
+                    <button class="more-btn">More</button>
                 </div>
             </div>
         </section>
