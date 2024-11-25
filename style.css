@@ -183,7 +183,9 @@ body.night-mode #product-evaluation {
 body.night-mode .review {
     color: black;
 }
-
+ .product.night-mode h3{
+    color:black;
+ }
 
 /* Footer */
 #f-logo {
