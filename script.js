@@ -275,7 +275,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     themeToggle.addEventListener('click', toggleTheme);
 });
-//Stars code
+//Stars code for order 1
 document.addEventListener("DOMContentLoaded", () => {
     // Stars rating logic
     const stars1 = document.querySelectorAll("#Stars1 .stars1 i");
@@ -317,14 +317,13 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton1.addEventListener("click", (event) => {
         event.preventDefault(); // Prevent form submission
         const selectedOrder = document.getElementById("order-select").value;
-
         if (!selectedOrder || rating1 === 0) {
             alert("Please choose an order and rate the product!");
             return;
         }
 
         alert(
-            `Thank you for your feedback!\nYour rating for ${selectedOrder} is:\nProduct 1: ${rating1} stars`
+            `Thank you for your feedback! is:\nProduct 1: ${rating1} stars`
         );
         window.location.href = "homepage.html";  // Redirect to homepage
     });
@@ -341,7 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         alert(
-            `Thank you for your feedback!\nYour rating for ${selectedOrder} is:\nProduct 2: ${rating2} stars`
+            `Thank you for your feedback! is:\nProduct 2: ${rating2} stars`
         );
         window.location.href = "homepage.html";  // Redirect to homepage
     });
