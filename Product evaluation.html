@@ -250,7 +250,6 @@
 <body>
     <h1>The Trend Loft</h1>
     <header>
-        <!-- NAVIGATION [COPY TO ALL PAGES] -->
         <div id="navigation">
             <div id="leftnav">
                 <a href="homepage.html"><img id="logo" src="images/logo2.png" alt="The Trend Loft Logo"></a>
@@ -261,12 +260,7 @@
             <div id="rightnav">
                 <input id="search" type="text" placeholder="Search...">
                 <div class="user">
-                    <p>Welcome, <br> Sara <img src="images/arrow-down.png" alt="arrow down icon"
-                            class="user-arrow-icon"></p>
-                    <div class="user-menu">
-                        <a href="UserPage.html">Your Account<br><br></a>
-                        <a href="SellerDashboardPage.html">Your Seller Account</a>
-                    </div>
+                    <p>Welcome, <br> Sara</p>
                 </div>
                 <div class="forcart">
                     <a href="cartpage.html"><img id="cart-img" src="images/cart.png" alt="Cart"></a>
@@ -274,20 +268,24 @@
             </div>
         </div>
     </header>
+
     <!-- Breadcrumbs -->
     <div class="breadcrumb">
         <p><a href="homepage.html" class="breadcrumb-links">Home</a> &raquo; <a href="UserPage.html"
                 class="breadcrumb-links">User page</a> &raquo; Order review</p>
     </div>
+
     <main>
         <section class="review-order">
             <h2>Review your order</h2>
             <div class="order-number">
                 <h2>#Order number</h2>
                 <select name="orders" id="order-select">
-                    <option value="order1">Order #182918</option>
-                    <option value="order2">Order #183982</option>
-                    <option value="order3">Order #19473</option>
+                    <option value="order1">Order #001</option>
+                    <option value="order2">Order #002</option>
+                    <option value="order3">Order #003</option>
+                    <option value="order4">Order #004</option>
+                    <option value="order5">Order #005</option>
                 </select>
             </div>
             <div class="products">
@@ -299,23 +297,24 @@
                     </div>
                     <div class="rating-box" id="Stars1">
                         <div class="stars1">
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
-                      </div>
-                   <form>
-                    <label for="review"> Write Review </label>
-                    <input id="review" type="text" placeholder="Write your review here">
-                    <div class="button">
-                        <div class="review-btn">
-                        <input type="submit">
                     </div>
-                    </div>
+                    <form id="reviewForm1">
+                        <label for="review">Write Review</label>
+                        <input id="review1" type="text" placeholder="Write your review here">
+                        <div class="button">
+                            <div class="review-btn">
+                                <input type="submit" value="Submit Review">
+                            </div>
+                        </div>
                     </form>
                 </div>
+
                 <div class="product-item">
                     <img src="images/loewe-bag.png" alt="Brown loewe bag">
                     <div class="product-details">
@@ -324,46 +323,45 @@
                     </div>
                     <div class="rating-box" id="Stars2">
                         <div class="stars2">
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
-                      </div>
-                   <form>
-                    <label for="review"> Write Review </label>
-                    <input id="review" type="text" placeholder="Write your review here">
-                    <div class="button">
-                        <div class="review-btn">
-                        <input type="submit">
                     </div>
-                    </div>
+                    <form id="reviewForm2">
+                        <label for="review">Write Review</label>
+                        <input id="review2" type="text" placeholder="Write your review here">
+                        <div class="button">
+                            <div class="review-btn">
+                                <input type="submit" value="Submit Review">
+                            </div>
+                        </div>
                     </form>
-            
                 </div>
             </div>
         </section>
     </main>
-    
-<!-- Footer -->
- <footer>
-<div class="footer">
-    <img src="images/logo2.png" id="f-logo" alt="logo">
-    <div class="contacts">
-        <div class="phone">
-            <img src="images/phone-icon.png" id="phone-icon" alt="phone">
-            <p>+955XXXXXXXXX</p>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <img src="images/logo2.png" id="f-logo" alt="logo">
+            <div class="contacts">
+                <div class="phone">
+                    <img src="images/phone-icon.png" id="phone-icon" alt="phone">
+                    <p>+955XXXXXXXXX</p>
+                </div>
+                <div class="email">
+                    <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email"> </a>
+                    <p>info@example.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
+            </div>
         </div>
-        <div class="email">
-            <a href="mailto:TheTrendLoft@gmail.com"> <img src="images/email-icon.png" id="email-icon" alt="email"> </a>  
-             <p>info@example.com</p>
-         </div>
-    </div>
-    <div class="copyright">
-        <p>©2024 <strong>The Trend Loft.</strong> All rights reserved.</p>
-    </div>
-</div>
-</footer>
+    </footer>
 </body>
 </html>
