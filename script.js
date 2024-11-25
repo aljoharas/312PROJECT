@@ -275,4 +275,74 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     themeToggle.addEventListener('click', toggleTheme);
 });
+//Stars code
+document.addEventListener("DOMContentLoaded", () => {
+    // Stars rating logic
+    const stars1 = document.querySelectorAll("#Stars1 .stars1 i");
+    const stars2 = document.querySelectorAll("#Stars2 .stars2 i");
 
+    let rating1 = 0;
+    let rating2 = 0;
+
+    // Rating for product 1
+    stars1.forEach((star, index1) => {
+        star.addEventListener("click", () => {
+            rating1 = index1 + 1; // Set the rating based on the clicked star index
+            stars1.forEach((star, index2) => {
+                if (index1 >= index2) {
+                    star.classList.add("active");
+                } else {
+                    star.classList.remove("active");
+                }
+            });
+        });
+    });
+
+    // Rating for product 2
+    stars2.forEach((star, index2) => {
+        star.addEventListener("click", () => {
+            rating2 = index2 + 1; // Set the rating based on the clicked star index
+            stars2.forEach((star, index3) => {
+                if (index2 >= index3) {
+                    star.classList.add("active");
+                } else {
+                    star.classList.remove("active");
+                }
+            });
+        });
+    });
+
+    // Submit button event handler for Product 1
+    const submitButton1 = document.querySelector("#reviewForm1 .review-btn input[type='submit']");
+    submitButton1.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent form submission
+        const selectedOrder = document.getElementById("order-select").value;
+
+        if (!selectedOrder || rating1 === 0) {
+            alert("Please choose an order and rate the product!");
+            return;
+        }
+
+        alert(
+            `Thank you for your feedback!\nYour rating for ${selectedOrder} is:\nProduct 1: ${rating1} stars`
+        );
+        window.location.href = "homepage.html";  // Redirect to homepage
+    });
+
+    // Submit button event handler for Product 2
+    const submitButton2 = document.querySelector("#reviewForm2 .review-btn input[type='submit']");
+    submitButton2.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent form submission
+        const selectedOrder = document.getElementById("order-select").value;
+
+        if (!selectedOrder || rating2 === 0) {
+            alert("Please choose an order and rate the product!");
+            return;
+        }
+
+        alert(
+            `Thank you for your feedback!\nYour rating for ${selectedOrder} is:\nProduct 2: ${rating2} stars`
+        );
+        window.location.href = "homepage.html";  // Redirect to homepage
+    });
+});
